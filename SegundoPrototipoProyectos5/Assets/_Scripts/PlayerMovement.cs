@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float groundDrag;
 
     [Header ("Ground check")]
-    [SerializeField] private float playerHeight;
+    [SerializeField] private GameObject groundCheckObject;
 
     [Header("Jump")]
     [SerializeField] private float jumpForce;
@@ -29,7 +29,8 @@ public class PlayerMovement : MonoBehaviour
     private float verticalInput;
     private Vector3 moveDirection;
     private LayerMask groundMask;
-    private bool grounded;
+    private GroundCheck groundCheck;
+    private bool grounded = false;
 
 
     void Start()
@@ -37,12 +38,12 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         orientation = GetComponent<Transform>();
         rb.freezeRotation = true;
-        groundMask = LayerMask.GetMask("Ground");
+        groundCheck = groundCheckObject.GetComponent<GroundCheck>();
     }
 
     private void Update()
     {
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, groundMask); //la mitad de la altura del player + un poco más NO FUNCIONA BIEN
+        grounded = groundCheck.isGrounded;
 
         GetInput();
         SpeedControl();
@@ -85,7 +86,6 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Jump()
     {
-        Debug.Log("deberia estar saltando");
         rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z); //si no reseteas la v.y y vuelves a saltar salta muy alto
         rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);               
     }
