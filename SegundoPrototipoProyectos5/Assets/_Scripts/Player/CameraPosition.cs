@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class CameraPosition : MonoBehaviour
 {
-    private Transform m_cameraPosition;
+    private Transform cameraPosition;
 
     private void Start()
     {
-        m_cameraPosition = GameManager.instance.player.GetComponent<PlayerMovement>().cameraPosition;
+        cameraPosition = GameManager.instance.player.GetComponent<PlayerMovement>().cameraPosition;
     }
     private void Update()
     {
-        transform.position = m_cameraPosition.position;
+        transform.position = cameraPosition.position;
     }
 }

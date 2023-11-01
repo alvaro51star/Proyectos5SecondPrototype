@@ -28,7 +28,8 @@ public class WaterGun : MonoBehaviour
             rb.AddForce(-playerCamera.forward * thrustForce, ForceMode.Impulse);
         }
 
-        if(groundCheck.isGrounded){
+        if (groundCheck.isGrounded)
+        {
             currentWater = maxWater; //!Esto puede cambiar a que haya otras fuentes de agua.
         }
 
