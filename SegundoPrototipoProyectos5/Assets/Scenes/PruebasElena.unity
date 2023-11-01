@@ -690,8 +690,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38437d4930caf948b6516dc315d28af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivityX: 20
-  sensitivityY: 20
+  sensitivityX: 5
+  sensitivityY: 5
 --- !u!1 &1305428088
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +857,10 @@ PrefabInstance:
     - target: {fileID: 2014656637676029967, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
       propertyPath: m_Name
       value: PLAYER
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685947481521286398, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+      propertyPath: jumpForce
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

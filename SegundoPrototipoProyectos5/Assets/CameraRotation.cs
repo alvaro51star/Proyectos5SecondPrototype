@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class CameraRotation : MonoBehaviour
 {
-    [SerializeField, Range(0,50)] private float sensitivityX, sensitivityY;
+    [SerializeField, Range(0,10)] private float sensitivityX, sensitivityY;
 
     private float yRotation, XRotation;
     private Transform m_cameraPosition;
