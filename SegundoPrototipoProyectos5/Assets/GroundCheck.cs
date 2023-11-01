@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
-    private bool isTouchingGround, raycastIsGround = false;
-    public bool isGrounded = false;
+    public bool isGrounded;
+    private bool isTouchingGround, raycastIsGround;
     private int layerGround;
     private LayerMask groundMask;
 
@@ -17,16 +17,7 @@ public class GroundCheck : MonoBehaviour
 
     private void Update()
     {
-        raycastIsGround = Physics.Raycast(transform.position, Vector3.down, 0.5f, groundMask); //no funciona lo de groundMask???
-        Debug.DrawRay(transform.position, Vector3.down, Color.red);
-
-        if(raycastIsGround && isTouchingGround)
-        {
-            isGrounded = true;
-        }
-            
-        else
-            isGrounded = false;        
+        CheckIfItIsGrounded();
     }
     
     private void OnTriggerEnter(Collider other)
@@ -35,5 +26,18 @@ public class GroundCheck : MonoBehaviour
         {
             isTouchingGround = true;
         }
+    }
+
+    private void CheckIfItIsGrounded()
+    {
+        raycastIsGround = Physics.Raycast(transform.position, Vector3.down, 0.5f, groundMask);
+
+        if (raycastIsGround && isTouchingGround)
+        {
+            isGrounded = true;
+        }
+
+        else
+            isGrounded = false;
     }
 }

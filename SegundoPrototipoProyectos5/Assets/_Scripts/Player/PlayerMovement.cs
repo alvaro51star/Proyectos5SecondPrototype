@@ -21,16 +21,16 @@ public class PlayerMovement : MonoBehaviour
     [Header("Jump")]
     [SerializeField] private float jumpForce;
     [SerializeField] private float airResistance;
-
+   
     
     private Rigidbody rb;
     private Transform orientation;
     private float horizontalInput;
     private float verticalInput;
     private Vector3 moveDirection;
-    private LayerMask groundMask;
+
     private GroundCheck groundCheck;
-    private bool grounded = false;
+    private bool grounded;
 
 
     void Start()
@@ -58,7 +58,7 @@ public class PlayerMovement : MonoBehaviour
     private void GetInput()
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");
+        verticalInput = Input.GetAxisRaw("Vertical");       
 
         if (Input.GetButtonDown("Jump") && grounded)
             Jump();
@@ -96,4 +96,5 @@ public class PlayerMovement : MonoBehaviour
         else
             rb.drag = 0;
     }
+    
 }
