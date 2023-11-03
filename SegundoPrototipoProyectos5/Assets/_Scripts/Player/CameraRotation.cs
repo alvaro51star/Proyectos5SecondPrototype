@@ -6,27 +6,38 @@ using UnityEngine;
 public class CameraRotation : MonoBehaviour
 {
     [SerializeField, Range(0,50)] private float sensitivityX, sensitivityY;
+    [SerializeField, Range(0,90)] private float limitAngleX;
 
-    private float yRotation, XRotation;
-    private Transform m_cameraPosition;
+    private float yRotation, xRotation;
+    private Transform m_orientationPlayer;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        m_cameraPosition = GameManager.instance.player.GetComponent<PlayerMovement>().cameraPosition;
+        m_orientationPlayer = GameManager.instance.player.GetComponent<PlayerMovement>().orientation;
     }
 
     private void Update()
+    {
+        RotateCamera();
+        RotatePlayer();        
+    }
+
+    private void RotateCamera()
     {
         float mouseX = Input.GetAxis("Mouse X") * sensitivityX;
         float mouseY = Input.GetAxis("Mouse Y") * sensitivityY;
 
         yRotation += mouseX;
-        XRotation -= mouseY;
-        XRotation = Mathf.Clamp(XRotation, -90f, 90f);
+        xRotation -= mouseY;
+        xRotation = Mathf.Clamp(xRotation, -limitAngleX, limitAngleX);
 
-        transform.rotation = Quaternion.Euler(XRotation, yRotation, 0);
-        m_cameraPosition.rotation = Quaternion.Euler(0, yRotation, 0);
+        transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);        
+    }
+
+    private void RotatePlayer()
+    {        
+        m_orientationPlayer.rotation = Quaternion.Euler(0, yRotation, 0);
     }
 }

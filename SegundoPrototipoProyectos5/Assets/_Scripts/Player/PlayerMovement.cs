@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerMovement : MonoBehaviour
@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("HAY QUE PONER AL SUELO LA LAYER GROUND PARA QUE FUNCIONE EL MOVIMIENTO")]
 
     public Transform cameraPosition;
+    public Transform orientation;
 
     [Header("Movement")]
     [SerializeField] private float speed;
@@ -20,30 +21,28 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Jump")]
     [SerializeField] private float jumpForce;
-    [SerializeField] private float airResistance;
+    [SerializeField, Range (0,1)] private float airResistance;
    
     
-    private Rigidbody rb;
-    private Transform orientation;
-    private float horizontalInput;
-    private float verticalInput;
-    private Vector3 moveDirection;
+    private Rigidbody m_rb;
+    private float m_horizontalInput;
+    private float m_verticalInput;
+    private Vector3 m_moveDirection;
 
-    private GroundCheck groundCheck;
-    private bool grounded;
+    private GroundCheck m_groundCheck;
+    private bool m_grounded;
 
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        orientation = GetComponent<Transform>();
-        rb.freezeRotation = true;
-        groundCheck = groundCheckObject.GetComponent<GroundCheck>();
+        m_rb = GetComponent<Rigidbody>();
+        m_rb.freezeRotation = true;
+        m_groundCheck = groundCheckObject.GetComponent<GroundCheck>();
     }
 
     private void Update()
     {
-        grounded = groundCheck.isGrounded;
+        m_grounded = m_groundCheck.isGrounded;
 
         GetInput();
         SpeedControl();
@@ -57,44 +56,43 @@ public class PlayerMovement : MonoBehaviour
 
     private void GetInput()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        verticalInput = Input.GetAxisRaw("Vertical");       
+        m_horizontalInput = Input.GetAxisRaw("Horizontal");
+        m_verticalInput = Input.GetAxisRaw("Vertical");       
 
-        if (Input.GetButtonDown("Jump") && grounded)
+        if (Input.GetButtonDown("Jump") && m_grounded)
             Jump();
     }
 
     private void MovePlayer()
     {
-        moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
-        
-        if(grounded)
-            rb.AddForce(moveDirection.normalized * (speed * 10f), ForceMode.Force); //sin el 10 va muy lento
-        else if(!grounded)
-            rb.AddForce(moveDirection.normalized * (speed * 10f * airResistance), ForceMode.Force);
+        m_moveDirection = orientation.forward * m_verticalInput + orientation.right * m_horizontalInput;
+
+        if (m_grounded)
+            m_rb.AddForce(m_moveDirection.normalized * (speed * 10f), ForceMode.Force); //sin el 10 va muy lento
+        else if(!m_grounded)
+            m_rb.AddForce(m_moveDirection.normalized * (speed * 10f * airResistance), ForceMode.Force);
     }
 
     private void SpeedControl()
     {
-        Vector3 actualSpeed = new Vector3(rb.velocity.x, 0, rb.velocity.z);
+        Vector3 actualSpeed = new Vector3(m_rb.velocity.x, 0, m_rb.velocity.z);
 
         if(actualSpeed.magnitude > speed)
         {
             Vector3 limitedSpeed = actualSpeed.normalized * speed;
-            rb.velocity = new Vector3(limitedSpeed.x, rb.velocity.y, limitedSpeed.z);
+            m_rb.velocity = new Vector3(limitedSpeed.x, m_rb.velocity.y, limitedSpeed.z);
         }
     }
     private void Jump()
     {
-        rb.velocity = new Vector3(rb.velocity.x, 0, rb.velocity.z); //si no reseteas la v.y y vuelves a saltar salta muy alto
-        rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);               
+        m_rb.velocity = new Vector3(m_rb.velocity.x, 0, m_rb.velocity.z); //si no reseteas la v.y y vuelves a saltar salta muy alto
+        m_rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);               
     }
     private void HandleDrag()
     {
-        if (grounded)
-            rb.drag = groundDrag;
+        if (m_grounded)
+            m_rb.drag = groundDrag;
         else
-            rb.drag = 0;
-    }
-    
+            m_rb.drag = 0;
+    }    
 }
