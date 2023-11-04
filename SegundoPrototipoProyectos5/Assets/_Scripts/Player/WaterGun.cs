@@ -49,13 +49,6 @@ public class WaterGun : MonoBehaviour
             canMoveWithWater = false;
             DisableWater();
         }
-
-        /*if (groundCheck.isGrounded)
-        {
-            currentWater = maxWater; //!Esto puede cambiar a que haya otras fuentes de agua.
-        }*/
-
-        Debug.Log(currentWater);
     }
 
     private void FixedUpdate()
