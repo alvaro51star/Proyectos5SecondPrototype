@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WaterBehaviour : MonoBehaviour
 {
+    [SerializeField] private ParticleSystem waterParticleSystem;
+
     private void OnParticleCollision(GameObject other)
     {
         if (other.gameObject.CompareTag("Fire"))
