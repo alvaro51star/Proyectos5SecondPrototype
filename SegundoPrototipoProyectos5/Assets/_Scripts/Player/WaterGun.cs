@@ -21,6 +21,7 @@ public class WaterGun : MonoBehaviour
 
     private void Start()
     {
+        waterParticleSystem.Play();
         currentWater = maxWater;
         playerCamera = Camera.main.transform;
         rb = GetComponent<Rigidbody>();
@@ -31,19 +32,22 @@ public class WaterGun : MonoBehaviour
         if (Input.GetButton("Fire1") && currentWater > 0)
         {
             currentWater -= Time.deltaTime;
-            waterParticleSystem.Play();
+            EnableWater();
 
-            if (!groundCheck.isGrounded){
+
+            if (!groundCheck.isGrounded)
+            {
                 canMoveWithWater = true;
             }
-            else{
+            else
+            {
                 canMoveWithWater = false;
             }
         }
         else
         {
             canMoveWithWater = false;
-            waterParticleSystem.Stop();
+            DisableWater();
         }
 
         /*if (groundCheck.isGrounded)
@@ -67,4 +71,26 @@ public class WaterGun : MonoBehaviour
     {
         currentWater = maxWater;
     }
+
+    private void EnableWater()
+    {
+        var emission = waterParticleSystem.emission;
+        emission.enabled = true;
+    }
+
+    private void DisableWater()
+    {
+        var emission = waterParticleSystem.emission;
+        emission.enabled = false;
+    }
+
+    public bool IsWaterGunFull()
+    {
+        if (currentWater >= maxWater)
+        {
+            return true;
+        }
+        return false;
+    }
 }
+

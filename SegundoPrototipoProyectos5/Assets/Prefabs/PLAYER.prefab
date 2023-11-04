@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 638415888159416486}
   - component: {fileID: 1768818501296666720}
   - component: {fileID: 4685947481521286398}
+  - component: {fileID: 5736157976588476389}
   m_Layer: 0
   m_Name: PLAYER
   m_TagString: Untagged
@@ -150,6 +151,23 @@ MonoBehaviour:
   groundCheckObject: {fileID: 684129750678453289}
   jumpForce: 5
   airResistance: 0.4
+--- !u!114 &5736157976588476389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014656637676029967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb081130622ec364381bcad31dc065ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxWater: 5
+  thrustForce: 0.5
+  waterParticleSystem: {fileID: 0}
+  groundCheck: {fileID: 6322420422273886995}
+  playerCamera: {fileID: 0}
 --- !u!1 &2293468466200639612
 GameObject:
   m_ObjectHideFlags: 0

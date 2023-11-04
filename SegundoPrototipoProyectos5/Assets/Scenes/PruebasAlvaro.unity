@@ -467,7 +467,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 1.39
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3968,7 +3968,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     minKillSpeed: 0
-    maxKillSpeed: 10000
+    maxKillSpeed: 0
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
@@ -5056,17 +5056,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 230971223}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &281465814 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6322420422273886995, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
-  m_PrefabInstance: {fileID: 3616786890554995472}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c10d265e05a1d504899d7db22ab92745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &433732716
 GameObject:
   m_ObjectHideFlags: 0
@@ -5757,23 +5746,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2014656637676029967, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
   m_PrefabInstance: {fileID: 3616786890554995472}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1247170457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1247170451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb081130622ec364381bcad31dc065ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxWater: 5
-  thrustForce: 0.5
-  waterParticleSystem: {fileID: 214686309}
-  groundCheck: {fileID: 281465814}
-  playerCamera: {fileID: 0}
 --- !u!1 &1293682079
 GameObject:
   m_ObjectHideFlags: 0
@@ -6166,16 +6138,74 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4685947481521286398, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
       propertyPath: jumpForce
-      value: 10
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5736157976588476389, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+      propertyPath: waterParticleSystem
+      value: 
+      objectReference: {fileID: 214686309}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+--- !u!1001 &6817004230041366208
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3682588053711922339, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_Name
+      value: WaterBarrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008859527398957093, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008859527398957093, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008859527398957093, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008859527398957093, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008859527398957093, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008859527398957093, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008859527398957093, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008859527398957093, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008859527398957093, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6008859527398957093, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2014656637676029967, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1247170457}
-  m_SourcePrefab: {fileID: 100100000, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -6184,3 +6214,4 @@ SceneRoots:
   - {fileID: 3616786890554995472}
   - {fileID: 477998853}
   - {fileID: 2000739449}
+  - {fileID: 6817004230041366208}
