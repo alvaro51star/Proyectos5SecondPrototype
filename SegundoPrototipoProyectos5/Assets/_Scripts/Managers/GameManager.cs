@@ -6,20 +6,26 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    //Events
     public delegate void GameOver();
     public static event GameOver OnGameOver;
+    public delegate void OnVariableChangeDelegate(float newVal);
+    public static event OnVariableChangeDelegate OnTimeChange;
+
 
     public GameObject player;
 
-    [SerializeField] private float maxTimeLevel;
+    [SerializeField] public float maxTimeLevel;
     private float currentTime;
+    private float tempTime;
+
     private bool isDone = false;
 
-    
 
     private void Start()
     {
         currentTime = maxTimeLevel;
+        tempTime = currentTime;
     }
 
     private void Awake()
@@ -35,11 +41,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void Update() {
-        currentTime -= Time.deltaTime;
+    private void Update()
+    {
+        if (currentTime > 0)
+        {
+            currentTime -= Time.deltaTime;
+        }
 
         if (currentTime <= 0 && !isDone)
         {
+            currentTime = 0;
             isDone = true;
             if (OnGameOver != null)
             {
@@ -47,7 +58,15 @@ public class GameManager : MonoBehaviour
                 Debug.Log("alo");
             }
         }
+
+        CheckTimerValueChange();
     }
 
-
+    private void CheckTimerValueChange()
+    {
+        if(tempTime != currentTime && OnTimeChange != null){
+            tempTime = currentTime;
+            OnTimeChange(currentTime);
+        }
+    }
 }
