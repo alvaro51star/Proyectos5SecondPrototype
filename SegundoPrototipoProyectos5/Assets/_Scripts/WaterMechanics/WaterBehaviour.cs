@@ -5,12 +5,13 @@ using UnityEngine;
 public class WaterBehaviour : MonoBehaviour
 {
     [SerializeField] private ParticleSystem waterParticleSystem;
+    [SerializeField] private float damage = 10f;
 
     private void OnParticleCollision(GameObject other)
     {
         if (other.gameObject.CompareTag("Fire"))
         {
-            other.GetComponent<WaterDamage>().Damage(10);
+            other.GetComponent<WaterDamage>().Damage(damage);
         }
     }
 }
