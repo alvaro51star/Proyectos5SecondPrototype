@@ -5,7 +5,8 @@ using UnityEngine;
 public class WaterDamage : MonoBehaviour
 {
     [SerializeField] private float life = 300f;
-
+    [SerializeField] Fire Fire;
+   
     private void Update()
     {
         if (life <= 0)
