@@ -889,6 +889,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 477998853}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1040428985 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6525873057770159880, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+  m_PrefabInstance: {fileID: 6817004230041366208}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1040428989
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1040428985}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: c534a0b83197c86439c6e036547f282d, type: 3}
 --- !u!1 &1095114470
 GameObject:
   m_ObjectHideFlags: 0
@@ -1058,6 +1085,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2122113502}
+  - {fileID: 1874193947}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1270060867
@@ -1746,7 +1774,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 2054700190}
-  text: {fileID: 1432309034}
 --- !u!114 &1832562654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1785,6 +1812,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832562651}
   m_CullTransparentMesh: 1
+--- !u!1 &1874193946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1874193947}
+  m_Layer: 0
+  m_Name: PONER QUE RECOJAS AGUA CON LA E
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1874193947
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874193946}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1264558447}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2000739447
 GameObject:
   m_ObjectHideFlags: 0
@@ -1815,7 +1873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1247170451}
-  maxTimeLevel: 5
+  maxTimeLevel: 90
 --- !u!4 &2000739449
 Transform:
   m_ObjectHideFlags: 0
@@ -2208,6 +2266,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 708749262992112534, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_Size.x
+      value: 2.3830097
+      objectReference: {fileID: 0}
+    - target: {fileID: 708749262992112534, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_Size.y
+      value: 2.6915247
+      objectReference: {fileID: 0}
+    - target: {fileID: 708749262992112534, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_Size.z
+      value: 2.3830097
+      objectReference: {fileID: 0}
+    - target: {fileID: 708749262992112534, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_Center.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 708749262992112534, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3447294765657419604, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3682588053711922339, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
       propertyPath: m_Name
       value: WaterBarrel
@@ -2255,7 +2337,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6525873057770159880, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1040428989}
   m_SourcePrefab: {fileID: 100100000, guid: 517760c8da3f17848bcd9344845591d2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
