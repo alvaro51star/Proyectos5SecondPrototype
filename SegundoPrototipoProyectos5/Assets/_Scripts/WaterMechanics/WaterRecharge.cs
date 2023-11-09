@@ -14,7 +14,6 @@ public class WaterRecharge : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.E))
             {
-                print("Pulsando E");
                 if (!empty && !other.GetComponent<WaterGun>().IsWaterGunFull())
                 {
                     other.gameObject.GetComponent<WaterGun>().RechargeWater();

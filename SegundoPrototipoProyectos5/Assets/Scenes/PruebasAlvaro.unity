@@ -628,8 +628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f0811bf5c6aca74c961b6eaaed6897b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 300
-  Fire: {fileID: 0}
+  maxLife: 0
 --- !u!1 &752551058
 GameObject:
   m_ObjectHideFlags: 0
@@ -1163,8 +1162,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2122113502}
-  - {fileID: 1874193947}
   - {fileID: 1319143881}
+  - {fileID: 1874193947}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1270060867
@@ -1787,6 +1786,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 23553052793669848, guid: ffc0ad7e0eac29c41b6f95457d9f7594, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 23553052793669848, guid: ffc0ad7e0eac29c41b6f95457d9f7594, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 23553052793669848, guid: ffc0ad7e0eac29c41b6f95457d9f7594, type: 3}
+      propertyPath: m_DynamicOccludee
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 64627183470469398, guid: ffc0ad7e0eac29c41b6f95457d9f7594, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1906,7 +1917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1874193947
 Transform:
   m_ObjectHideFlags: 0
@@ -2259,6 +2270,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PLAYER
       objectReference: {fileID: 0}
+    - target: {fileID: 4045291357922798729, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5736157976588476389, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
       propertyPath: waterParticleSystem
       value: 
@@ -2276,6 +2291,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 264652360740151114, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 264652360740151114, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1072768215109496290, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
       propertyPath: m_IsActive
       value: 1
