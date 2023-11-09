@@ -5,7 +5,7 @@ using UnityEngine;
 public class WaterBehaviour : MonoBehaviour
 {
     [SerializeField] private ParticleSystem waterParticleSystem;
-    [SerializeField] private float damage = 10f;
+    [SerializeField] private float damage;
 
     private void OnParticleCollision(GameObject other)
     {

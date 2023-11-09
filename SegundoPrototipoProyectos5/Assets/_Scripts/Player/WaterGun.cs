@@ -29,7 +29,7 @@ public class WaterGun : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(currentWater);
+        //Debug.Log(currentWater);
 
         if (Input.GetButton("Fire1") && currentWater > 0)
         {
