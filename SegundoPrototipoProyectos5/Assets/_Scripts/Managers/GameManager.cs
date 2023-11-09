@@ -55,7 +55,6 @@ public class GameManager : MonoBehaviour
             if (OnGameOver != null)
             {
                 OnGameOver();
-                Debug.Log("alo");
             }
         }
 
@@ -64,7 +63,8 @@ public class GameManager : MonoBehaviour
 
     private void CheckTimerValueChange()
     {
-        if(tempTime != currentTime && OnTimeChange != null){
+        if (tempTime != currentTime && OnTimeChange != null)
+        {
             tempTime = currentTime;
             OnTimeChange(currentTime);
         }
