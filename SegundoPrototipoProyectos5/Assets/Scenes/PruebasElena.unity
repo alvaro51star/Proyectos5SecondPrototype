@@ -10335,6 +10335,11 @@ Transform:
   - {fileID: 1648701318}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &494262769 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3476746791584358532, guid: 2773811d89c208645bb742089f43611e, type: 3}
+  m_PrefabInstance: {fileID: 2491730833578855857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &504673184
 GameObject:
   m_ObjectHideFlags: 0
@@ -15719,6 +15724,30 @@ ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8857738758844113338, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
   m_PrefabInstance: {fileID: 542897344}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1383717609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6491665560624610239, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+  m_PrefabInstance: {fileID: 8896716179416503780}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &1383717610 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 4072101611327725883, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+  m_PrefabInstance: {fileID: 8896716179416503780}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1383717613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383717609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad7b0eb657852f43bcee3246e733788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireParticleSystem: {fileID: 1383717610}
+  damage: 1
 --- !u!1 &1535861638
 GameObject:
   m_ObjectHideFlags: 0
@@ -16185,6 +16214,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5347573569557167148, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8177794739573682663, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.27
@@ -16232,8 +16265,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8445084869772928660, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2491730833578855859}
   m_SourcePrefab: {fileID: 100100000, guid: 2773811d89c208645bb742089f43611e, type: 3}
+--- !u!1 &2491730833578855858 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8445084869772928660, guid: 2773811d89c208645bb742089f43611e, type: 3}
+  m_PrefabInstance: {fileID: 2491730833578855857}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2491730833578855859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2491730833578855858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dad7b0eb657852f43bcee3246e733788, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireParticleSystem: {fileID: 494262769}
+  damage: 1
 --- !u!1001 &3616786890554995472
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16319,6 +16374,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: BigFire
       objectReference: {fileID: 0}
+    - target: {fileID: 1104321357753266550, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072101611327725883, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072101611327725883, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072101611327725883, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4072101611327725883, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 375
+      objectReference: {fileID: 0}
     - target: {fileID: 5049831747175566955, guid: 32911777ebafe054398c452613d9f61b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -16359,10 +16434,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5195790541556710686, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6203424895299267899, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6491665560624610239, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8126207557726536802, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6491665560624610239, guid: 32911777ebafe054398c452613d9f61b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1383717613}
   m_SourcePrefab: {fileID: 100100000, guid: 32911777ebafe054398c452613d9f61b, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

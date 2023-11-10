@@ -6,6 +6,11 @@ public class LifeManager : MonoBehaviour
 {
     [SerializeField] private float life = 100f;
 
+    private void Update()
+    {
+        Debug.Log(life);
+    }
+
     public void Damage(float damage)
     {
         life -= damage;
