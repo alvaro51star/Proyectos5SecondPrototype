@@ -8,10 +8,12 @@ public class PickUpNPC : MonoBehaviour
     [SerializeField] private Transform pickUpPosition;
     private Rigidbody rb;
     [SerializeField] private float force = 10;
+    private ParachuteBehaviour parachuteBehaviour;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        parachuteBehaviour = GetComponent<ParachuteBehaviour>();
     }
 
     private void OnTriggerStay(Collider other)
@@ -19,15 +21,16 @@ public class PickUpNPC : MonoBehaviour
 
         if (Input.GetKey(KeyCode.E) && other.gameObject.CompareTag("Player") && !pickedUp)
         {
+            parachuteBehaviour.enabled = false;
             rb.useGravity = false;
             transform.SetParent(pickUpPosition);
             ResetTransform();
             pickedUp = true;
-            Debug.Log("Lo pillaste");
         }
 
         if (pickedUp && Input.GetKey(KeyCode.G))
         {
+            parachuteBehaviour.enabled = true;
             pickUpPosition.DetachChildren();
             rb.useGravity = true;
             rb.AddForce(Camera.main.transform.forward * force, ForceMode.Impulse);
