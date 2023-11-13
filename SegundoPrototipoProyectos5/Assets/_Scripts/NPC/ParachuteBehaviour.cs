@@ -12,7 +12,6 @@ public class ParachuteBehaviour : MonoBehaviour
 
     private bool isOpened = false;
 
-
     void Start()
     {
         rb = GetComponent<Rigidbody>();
