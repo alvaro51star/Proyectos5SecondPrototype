@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class Fire : MonoBehaviour
 {
-    [SerializeField] private float currentIntensity;
+    [Header("Only edit this:")]
     [SerializeField] private float regenTime = 2.5f;
     [SerializeField] private float regenRate = 5;
-
     [SerializeField] private ParticleSystem fireParticleSystem;
+    [Header("Don't edit this:")]
+    public float currentIntensity;
     public float maxEmissionRate;
-    private float timeLastWatered;
+    private float m_timeLastWatered;
 
     private void Awake()
     {
         maxEmissionRate = fireParticleSystem.emission.rateOverTime.constant;
         currentIntensity = maxEmissionRate;
-        timeLastWatered = regenTime;
+        m_timeLastWatered = regenTime;
     }
 
     private void Update()
     {
         Regeneration();
-        //Debug.Log(fireParticleSystem.emission.rateOverTime.constant);
     }
 
     public void Death()
@@ -43,16 +43,16 @@ public class Fire : MonoBehaviour
 
     public void DecreaseParticles(float removerOfIntensity)
     {
-        timeLastWatered = regenTime;
+        m_timeLastWatered = regenTime;
 
         currentIntensity  = removerOfIntensity;
         ChangeIntensity();        
     }
     private void Regeneration()
     {
-        timeLastWatered -= Time.deltaTime;
+        m_timeLastWatered -= Time.deltaTime;
 
-        if (currentIntensity < maxEmissionRate && timeLastWatered <= 0)
+        if (currentIntensity < maxEmissionRate && m_timeLastWatered <= 0)
         {
             currentIntensity += regenRate * Time.deltaTime;
             ChangeIntensity();

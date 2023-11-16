@@ -31,7 +31,6 @@ public class WaterDamage : MonoBehaviour
         life -= damage;
 
         float lessParticles = (maxEmissionRate * life) / maxLife;
-        //Debug.Log("less particles : " + lessParticles);
         fire.DecreaseParticles(lessParticles);
     }
 }
