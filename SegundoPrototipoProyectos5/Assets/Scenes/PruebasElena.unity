@@ -835,6 +835,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2014656637676029967, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
   m_PrefabInstance: {fileID: 3616786890554995472}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1247170452 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7645014570175704021, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+  m_PrefabInstance: {fileID: 3616786890554995472}
+  m_PrefabAsset: {fileID: 0}
 --- !u!198 &1304592587 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8857738758844113338, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
@@ -1096,17 +1101,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 729406146403972767, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1247170452}
     - target: {fileID: 2014656637676029967, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
       propertyPath: m_Name
       value: PLAYER
-      objectReference: {fileID: 0}
-    - target: {fileID: 4685947481521286398, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
-      propertyPath: jumpForce
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5736157976588476389, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
-      propertyPath: maxWater
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5736157976588476389, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
       propertyPath: playerCamera
@@ -1116,10 +1117,6 @@ PrefabInstance:
       propertyPath: waterParticleSystem
       value: 
       objectReference: {fileID: 1304592587}
-    - target: {fileID: 7645014570175704021, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

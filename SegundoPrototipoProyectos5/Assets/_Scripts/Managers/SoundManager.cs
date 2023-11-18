@@ -9,7 +9,8 @@ public enum AudioClipsNames
     Jump,
     Auch,
     FireWaterDamage,
-    FireDeath
+    FireDeath,
+    RechargeWater
 }
 
 

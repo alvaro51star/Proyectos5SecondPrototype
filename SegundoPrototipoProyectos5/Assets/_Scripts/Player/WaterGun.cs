@@ -15,6 +15,7 @@ public class WaterGun : MonoBehaviour
     [Header("Player variables")]
     [SerializeField] private GroundCheck groundCheck;
     [SerializeField] private Transform playerCamera;
+    [SerializeField] private AudioSource playerAudioSource;
 
 
     private bool canMoveWithWater = false;
@@ -65,6 +66,7 @@ public class WaterGun : MonoBehaviour
     public void RechargeWater()
     {
         currentWater = maxWater;
+        //SoundManager.instance.ReproduceSound(AudioClipsNames.RechargeWater, playerAudioSource);
     }
 
     private void EnableWater()
