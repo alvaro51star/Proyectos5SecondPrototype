@@ -8,6 +8,7 @@ public class Fire : MonoBehaviour
     [SerializeField] private float regenTime = 2.5f;
     [SerializeField] private float regenRate = 5;
     [SerializeField] private ParticleSystem fireParticleSystem;
+    [SerializeField] private FireLifeManager fireLifeManager;
     [Header("CUANTO MAS GRANDE MAS PARTICULAS HAY QUE PONER")]
     public float maxEmissionRate;
     [SerializeField, Range(0,1)] private float minParticleSizeMultiplier;
@@ -74,6 +75,8 @@ public class Fire : MonoBehaviour
             ChangeParticleSize();
             ChangeSize();
         }
+        if(currentIntensity == maxEmissionRate)
+            fireLifeManager.currentLife = fireLifeManager.maxLife;
     }
     private void ChangeParticleSize()
     {

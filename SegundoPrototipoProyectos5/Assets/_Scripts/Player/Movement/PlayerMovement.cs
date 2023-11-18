@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(AudioSource))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("HAY QUE PONER AL SUELO LA LAYER GROUND PARA QUE FUNCIONE EL MOVIMIENTO")]
@@ -25,6 +26,8 @@ public class PlayerMovement : MonoBehaviour
    
     
     private Rigidbody m_rb;
+    private AudioSource m_audioSource;
+
     private float m_horizontalInput;
     private float m_verticalInput;
     private Vector3 m_moveDirection;
@@ -38,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
         m_rb = GetComponent<Rigidbody>();
         m_rb.freezeRotation = true;
         m_groundCheck = groundCheckObject.GetComponent<GroundCheck>();
+
+        m_audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -86,7 +91,8 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         m_rb.velocity = new Vector3(m_rb.velocity.x, 0, m_rb.velocity.z); //si no reseteas la v.y y vuelves a saltar salta muy alto
-        m_rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);               
+        m_rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);        
+        //SoundManager.instance.ReproduceSound(AudioClipsNames.Jump, m_audioSource);
     }
     private void HandleDrag()
     {

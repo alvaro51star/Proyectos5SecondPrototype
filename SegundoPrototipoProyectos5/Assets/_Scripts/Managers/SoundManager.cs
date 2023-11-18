@@ -6,7 +6,10 @@ using UnityEngine.Audio;
 
 public enum AudioClipsNames
 {
-    
+    Jump,
+    Auch,
+    FireWaterDamage,
+    FireDeath
 }
 
 

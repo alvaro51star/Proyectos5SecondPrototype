@@ -11,7 +11,7 @@ public class WaterBehaviour : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Fire"))
         {
-            other.GetComponent<WaterDamage>().Damage(damage);
+            other.GetComponent<FireLifeManager>().Damage(damage);
         }
     }
 }
