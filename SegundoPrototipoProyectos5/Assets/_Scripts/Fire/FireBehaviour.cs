@@ -5,7 +5,6 @@ using UnityEngine;
 public class FireBehaviour : MonoBehaviour
 {
     [Header ("SOLO FUNCIONA EN EL GAMEOBJECT DEL SIST DE PARTICULAS")]
-    [SerializeField] private ParticleSystem fireParticleSystem;
     [SerializeField] private Fire fire;
     [Header("Segun la intensidad del fuego hara +o- damage")]
     [SerializeField] private float maxDamage;

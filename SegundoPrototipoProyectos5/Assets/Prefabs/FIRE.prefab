@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 5655035913104934351}
   - component: {fileID: 4046731746916425601}
   m_Layer: 7
-  m_Name: Fire_Yellow
+  m_Name: Fire_Yellow_ParticleSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4957,7 +4957,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireParticleSystem: {fileID: 3476746791584358532}
-  damage: 2
+  fire: {fileID: 15515355877161590}
+  maxDamage: 5
+  minDamage: 1
 --- !u!1 &6877162810971925220
 GameObject:
   m_ObjectHideFlags: 0
@@ -5038,10 +5040,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16256652c8cd8904a9ee7326c66d5ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentIntensity: 1
   regenTime: 2.5
   regenRate: 5
   fireParticleSystem: {fileID: 3476746791584358532}
+  currentIntensity: 1
   maxEmissionRate: 0
 --- !u!114 &5773075160410882408
 MonoBehaviour:
