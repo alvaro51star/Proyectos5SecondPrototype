@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Fire : MonoBehaviour
@@ -7,22 +8,28 @@ public class Fire : MonoBehaviour
     [SerializeField] private float regenTime = 2.5f;
     [SerializeField] private float regenRate = 5;
     [SerializeField] private ParticleSystem fireParticleSystem;
+    [Header("CUANTO MAS GRANDE MAS PARTICULAS HAY QUE PONER")]
+    public float maxEmissionRate;
     [SerializeField, Range(0,1)] private float minParticleSizeMultiplier;
     [SerializeField, Range(0, 1)] private float maxParticleSizeMultiplier;
-
-    public bool canChangeParticleSize;
-    
+    [SerializeField] private float maxScale;
+    [SerializeField] private float minScale;
+    [SerializeField] private BoxCollider boxCollider;
 
     [HideInInspector] public float currentIntensity;
-    [HideInInspector] public float maxEmissionRate;
     
     private float m_timeLastWatered;
+    private Vector3 m_InitialParticleSystemShapeScale;
 
     private void Awake()
     {
-        maxEmissionRate = fireParticleSystem.emission.rateOverTime.constant;
+        var fireEmissionRateOverTime = fireParticleSystem.emission.rateOverTime;
+        fireEmissionRateOverTime.constantMax = maxEmissionRate;
+
         currentIntensity = maxEmissionRate;
         m_timeLastWatered = regenTime;
+        m_InitialParticleSystemShapeScale = fireParticleSystem.shape.scale * maxScale;
+        ChangeSize();
     }
 
     private void Update()
@@ -35,25 +42,27 @@ public class Fire : MonoBehaviour
         if(currentIntensity <=0)
         {
             fireParticleSystem.Stop();
+            gameObject.SetActive(false);
             Destroy(gameObject);
         }
     }
-   
+    public void DecreaseParticles(float removerOfIntensity)
+    {
+        m_timeLastWatered = regenTime;
+
+        currentIntensity = removerOfIntensity;
+        ChangeIntensity();
+        ChangeParticleSize();
+        ChangeSize();
+    }
+
     private void ChangeIntensity()
     {
         currentIntensity = Mathf.Clamp(currentIntensity, 0f, maxEmissionRate);
         var emission = fireParticleSystem.emission;
         emission.rateOverTime = currentIntensity;
-        ChangeParticleSize();
     }
 
-    public void DecreaseParticles(float removerOfIntensity)
-    {
-        m_timeLastWatered = regenTime;
-
-        currentIntensity  = removerOfIntensity;
-        ChangeIntensity();        
-    }
     private void Regeneration()
     {
         m_timeLastWatered -= Time.deltaTime;
@@ -61,26 +70,50 @@ public class Fire : MonoBehaviour
         if (currentIntensity < maxEmissionRate && m_timeLastWatered <= 0)
         {
             currentIntensity += regenRate * Time.deltaTime;
-            ChangeIntensity();            
+            ChangeIntensity();
+            ChangeParticleSize();
+            ChangeSize();
         }
     }
     private void ChangeParticleSize()
-    {//dependiendo del currentIntensity, y por ende el emission.rateOverTime tendra una curva con valores mas o menos bajos
+    {
+        float particleSizeMultiplier = ((maxParticleSizeMultiplier * currentIntensity) / maxEmissionRate);
+        particleSizeMultiplier = Mathf.Clamp(particleSizeMultiplier, minParticleSizeMultiplier, maxParticleSizeMultiplier);
+        
         var particleSize = fireParticleSystem.sizeOverLifetime;
         particleSize.enabled = true;
 
+        if (currentIntensity <= maxEmissionRate * 0.9f)
+            particleSize.sizeMultiplier = particleSizeMultiplier;
 
-        AnimationCurve curve = new AnimationCurve();
-        curve.AddKey(0, 0.1f);
-        curve.AddKey(1.25f, 1.0f);
+        else
+            particleSize.sizeMultiplier = maxParticleSizeMultiplier;
+    }
 
-        if(canChangeParticleSize)
+    private void ChangeSize()
+    {
+        var particleSystemShape = fireParticleSystem.shape;
+        particleSystemShape.enabled = true;
+
+        if (currentIntensity <= maxEmissionRate * 0.9f)
         {
-            if (currentIntensity <= maxEmissionRate * 0.5f)
-                particleSize.size = new ParticleSystem.MinMaxCurve(minParticleSizeMultiplier, curve);
-            else
-                particleSize.size = new ParticleSystem.MinMaxCurve(maxParticleSizeMultiplier, curve);
-        }
+            float sizeMultiplier = ((currentIntensity * maxScale) / maxEmissionRate);
+            Vector3 newScale = Vector3.one * sizeMultiplier;
+            particleSystemShape.scale = newScale;
 
+            ChangeColliderSize(sizeMultiplier);
+        }
+        else
+        {
+            particleSystemShape.scale = m_InitialParticleSystemShapeScale;
+            ChangeColliderSize(maxScale);
+        }
+    }
+
+    private void ChangeColliderSize(float scaleMultiplier)
+    {
+        boxCollider.size = Vector3.one * scaleMultiplier;
+
+        boxCollider.center = new Vector3 (0, scaleMultiplier* 0.5f,0);
     }
 }

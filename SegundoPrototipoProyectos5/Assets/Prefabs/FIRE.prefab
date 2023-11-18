@@ -1,5 +1,73 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2168654796776432024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3013153578239551936}
+  - component: {fileID: 6199324343387522397}
+  - component: {fileID: 4039106458010665796}
+  m_Layer: 7
+  m_Name: BoxCollider
+  m_TagString: Fire
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3013153578239551936
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2168654796776432024}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8177794739573682663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &6199324343387522397
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2168654796776432024}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4039106458010665796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2168654796776432024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f0811bf5c6aca74c961b6eaaed6897b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxLife: 100
+  fire: {fileID: 1793371952872935867}
 --- !u!1 &5175999067266274948
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,8 +175,8 @@ GameObject:
   - component: {fileID: 5655035913104934351}
   - component: {fileID: 4046731746916425601}
   m_Layer: 7
-  m_Name: Fire_Yellow_ParticleSystem
-  m_TagString: Untagged
+  m_Name: ParticleSystem
+  m_TagString: Fire
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +194,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5869545198652131954}
+  m_Father: {fileID: 8177794739573682663}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!198 &3476746791584358532
 ParticleSystem:
@@ -699,7 +767,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 50
+    maxNumParticles: 350
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -759,11 +827,11 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 5
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 0
+    radiusThickness: 1
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -965,7 +1033,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 12
+      scalar: 80
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4956,8 +5024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dad7b0eb657852f43bcee3246e733788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireParticleSystem: {fileID: 3476746791584358532}
-  fire: {fileID: 15515355877161590}
+  fire: {fileID: 1793371952872935867}
   maxDamage: 5
   minDamage: 1
 --- !u!1 &6877162810971925220
@@ -4989,7 +5056,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8781789526509267800}
   - {fileID: 8755077748344940049}
   m_Father: {fileID: 8177794739573682663}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5002,9 +5068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8177794739573682663}
-  - component: {fileID: 15515355877161590}
-  - component: {fileID: 5773075160410882408}
-  - component: {fileID: 5347573569557167148}
+  - component: {fileID: 1793371952872935867}
   m_Layer: 7
   m_Name: FIRE
   m_TagString: Fire
@@ -5025,10 +5089,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8781789526509267800}
+  - {fileID: 3013153578239551936}
   - {fileID: 5869545198652131954}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &15515355877161590
+--- !u!114 &1793371952872935867
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5043,39 +5109,10 @@ MonoBehaviour:
   regenTime: 2.5
   regenRate: 5
   fireParticleSystem: {fileID: 3476746791584358532}
-  currentIntensity: 1
-  maxEmissionRate: 0
---- !u!114 &5773075160410882408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445084869772928660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f0811bf5c6aca74c961b6eaaed6897b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxLife: 100
---- !u!65 &5347573569557167148
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8445084869772928660}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.5, y: 2, z: 0.5}
-  m_Center: {x: 0, y: 1, z: 0}
+  maxEmissionRate: 80
+  minParticleSizeMultiplier: 0.01
+  maxParticleSizeMultiplier: 1
+  maxScale: 3
+  minScale: 0.5
+  boxCollider: {fileID: 6199324343387522397}
+  currentIntensity: 0
