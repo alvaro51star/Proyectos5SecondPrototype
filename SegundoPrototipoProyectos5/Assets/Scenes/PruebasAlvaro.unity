@@ -2631,6 +2631,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1461052314271276659, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 8d6835bdfe98b57438d1cec7dfb25691, type: 2}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.21
@@ -2671,13 +2675,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4185619167809004255, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-      propertyPath: CollisionModule.colliderForce
-      value: 20
-      objectReference: {fileID: 0}
+    - target: {fileID: 4661215286719103394, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 8d6835bdfe98b57438d1cec7dfb25691, type: 2}
+    - target: {fileID: 4778301157051544009, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 8d6835bdfe98b57438d1cec7dfb25691, type: 2}
     - target: {fileID: 7169669320638059221, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_Name
       value: PlayerYCamara
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599929503299137341, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599929503299137341, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: m_ImplicitCom
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599929503299137341, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7599929503299137341, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: m_ImplicitTensor
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
