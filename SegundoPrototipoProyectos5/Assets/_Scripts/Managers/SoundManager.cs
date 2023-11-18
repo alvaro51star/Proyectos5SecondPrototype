@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,6 @@ public enum AudioClipsNames
 
 public class SoundManager : MonoBehaviour
 {
-
     [SerializeField] private List<AudioClip> soundList;
 
     public static SoundManager instance;
@@ -34,6 +34,11 @@ public class SoundManager : MonoBehaviour
         audioSource.PlayOneShot(soundList[(int)clipName]);
     }
 
+    public void ReproduceSound(AudioClipsNames clipName)
+    {
+        managerAudioSource.PlayOneShot(instance.soundList[(int)clipName]);
+    }
+
     public void ReproduceSound(AudioClip audioClip, AudioSource audioSource)
     {
         audioSource.PlayOneShot(audioClip);
@@ -44,8 +49,4 @@ public class SoundManager : MonoBehaviour
         managerAudioSource.PlayOneShot(audioClip);
     }
 
-    public void ReproduceSound(AudioClipsNames clipName)
-    {
-        managerAudioSource.PlayOneShot(instance.soundList[(int)clipName]);
-    }
 }
