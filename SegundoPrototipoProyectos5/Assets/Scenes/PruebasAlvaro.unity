@@ -2671,6 +2671,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4185619167809004255, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: CollisionModule.colliderForce
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7169669320638059221, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_Name
       value: PlayerYCamara

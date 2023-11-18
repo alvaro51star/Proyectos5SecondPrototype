@@ -221,7 +221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8857738758844113338, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
       propertyPath: CollisionModule.colliderForce
-      value: 0
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8857738758844113338, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
       propertyPath: EmissionModule.m_Bursts.Array.size
