@@ -69,4 +69,9 @@ public class GameManager : MonoBehaviour
             OnTimeChange(currentTime);
         }
     }
+
+    public void InvokeGameOver()
+    {
+        OnGameOver.Invoke();
+    }
 }
