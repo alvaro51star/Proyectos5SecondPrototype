@@ -50,10 +50,12 @@ public class UIController : MonoBehaviour
 
     public void CursorVisible()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         Cursor.visible = true;
     }
     public void CursorInvisible()
     {
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 }

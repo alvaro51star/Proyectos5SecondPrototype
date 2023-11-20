@@ -5,30 +5,32 @@ using UnityEngine.SceneManagement;
 
 public class UI_Manager2 : MonoBehaviour
 {
+    [SerializeField] NextSceneIndex nextSceneIndex;
+
     public UIController m_uiController;
 
     private int initialScene = 0;
     private int levelSelectionScene = 1;
     private int tutorialLevelScene = 2;
-    private int nextSceneLoad;
+    private int m_nextSceneIndex;
 
     public bool isPaused = false;
 
     private void Start()
     {
         UIController.instance.EnabledPauseMenu(false);
-        nextSceneLoad = SceneManager.GetActiveScene().buildIndex + 1;
-    }
-
-    public void GoToInitialMenu()
-    {
-        SceneManager.LoadScene(initialScene);
+        m_nextSceneIndex = nextSceneIndex.nextSceneLoad;
     }
 
     public void QuitGame()
     {
         // Application.Quit();
         Debug.Log("Quit Game");
+    }
+
+    public void GoToInitialMenu()
+    {
+        SceneManager.LoadScene(initialScene);
     }
 
     public void GoToLevelsMenu()
@@ -43,14 +45,14 @@ public class UI_Manager2 : MonoBehaviour
         SceneManager.LoadScene(tutorialLevelScene);
     }
 
-    public void GoToNextLevel()
+    /* public void GoToNextLevel()
     {
-        SceneManager.LoadScene(nextSceneLoad);
-        if (nextSceneLoad > PlayerPrefs.GetInt("LevelProgress"))
+        if (m_nextSceneIndex > PlayerPrefs.GetInt("LevelProgress"))
         {
-            PlayerPrefs.SetInt("LevelProgress", nextSceneLoad);
+            PlayerPrefs.SetInt("LevelProgress", m_nextSceneIndex);
         }
-    }
+        SceneManager.LoadScene(m_nextSceneIndex);
+    } */
     
     public void PauseMenu()
     {

@@ -446,6 +446,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5736157976588476389, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+      propertyPath: playerCamera
+      value: 
+      objectReference: {fileID: 2109378543172130808}
+    - target: {fileID: 5736157976588476389, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
       propertyPath: waterParticleSystem
       value: 
       objectReference: {fileID: 4185619167809004255}
@@ -460,8 +464,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2014656637676029967, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5904537284865537756}
   m_SourcePrefab: {fileID: 100100000, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+--- !u!1 &7638451427510771538 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2014656637676029967, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+  m_PrefabInstance: {fileID: 8211263422307424093}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &5904537284865537756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7638451427510771538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31800eae2c8fee541a1110ca0b6cc641, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8730332666194294779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 638415888159416486, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
