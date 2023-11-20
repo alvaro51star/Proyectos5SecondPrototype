@@ -19,7 +19,7 @@ public class FireBehaviour : MonoBehaviour
     
     private void DamageControl()
     {
-        //según la intensidad del fuego hará más o menos daño MEJORAR ESTO SEGUN FEEDBACK
+        //segun la intensidad del fuego hara mas o menos daño MEJORAR ESTO SEGUN FEEDBACK
         float intensity = fire.currentIntensity;
 
         if (intensity < (m_maxEmissionRate * 0.5f))
