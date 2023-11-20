@@ -242,9 +242,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337892199f034054db66724777571779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneIndex: {fileID: 1959272659}
   m_uiController: {fileID: 897311366}
   isPaused: 0
+  islevelCompleted: 0
 --- !u!4 &1112176192
 Transform:
   m_ObjectHideFlags: 0
@@ -541,51 +541,6 @@ MonoBehaviour:
   - {fileID: 1225069535}
   - {fileID: 1641400016}
   - {fileID: 1203854297}
---- !u!1 &1959272658
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1959272660}
-  - component: {fileID: 1959272659}
-  m_Layer: 0
-  m_Name: IndexScene
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1959272659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959272658}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d62bbd2a8fc57b42b4e3933d05445fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneLoad: 0
---- !u!4 &1959272660
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959272658}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.384789, y: 6.350152, z: 4.4218416}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2144115530 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4025226309502595295, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
@@ -789,7 +744,6 @@ SceneRoots:
   - {fileID: 1855288174}
   - {fileID: 1275977954}
   - {fileID: 1886859496}
-  - {fileID: 1959272660}
   - {fileID: 1112176192}
   - {fileID: 5908682804420115052}
   - {fileID: 710480751}
