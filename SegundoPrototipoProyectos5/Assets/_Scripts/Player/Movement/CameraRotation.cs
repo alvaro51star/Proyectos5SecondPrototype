@@ -15,7 +15,6 @@ public class CameraRotation : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        //m_orientationPlayer = GameManager.instance.player.GetComponent<PlayerMovement>().orientation;
     }
 
     private void Update()
