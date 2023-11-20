@@ -5,11 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MoveToNextLevel : MonoBehaviour
 {
+    [SerializeField] UI_Manager2 m_uiManager2;
+
     public UIController m_uiController;
 
     private int m_nextSceneIndex;
     private int lastLevel = 4;   // el número del último nivel
-    private int victoryScene = 5;   // o el que sea según el número de niveles
 
     void Start()
     {
@@ -27,13 +28,12 @@ public class MoveToNextLevel : MonoBehaviour
             }
             else
             {
-                //UIController.instance.CursorVisible();
-                //SceneManager.LoadScene(victoryScene);
                 if (m_nextSceneIndex > PlayerPrefs.GetInt("LevelProgress"))
                 {
                     PlayerPrefs.SetInt("LevelProgress", m_nextSceneIndex);
                 }
                 SceneManager.LoadScene(m_nextSceneIndex);
+                m_uiManager2.LevelCompleted();
             }
         }
     }

@@ -279,51 +279,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7638451427510771538, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
   m_PrefabInstance: {fileID: 352731479}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &674499687
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 674499689}
-  - component: {fileID: 674499688}
-  m_Layer: 0
-  m_Name: LevelManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &674499688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674499687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d62bbd2a8fc57b42b4e3933d05445fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneLoad: 0
---- !u!4 &674499689
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674499687}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.384789, y: 6.350152, z: 4.4218416}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1000089810
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,6 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30e26cb9db6fbd4c897e954859c874c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_uiManager2: {fileID: 0}
   m_uiController: {fileID: 1891043288}
 --- !u!65 &1169406545
 BoxCollider:
@@ -578,9 +534,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 337892199f034054db66724777571779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneIndex: {fileID: 674499688}
   m_uiController: {fileID: 1891043288}
   isPaused: 0
+  islevelCompleted: 0
 --- !u!1 &1626494154
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,7 +744,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4967308592660129808, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: GoToNextLevel
+      value: LevelCompleted
       objectReference: {fileID: 0}
     - target: {fileID: 4967308592660129808, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1023,4 +979,3 @@ SceneRoots:
   - {fileID: 1000089811}
   - {fileID: 1169406548}
   - {fileID: 1036783682}
-  - {fileID: 674499689}
