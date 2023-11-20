@@ -4,16 +4,56 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
-    public GameObject m;
-    // Start is called before the first frame update
-    void Start()
+    public static UIController instance;
+
+    public GameObject m_initialMenu;
+    public GameObject m_levelsMenu;
+    public GameObject m_pauseMenu;
+    public GameObject m_victoryMenu;
+    public GameObject m_gameOverMenu;
+
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EnabledInitialMenu(bool isActive)
     {
-        
+        m_initialMenu.SetActive(isActive);
+    }
+
+    public void EnabledLevelsMenu(bool isActive)
+    {
+        m_levelsMenu.SetActive(isActive);
+    }
+
+    public void EnabledPauseMenu(bool isActive)
+    {
+        m_pauseMenu.SetActive(isActive);
+    }
+    public void EnabledVictoryMenu(bool isActive)
+    {
+        m_victoryMenu.SetActive(isActive);
+    }
+
+    public void EnabledGameOverMenu(bool isActive)
+    {
+        m_gameOverMenu.SetActive(isActive);
+    }
+
+    public void CursorVisible()
+    {
+        Cursor.visible = true;
+    }
+    public void CursorInvisible()
+    {
+        Cursor.visible = false;
     }
 }
