@@ -2688,14 +2688,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1383372217400752255, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1973262535509741267, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-      propertyPath: limitAngleX
-      value: 80
-      objectReference: {fileID: 0}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.x
       value: -34.21
@@ -2736,25 +2728,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5327229557097274779, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7169669320638059221, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_Name
       value: PlayerYCamara
-      objectReference: {fileID: 0}
-    - target: {fileID: 7638451427510771538, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7935428275213971233, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8685966976461171572, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-      propertyPath: m_Layer
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

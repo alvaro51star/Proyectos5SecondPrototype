@@ -9,13 +9,13 @@ public class CameraRotation : MonoBehaviour
     [SerializeField, Range(0,90)] private float limitAngleX;
 
     private float yRotation, xRotation;
-    private Transform m_orientationPlayer;
+    [SerializeField] private Transform m_orientationPlayer;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        m_orientationPlayer = GameManager.instance.player.GetComponent<PlayerMovement>().orientation;
+        //m_orientationPlayer = GameManager.instance.player.GetComponent<PlayerMovement>().orientation;
     }
 
     private void Update()
