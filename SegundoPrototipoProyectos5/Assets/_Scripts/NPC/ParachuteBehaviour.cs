@@ -19,8 +19,6 @@ public class ParachuteBehaviour : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(rb.velocity.y);
-
         if (isOpened)
         {
             LimitVerticalSpeed();

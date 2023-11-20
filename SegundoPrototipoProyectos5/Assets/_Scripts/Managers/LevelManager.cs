@@ -31,6 +31,7 @@ public class LevelManager : MonoBehaviour
     public void UpdateLevelProgress(int level)
     {
         PlayerPrefs.SetInt("LevelProgress", level);
+        PlayerPrefs.Save();
     }
 
     public void EnableButtons()
