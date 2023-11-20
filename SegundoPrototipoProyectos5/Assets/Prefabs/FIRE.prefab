@@ -5117,7 +5117,7 @@ MonoBehaviour:
   minParticleSizeMultiplier: 0.01
   maxParticleSizeMultiplier: 1
   maxScale: 3
-  minScale: 0.5
+  minScale: 1
   boxCollider: {fileID: 6199324343387522397}
   currentIntensity: 0
 --- !u!82 &510250210287216393

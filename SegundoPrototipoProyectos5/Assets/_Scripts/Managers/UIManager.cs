@@ -5,6 +5,9 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverPanel;
+    //[SerializeField] private GameObject pauseMenu;
+    //[SerializeField] private GameObject congratulationsPanel;
+    //[SerializeField] private GameObject exitLevelMenu;
 
     private void OnEnable()
     {
