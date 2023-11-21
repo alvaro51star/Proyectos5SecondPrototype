@@ -9,12 +9,12 @@ public class MoveToNextLevel : MonoBehaviour
 
     public UIController m_uiController;
 
-    private int m_nextSceneIndex;
+    private int nextSceneIndex;
     private int lastLevel = 4;   // el número del último nivel
 
     void Start()
     {
-        m_nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -28,12 +28,11 @@ public class MoveToNextLevel : MonoBehaviour
             }
             else
             {
-                if (m_nextSceneIndex > PlayerPrefs.GetInt("LevelProgress"))
+                if (nextSceneIndex > PlayerPrefs.GetInt("LevelProgress"))
                 {
-                    PlayerPrefs.SetInt("LevelProgress", m_nextSceneIndex);
+                    PlayerPrefs.SetInt("LevelProgress", nextSceneIndex);
                 }
-                m_uiManager2.LevelCompleted();
-                SceneManager.LoadScene(m_nextSceneIndex);
+                SceneManager.LoadScene(nextSceneIndex);
             }
         }
     }

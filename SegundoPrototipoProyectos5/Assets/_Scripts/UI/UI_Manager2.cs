@@ -10,6 +10,7 @@ public class UI_Manager2 : MonoBehaviour
     private int initialScene = 0;
     private int levelSelectionScene = 1;
     private int tutorialLevelScene = 2;
+    private int victoryScene = 5;
 
     public bool isPaused = false;
     public bool islevelCompleted = false;
@@ -17,7 +18,15 @@ public class UI_Manager2 : MonoBehaviour
     private void Start()
     {
         UIController.instance.EnabledPauseMenu(false);
-        UIController.instance.EnabledVictoryMenu(false);
+        if(SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < victoryScene)
+        {
+            UIController.instance.EnabledVictoryMenu(true);
+            LevelCompleted();
+        }
+        else
+        {
+            UIController.instance.EnabledVictoryMenu(false);
+        }
     }
 
     public void QuitGame()
@@ -46,9 +55,9 @@ public class UI_Manager2 : MonoBehaviour
     public void LevelCompleted()
     {
         islevelCompleted = !islevelCompleted;
+
         if (islevelCompleted)
         {
-            Debug.Log("inicio del if");
             UIController.instance.CursorVisible();
             Time.timeScale = 0;
             UIController.instance.EnabledInitialMenu(false);
@@ -56,11 +65,9 @@ public class UI_Manager2 : MonoBehaviour
             UIController.instance.EnabledPauseMenu(false);
             UIController.instance.EnabledVictoryMenu(true);
             UIController.instance.EnabledGameOverMenu(false);
-            Debug.Log("fin del if");
         }
         else
         {
-            Debug.Log("inicio del else");
             UIController.instance.CursorInvisible();
             Time.timeScale = 1;
             UIController.instance.EnabledInitialMenu(false);
@@ -68,9 +75,7 @@ public class UI_Manager2 : MonoBehaviour
             UIController.instance.EnabledPauseMenu(false);
             UIController.instance.EnabledVictoryMenu(false);
             UIController.instance.EnabledGameOverMenu(false);
-            Debug.Log("Fin del else");
         }
-        Debug.Log("Fin de level completed");
     }
 
     public void PauseMenu()
