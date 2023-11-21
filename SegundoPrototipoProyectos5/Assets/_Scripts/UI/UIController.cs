@@ -11,6 +11,7 @@ public class UIController : MonoBehaviour
     public GameObject m_pauseMenu;
     public GameObject m_victoryMenu;
     public GameObject m_gameOverMenu;
+    public GameObject m_endMenu;
 
     private void Awake()
     {
@@ -46,6 +47,11 @@ public class UIController : MonoBehaviour
     public void EnabledGameOverMenu(bool isActive)
     {
         m_gameOverMenu.SetActive(isActive);
+    }
+
+    public void EnabledEndMenu(bool isActive)
+    {
+        m_endMenu.SetActive(isActive);
     }
 
     public void CursorVisible()

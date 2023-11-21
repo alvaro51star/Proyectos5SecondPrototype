@@ -24,7 +24,7 @@ public class MoveToNextLevel : MonoBehaviour
             if(SceneManager.GetActiveScene().buildIndex == lastLevel)
             {
                 Debug.Log("HAS GANADO");
-                // pondría otra escena que tenga el canvas diciendo enhorabuena, más niveles en el futuro.
+                m_uiManager2.GoToEndScene();
             }
             else
             {

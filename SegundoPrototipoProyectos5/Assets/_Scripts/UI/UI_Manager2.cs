@@ -11,6 +11,7 @@ public class UI_Manager2 : MonoBehaviour
     private int levelSelectionScene = 1;
     private int tutorialLevelScene = 2;
     private int victoryScene = 5;
+    private int endScene = 6;   // el número de la última escena
 
     public bool isPaused = false;
     public bool islevelCompleted = false;
@@ -51,6 +52,12 @@ public class UI_Manager2 : MonoBehaviour
         m_uiController.CursorInvisible();
         SceneManager.LoadScene(tutorialLevelScene);
     }
+
+    public void GoToEndScene()
+    {
+        m_uiController.CursorVisible();
+        SceneManager.LoadScene(endScene);
+    }
     
     public void LevelCompleted()
     {
@@ -65,6 +72,7 @@ public class UI_Manager2 : MonoBehaviour
             UIController.instance.EnabledPauseMenu(false);
             UIController.instance.EnabledVictoryMenu(true);
             UIController.instance.EnabledGameOverMenu(false);
+            UIController.instance.EnabledEndMenu(false);
         }
         else
         {
@@ -75,6 +83,7 @@ public class UI_Manager2 : MonoBehaviour
             UIController.instance.EnabledPauseMenu(false);
             UIController.instance.EnabledVictoryMenu(false);
             UIController.instance.EnabledGameOverMenu(false);
+            UIController.instance.EnabledEndMenu(false);
         }
     }
 
@@ -91,6 +100,7 @@ public class UI_Manager2 : MonoBehaviour
             UIController.instance.EnabledPauseMenu(true);
             UIController.instance.EnabledVictoryMenu(false);
             UIController.instance.EnabledGameOverMenu(false);
+            UIController.instance.EnabledEndMenu(false);
         }
         else
         {
@@ -101,6 +111,7 @@ public class UI_Manager2 : MonoBehaviour
             UIController.instance.EnabledPauseMenu(false);
             UIController.instance.EnabledVictoryMenu(false);
             UIController.instance.EnabledGameOverMenu(false);
+            UIController.instance.EnabledEndMenu(false);
         }
     }
 }
