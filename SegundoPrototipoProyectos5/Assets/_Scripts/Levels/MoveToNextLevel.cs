@@ -32,8 +32,8 @@ public class MoveToNextLevel : MonoBehaviour
                 {
                     PlayerPrefs.SetInt("LevelProgress", m_nextSceneIndex);
                 }
-                SceneManager.LoadScene(m_nextSceneIndex);
                 m_uiManager2.LevelCompleted();
+                SceneManager.LoadScene(m_nextSceneIndex);
             }
         }
     }

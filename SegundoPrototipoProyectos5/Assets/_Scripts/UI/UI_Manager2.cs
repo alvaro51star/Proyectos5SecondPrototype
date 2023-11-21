@@ -43,7 +43,7 @@ public class UI_Manager2 : MonoBehaviour
         SceneManager.LoadScene(tutorialLevelScene);
     }
     
-    public void LevelCompleted()    // si con el cambio de escena no se guarda, darle la vuelta o algo.
+    public void LevelCompleted()
     {
         islevelCompleted = !islevelCompleted;
         if (islevelCompleted)
