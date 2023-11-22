@@ -9,6 +9,7 @@ public class PickUpNPC : MonoBehaviour
     private Rigidbody rb;
     [SerializeField] private float force = 10;
     private ParachuteBehaviour parachuteBehaviour;
+    [SerializeField] private PlayerManager playerManager;
 
     private void Start()
     {
@@ -18,8 +19,12 @@ public class PickUpNPC : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            playerManager = other.GetComponent<PlayerManager>();
+        }
 
-        if (Input.GetKey(KeyCode.E) && other.gameObject.CompareTag("Player") && !pickedUp)
+        if (Input.GetKey(KeyCode.E) && other.gameObject.CompareTag("Player") && !pickedUp && !playerManager.HasBody())
         {
             parachuteBehaviour.enabled = false;
             rb.useGravity = false;
@@ -34,6 +39,7 @@ public class PickUpNPC : MonoBehaviour
             pickUpPosition.DetachChildren();
             rb.useGravity = true;
             rb.AddForce(Camera.main.transform.forward * force, ForceMode.Impulse);
+            transform.localRotation = Quaternion.Euler(Vector3.zero);
             pickedUp = false;
 
         }
