@@ -4198,6 +4198,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3527322343355235235, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: airResistance
+      value: 0.646
+      objectReference: {fileID: 0}
     - target: {fileID: 7169669320638059221, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_Name
       value: PlayerYCamara
@@ -6467,6 +6471,18 @@ PrefabInstance:
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minScale
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476746791584358532, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 592
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476746791584358532, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByParticleSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6199324343387522397, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 8177794739573682663, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_LocalPosition.x
