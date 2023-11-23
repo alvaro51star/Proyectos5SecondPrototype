@@ -842,11 +842,6 @@ Transform:
   - {fileID: 687814500}
   m_Father: {fileID: 1486552035}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &208268562 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2666564267956411508, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-  m_PrefabInstance: {fileID: 1289075296}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &212793316
 GameObject:
   m_ObjectHideFlags: 0
@@ -3308,11 +3303,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952769734}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &987250352 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3648338992523680718, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-  m_PrefabInstance: {fileID: 1289075296}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &992963873
 GameObject:
   m_ObjectHideFlags: 0
@@ -4328,21 +4318,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1973262535509741267, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-      propertyPath: m_orientationPlayer
-      value: 
-      objectReference: {fileID: 208268562}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1600003
+      value: 4.89
       objectReference: {fileID: 0}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0199995
+      value: 5.95
       objectReference: {fileID: 0}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.579998
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4372,10 +4358,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6684039420707268480, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-      propertyPath: cameraPosition
-      value: 
-      objectReference: {fileID: 987250352}
     - target: {fileID: 7169669320638059221, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_Name
       value: PlayerYCamara
@@ -6945,6 +6927,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 15348711}
     m_Modifications:
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: minScale
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8177794739573682663, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.6627502
