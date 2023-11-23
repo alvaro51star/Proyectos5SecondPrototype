@@ -14,6 +14,8 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject endPanel;
 
+    public bool dead = false;
+
     public void MenusAndPanels (GameObject gOToActivate, bool b)
     {
         gOToActivate.SetActive(b);
@@ -38,6 +40,7 @@ public class UIManager : MonoBehaviour
     {
         IsInGame(false);
         gameOverPanel.SetActive(true);
+        dead = true;
     }
 
     public void EndGame ()

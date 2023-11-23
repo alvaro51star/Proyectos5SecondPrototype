@@ -23,7 +23,7 @@ public class UIMenus : MonoBehaviour
         {
             player.SetActive(true);
         }
-        uIManager.MenusAndPanels(uIManager.pauseMenu, false);
+
         if (SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < congratulationsPanel)
         {
             uIManager.MenusAndPanels(uIManager.congratulationsPanel, true);
@@ -33,6 +33,9 @@ public class UIMenus : MonoBehaviour
         {
             uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
         }
+
+        uIManager.MenusAndPanels(uIManager.pauseMenu, false);
+        uIManager.dead = false;
     }
 
     public void QuitGame()
@@ -150,14 +153,21 @@ public class UIMenus : MonoBehaviour
                 player.SetActive(true);
             }
 
-            uIManager.IsInGame(true);
-            Time.timeScale = 1;
-            uIManager.MenusAndPanels(uIManager.initialMenu, false);
-            uIManager.MenusAndPanels(uIManager.levelsMenu, false);
-            uIManager.MenusAndPanels(uIManager.pauseMenu, false);
-            uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-            uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
-            uIManager.MenusAndPanels(uIManager.endPanel, false);
+            if (uIManager.dead == true)
+            {
+                Debug.Log("Estas muerto, no hay resume");
+            }
+            else
+            {
+                uIManager.IsInGame(true);
+                Time.timeScale = 1;
+                uIManager.MenusAndPanels(uIManager.initialMenu, false);
+                uIManager.MenusAndPanels(uIManager.levelsMenu, false);
+                uIManager.MenusAndPanels(uIManager.pauseMenu, false);
+                uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
+                uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
+                uIManager.MenusAndPanels(uIManager.endPanel, false);
+            }
         }
     }
 }

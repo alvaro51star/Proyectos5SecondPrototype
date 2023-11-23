@@ -6,21 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/PruebasEscenario/Escenario_Intro.unity
+    path: Assets/Scenes/EscenasFinales/Escenario_Intro.unity
     guid: 1483947df46fae148b12ca6831090157
   - enabled: 1
-    path: Assets/Scenes/PruebasEscenario/Escenario_01.unity
+    path: Assets/Scenes/EscenasFinales/Escenario_01.unity
     guid: 6cdc4cf53da863a41b33410c02ae34e6
   - enabled: 1
-    path: Assets/Scenes/PruebasEscenario/Escenario_02.unity
+    path: Assets/Scenes/EscenasFinales/Escenario_02.unity
     guid: f979b7e78e920104ea7e22c9d048a639
   - enabled: 1
-    path: Assets/Scenes/PruebasEscenario/Escenario_03.unity
+    path: Assets/Scenes/EscenasFinales/Escenario_03.unity
     guid: 89869a39c3751d44a8da25b154e0844a
   - enabled: 1
-    path: Assets/Scenes/PruebasEscenario/Escenario_Victoria.unity
+    path: Assets/Scenes/EscenasFinales/Escenario_Victoria.unity
     guid: 1953cba41e3062d4a8f98d699f0b993d
   - enabled: 1
-    path: Assets/Scenes/PruebasEscenario/Escenario_End.unity
+    path: Assets/Scenes/EscenasFinales/Escenario_End.unity
     guid: 19f1744d8a089ab468b9d00131ab761a
   m_configObjects: {}
