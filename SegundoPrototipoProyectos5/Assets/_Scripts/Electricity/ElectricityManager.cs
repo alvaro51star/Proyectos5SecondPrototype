@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class ElectricityManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool active = false;
+
+    private void OnEnable()
     {
-        
+        ElectricitySwitch.OnSwitchActivation += SwitchElectricity;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
+        ElectricitySwitch.OnSwitchActivation -= SwitchElectricity;
+    }
+
+    private void SwitchElectricity()
+    {
+        active = !active;
+    }
+
+    private void Update() {
         
     }
 }

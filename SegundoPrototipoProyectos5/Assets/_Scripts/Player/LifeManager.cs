@@ -11,6 +11,8 @@ public class LifeManager : MonoBehaviour
     private float m_timeLastDamaged;
     private float m_currentLife;
 
+    private bool isDone = false;
+
     private void Start()
     {
         m_timeLastDamaged = regenTime;
@@ -29,10 +31,11 @@ public class LifeManager : MonoBehaviour
         m_timeLastDamaged = regenTime;
         
 
-        if (m_currentLife <= 0)
+        if (m_currentLife <= 0 && !isDone)
         {
             //!Se activa el game over
             GameManager.instance.InvokeGameOver();
+            isDone = true;
         }
     }
 
