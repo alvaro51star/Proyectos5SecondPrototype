@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class MoveToNextLevel : MonoBehaviour
 {
-    [SerializeField] UI_Manager2 m_uiManager2;
+    [SerializeField] UIManager uIManager;
 
-    public UIController m_uiController;
+    public UIMenus uiMenus;
 
     private int nextSceneIndex;
     private int lastLevel = 3;   // el número del último nivel
@@ -24,7 +24,7 @@ public class MoveToNextLevel : MonoBehaviour
             if(SceneManager.GetActiveScene().buildIndex == lastLevel)
             {
                 Debug.Log("HAS GANADO");
-                m_uiManager2.GoToEndScene();
+                uiMenus.GoToEndScene();
             }
             else
             {
