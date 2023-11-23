@@ -7,7 +7,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject gameOverPanel;
     //[SerializeField] private GameObject pauseMenu;
     //[SerializeField] private GameObject congratulationsPanel;
-    //[SerializeField] private GameObject exitLevelMenu;
+    [SerializeField] private GameObject exitLevelMenu;
+    [SerializeField] private GameObject finalScore;
+
 
     private void OnEnable()
     {
@@ -21,6 +23,34 @@ public class UIManager : MonoBehaviour
 
     private void ShowGameOver()
     {
+        IsInGame(false);
         gameOverPanel.SetActive(true);
+    }
+
+    public void EndGame ()
+    {
+        IsInGame(false);
+        exitLevelMenu.SetActive(true);
+    }
+
+    public void FinalScore()
+    {
+        finalScore.SetActive(true);
+        exitLevelMenu.SetActive(false);
+    }
+
+    private void IsInGame (bool isInGame)
+    {
+        if(isInGame)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
     }
 }

@@ -215,6 +215,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7438979315003341866, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7981289464427541498, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -504,6 +508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31800eae2c8fee541a1110ca0b6cc641, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bodyTransform: {fileID: 0}
 --- !u!4 &8730332666194294779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 638415888159416486, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
