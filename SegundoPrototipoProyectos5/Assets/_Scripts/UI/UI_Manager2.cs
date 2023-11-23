@@ -40,7 +40,7 @@ public class UI_Manager2 : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Time.timeScale = 1;
+        //Time.timeScale = 1;
         UIController.instance.EnabledInitialMenu(false);
         UIController.instance.EnabledLevelsMenu(false);
         UIController.instance.EnabledPauseMenu(false);
