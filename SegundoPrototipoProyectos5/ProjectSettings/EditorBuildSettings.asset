@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/PruebasEscenario/Escenario_Intro.unity
     guid: 1483947df46fae148b12ca6831090157
   - enabled: 1
-    path: Assets/Scenes/PruebasEscenario/Escenario_Niveles.unity
-    guid: 7262fa9bd2903a747ad99218737ea517
-  - enabled: 1
     path: Assets/Scenes/PruebasEscenario/Escenario_01.unity
     guid: 6cdc4cf53da863a41b33410c02ae34e6
   - enabled: 1

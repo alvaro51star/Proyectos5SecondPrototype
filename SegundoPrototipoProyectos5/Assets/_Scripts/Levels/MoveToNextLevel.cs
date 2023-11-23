@@ -10,7 +10,7 @@ public class MoveToNextLevel : MonoBehaviour
     public UIController m_uiController;
 
     private int nextSceneIndex;
-    private int lastLevel = 4;   // el número del último nivel
+    private int lastLevel = 3;   // el número del último nivel
 
     void Start()
     {

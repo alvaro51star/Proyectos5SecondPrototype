@@ -8,10 +8,9 @@ public class UI_Manager2 : MonoBehaviour
     public UIController m_uiController;
 
     private int initialScene = 0;
-    private int levelSelectionScene = 1;
-    private int tutorialLevelScene = 2;
-    private int victoryScene = 5;
-    private int endScene = 6;   // el número de la última escena
+    private int tutorialLevelScene = 1;
+    private int victoryScene = 4;
+    private int endScene = 5;   // el número de la última escena
 
     public bool isPaused = false;
     public bool islevelCompleted = false;
@@ -40,7 +39,6 @@ public class UI_Manager2 : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        //Time.timeScale = 1;
         UIController.instance.EnabledInitialMenu(false);
         UIController.instance.EnabledLevelsMenu(false);
         UIController.instance.EnabledPauseMenu(false);
@@ -52,12 +50,23 @@ public class UI_Manager2 : MonoBehaviour
     public void GoToInitialMenu()
     {
         SceneManager.LoadScene(initialScene);
+        UIController.instance.EnabledInitialMenu(false);
+        UIController.instance.EnabledLevelsMenu(true);
+        UIController.instance.EnabledPauseMenu(false);
+        UIController.instance.EnabledVictoryMenu(false);
+        UIController.instance.EnabledGameOverMenu(false);
+        UIController.instance.EnabledEndMenu(false);
     }
 
     public void GoToLevelsMenu()
     {
         m_uiController.CursorVisible();
-        SceneManager.LoadScene(levelSelectionScene);
+        UIController.instance.EnabledInitialMenu(false);
+        UIController.instance.EnabledLevelsMenu(true);
+        UIController.instance.EnabledPauseMenu(false);
+        UIController.instance.EnabledVictoryMenu(false);
+        UIController.instance.EnabledGameOverMenu(false);
+        UIController.instance.EnabledEndMenu(false);
     }
 
     public void GotToTutorialLevel()

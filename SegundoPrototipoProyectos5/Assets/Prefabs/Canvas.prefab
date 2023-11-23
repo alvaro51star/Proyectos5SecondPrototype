@@ -1604,6 +1604,7 @@ MonoBehaviour:
   m_victoryMenu: {fileID: 6109386308089380505}
   m_gameOverMenu: {fileID: 3384078094738328883}
   m_endMenu: {fileID: 6389144402077403114}
+  m_player: {fileID: 0}
 --- !u!1 &2119246642850232182
 GameObject:
   m_ObjectHideFlags: 0
