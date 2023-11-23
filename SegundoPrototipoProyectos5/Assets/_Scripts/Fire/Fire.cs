@@ -9,6 +9,7 @@ public class Fire : MonoBehaviour
     [SerializeField] private float regenRate = 5;
     [SerializeField] private ParticleSystem fireParticleSystem;
     [SerializeField] private FireLifeManager fireLifeManager;
+    [SerializeField] private Light fireLight;
     [Header("CUANTO MAS GRANDE MAS PARTICULAS HAY QUE PONER")]
     public float maxEmissionRate;
     [SerializeField, Range(0,1)] private float minParticleSizeMultiplier;
@@ -20,6 +21,7 @@ public class Fire : MonoBehaviour
     [HideInInspector] public float currentIntensity;
     
     private float m_timeLastWatered;
+    private float m_initialLightIntensity;
     private Vector3 m_InitialParticleSystemShapeScale;
 
     private void Awake()
@@ -29,6 +31,8 @@ public class Fire : MonoBehaviour
 
         currentIntensity = maxEmissionRate;
         m_timeLastWatered = regenTime;
+        m_initialLightIntensity = fireLight.intensity;
+
         m_InitialParticleSystemShapeScale = fireParticleSystem.shape.scale * maxScale;
         ChangeSize();
     }
@@ -55,6 +59,7 @@ public class Fire : MonoBehaviour
         ChangeIntensity();
         ChangeParticleSize();
         ChangeSize();
+        ChangeLightIntensity();
     }
 
     private void ChangeIntensity()
@@ -74,6 +79,7 @@ public class Fire : MonoBehaviour
             ChangeIntensity();
             ChangeParticleSize();
             ChangeSize();
+            ChangeLightIntensity();
         }
         if(currentIntensity == maxEmissionRate)
             fireLifeManager.currentLife = fireLifeManager.maxLife;
@@ -101,6 +107,7 @@ public class Fire : MonoBehaviour
         if (currentIntensity <= maxEmissionRate * 0.9f)
         {
             float sizeMultiplier = ((currentIntensity * maxScale) / maxEmissionRate);
+            sizeMultiplier = Mathf.Clamp(sizeMultiplier, minScale, maxScale);
             Vector3 newScale = Vector3.one * sizeMultiplier;
             particleSystemShape.scale = newScale;
 
@@ -118,5 +125,16 @@ public class Fire : MonoBehaviour
         boxCollider.size = Vector3.one * scaleMultiplier;
 
         boxCollider.center = new Vector3 (0, scaleMultiplier* 0.5f,0);
+    }
+
+    private void ChangeLightIntensity()
+    {
+        float intensityMultiplier = ((m_initialLightIntensity * currentIntensity) / maxEmissionRate);
+
+        if (currentIntensity <= maxEmissionRate * 0.9f)
+            fireLight.intensity = intensityMultiplier;
+
+        else
+            fireLight.intensity = m_initialLightIntensity;
     }
 }

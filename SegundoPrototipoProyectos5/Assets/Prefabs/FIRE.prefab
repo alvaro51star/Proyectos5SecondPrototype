@@ -5113,6 +5113,7 @@ MonoBehaviour:
   regenRate: 5
   fireParticleSystem: {fileID: 3476746791584358532}
   fireLifeManager: {fileID: 6238450212499282484}
+  fireLight: {fileID: 148201850107522815}
   maxEmissionRate: 80
   minParticleSizeMultiplier: 0.01
   maxParticleSizeMultiplier: 1

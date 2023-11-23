@@ -20,6 +20,7 @@ public class FireLifeManager : MonoBehaviour
     public void Damage(float damage)
     {
         currentLife -= damage;
+        Debug.Log("fireLife = " + currentLife);
         //SoundManager.instance.ReproduceSound(AudioClipsNames.FireWaterDamage, audioSource);
 
         float lessParticles = (m_maxEmissionRate * currentLife) / maxLife;
