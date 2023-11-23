@@ -26,15 +26,15 @@ public class UIMenus : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < congratulationsPanel)
         {
-            uIManager.MenusAndPanels(uIManager.congratulationsPanel, true);
+            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, true);
             LevelCompleted();
         }
         else
         {
-            uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
         }
 
-        uIManager.MenusAndPanels(uIManager.pauseMenu, false);
+        uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
         uIManager.dead = false;
     }
 
@@ -47,34 +47,34 @@ public class UIMenus : MonoBehaviour
     public void RestartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        uIManager.MenusAndPanels(uIManager.initialMenu, false);
-        uIManager.MenusAndPanels(uIManager.levelsMenu, false);
-        uIManager.MenusAndPanels(uIManager.pauseMenu, false);
-        uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-        uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
-        uIManager.MenusAndPanels(uIManager.endPanel, false);
+        uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
+        uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
+        uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
+        uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
+        uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
+        uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
     }
 
     public void GoToInitialMenu()
     {
         SceneManager.LoadScene(initialScene);
-        uIManager.MenusAndPanels(uIManager.initialMenu, true);
-        uIManager.MenusAndPanels(uIManager.levelsMenu, false);
-        uIManager.MenusAndPanels(uIManager.pauseMenu, false);
-        uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-        uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
-        uIManager.MenusAndPanels(uIManager.endPanel, false);
+        uIManager.ActivateUIGameObjects(uIManager.initialMenu, true);
+        uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
+        uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
+        uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
+        uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
+        uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
     }
 
     public void GoToLevelsMenu()
     {
         uIManager.IsInGame(false);
-        uIManager.MenusAndPanels(uIManager.initialMenu, false);
-        uIManager.MenusAndPanels(uIManager.levelsMenu, true);
-        uIManager.MenusAndPanels(uIManager.pauseMenu, false);
-        uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-        uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
-        uIManager.MenusAndPanels(uIManager.endPanel, false);
+        uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
+        uIManager.ActivateUIGameObjects(uIManager.levelsMenu, true);
+        uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
+        uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
+        uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
+        uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
     }
 
     public void GotToTutorialLevel()
@@ -101,13 +101,13 @@ public class UIMenus : MonoBehaviour
 
             uIManager.IsInGame(false);
             Time.timeScale = 0;
-            uIManager.MenusAndPanels(uIManager.initialMenu, false);
-            uIManager.MenusAndPanels(uIManager.levelsMenu, false);
-            uIManager.MenusAndPanels(uIManager.pauseMenu, false);
-            uIManager.MenusAndPanels(uIManager.congratulationsPanel, true);
-            uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
-            uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
-            uIManager.MenusAndPanels(uIManager.endPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, true);
+            uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
         }
         else
         {
@@ -117,12 +117,12 @@ public class UIMenus : MonoBehaviour
             }
             uIManager.IsInGame(true);
             Time.timeScale = 1;
-            uIManager.MenusAndPanels(uIManager.initialMenu, false);
-            uIManager.MenusAndPanels(uIManager.levelsMenu, false);
-            uIManager.MenusAndPanels(uIManager.pauseMenu, false);
-            uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-            uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
-            uIManager.MenusAndPanels(uIManager.endPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
         }
     }
 
@@ -139,12 +139,12 @@ public class UIMenus : MonoBehaviour
 
             uIManager.IsInGame(false);
             Time.timeScale = 0;
-            uIManager.MenusAndPanels(uIManager.initialMenu, false);
-            uIManager.MenusAndPanels(uIManager.levelsMenu, false);
-            uIManager.MenusAndPanels(uIManager.pauseMenu, true);
-            uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-            uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
-            uIManager.MenusAndPanels(uIManager.endPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.pauseMenu, true);
+            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
         }
         else
         {
@@ -161,12 +161,12 @@ public class UIMenus : MonoBehaviour
             {
                 uIManager.IsInGame(true);
                 Time.timeScale = 1;
-                uIManager.MenusAndPanels(uIManager.initialMenu, false);
-                uIManager.MenusAndPanels(uIManager.levelsMenu, false);
-                uIManager.MenusAndPanels(uIManager.pauseMenu, false);
-                uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-                uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
-                uIManager.MenusAndPanels(uIManager.endPanel, false);
+                uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
+                uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
+                uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
+                uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
+                uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
+                uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
             }
         }
     }

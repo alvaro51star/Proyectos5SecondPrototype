@@ -16,14 +16,9 @@ public class UIManager : MonoBehaviour
 
     public bool dead = false;
 
-    public void MenusAndPanels (GameObject gOToActivate, bool b)
+    public void ActivateUIGameObjects(GameObject gOToActivate, bool b)
     {
         gOToActivate.SetActive(b);
-    }
-
-    public void EnabledEndMenu(bool isActive)
-    {
-        endPanel.SetActive(isActive);
     }
 
     private void OnEnable()
