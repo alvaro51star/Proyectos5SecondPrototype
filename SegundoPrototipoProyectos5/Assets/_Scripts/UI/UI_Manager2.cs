@@ -18,6 +18,7 @@ public class UI_Manager2 : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         UIController.instance.EnabledPauseMenu(false);
         if(SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < victoryScene)
         {
@@ -34,6 +35,18 @@ public class UI_Manager2 : MonoBehaviour
     {
         // Application.Quit();
         Debug.Log("Quit Game");
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
+        UIController.instance.EnabledInitialMenu(false);
+        UIController.instance.EnabledLevelsMenu(false);
+        UIController.instance.EnabledPauseMenu(false);
+        UIController.instance.EnabledVictoryMenu(false);
+        UIController.instance.EnabledGameOverMenu(false);
+        UIController.instance.EnabledEndMenu(false);
     }
 
     public void GoToInitialMenu()
