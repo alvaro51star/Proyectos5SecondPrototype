@@ -48,7 +48,7 @@ public class UIMenus : MonoBehaviour
         uIManager.MenusAndPanels(uIManager.levelsMenu, false);
         uIManager.MenusAndPanels(uIManager.pauseMenu, false);
         uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-        // si es necesario, desactivar el game over tmb
+        uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
         uIManager.MenusAndPanels(uIManager.endPanel, false);
     }
 
@@ -59,19 +59,18 @@ public class UIMenus : MonoBehaviour
         uIManager.MenusAndPanels(uIManager.levelsMenu, false);
         uIManager.MenusAndPanels(uIManager.pauseMenu, false);
         uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-        // si es necesario, desactivar el game over tmb
+        uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
         uIManager.MenusAndPanels(uIManager.endPanel, false);
     }
 
     public void GoToLevelsMenu()
     {
-        Debug.Log("ir al menu de niveles");
         uIManager.IsInGame(false);
         uIManager.MenusAndPanels(uIManager.initialMenu, false);
         uIManager.MenusAndPanels(uIManager.levelsMenu, true);
         uIManager.MenusAndPanels(uIManager.pauseMenu, false);
         uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-        // si es necesario, desactivar el game over tmb
+        uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
         uIManager.MenusAndPanels(uIManager.endPanel, false);
     }
 
@@ -103,7 +102,8 @@ public class UIMenus : MonoBehaviour
             uIManager.MenusAndPanels(uIManager.levelsMenu, false);
             uIManager.MenusAndPanels(uIManager.pauseMenu, false);
             uIManager.MenusAndPanels(uIManager.congratulationsPanel, true);
-            // si es necesario, desactivar el game over tmb
+            uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
+            uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
             uIManager.MenusAndPanels(uIManager.endPanel, false);
         }
         else
@@ -118,7 +118,7 @@ public class UIMenus : MonoBehaviour
             uIManager.MenusAndPanels(uIManager.levelsMenu, false);
             uIManager.MenusAndPanels(uIManager.pauseMenu, false);
             uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-            // si es necesario, desactivar el game over tmb
+            uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
             uIManager.MenusAndPanels(uIManager.endPanel, false);
         }
     }
@@ -140,7 +140,7 @@ public class UIMenus : MonoBehaviour
             uIManager.MenusAndPanels(uIManager.levelsMenu, false);
             uIManager.MenusAndPanels(uIManager.pauseMenu, true);
             uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-            // si es necesario, desactivar el game over tmb
+            uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
             uIManager.MenusAndPanels(uIManager.endPanel, false);
         }
         else
@@ -156,7 +156,7 @@ public class UIMenus : MonoBehaviour
             uIManager.MenusAndPanels(uIManager.levelsMenu, false);
             uIManager.MenusAndPanels(uIManager.pauseMenu, false);
             uIManager.MenusAndPanels(uIManager.congratulationsPanel, false);
-            // si es necesario, desactivar el game over tmb
+            uIManager.MenusAndPanels(uIManager.gameOverPanel, false);
             uIManager.MenusAndPanels(uIManager.endPanel, false);
         }
     }
