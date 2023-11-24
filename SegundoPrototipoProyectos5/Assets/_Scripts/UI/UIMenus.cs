@@ -25,20 +25,10 @@ public class UIMenus : MonoBehaviour
             player.SetActive(true);
             isAMenuOrPanel = false;
         }
-        else
-        {
-            //isAMenuOrPanel = true;
-        }
 
         if (SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < congratulationsPanel)
         {
-            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, true);
             LevelCompleted();
-            //isAMenuOrPanel = true;
-        }
-        else
-        {
-            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
         }
 
         uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
@@ -48,17 +38,6 @@ public class UIMenus : MonoBehaviour
     {
         // Application.Quit();
         Debug.Log("Quit Game");
-    }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
-        uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
-        uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
-        uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
-        uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
-        uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
     }
 
     public void GoToInitialMenu()

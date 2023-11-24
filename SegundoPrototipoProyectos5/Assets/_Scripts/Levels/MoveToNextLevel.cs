@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class MoveToNextLevel : MonoBehaviour
 {
     [SerializeField] UIManager uIManager;
-
     public UIMenus uiMenus;
 
     private int nextSceneIndex;
