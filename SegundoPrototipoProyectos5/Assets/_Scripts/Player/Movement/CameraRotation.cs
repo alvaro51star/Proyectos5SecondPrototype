@@ -11,12 +11,6 @@ public class CameraRotation : MonoBehaviour
     private float yRotation, xRotation;
     [SerializeField] private Transform m_orientationPlayer;
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-    }
-
     private void Update()
     {
         RotateCamera();

@@ -3198,6 +3198,7 @@ MonoBehaviour:
   congratulationsPanel: {fileID: 0}
   gameOverPanel: {fileID: 1194449861}
   endPanel: {fileID: 0}
+  UIGameObjects: []
   dead: 0
 --- !u!114 &1778036617
 MonoBehaviour:
