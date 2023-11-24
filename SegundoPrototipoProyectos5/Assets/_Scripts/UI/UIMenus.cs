@@ -19,7 +19,6 @@ public class UIMenus : MonoBehaviour
 
     void Start()
     {
-        Time.timeScale = 1;
         if (player)
         {
             player.SetActive(true);
@@ -31,6 +30,7 @@ public class UIMenus : MonoBehaviour
             LevelCompleted();
         }
 
+        uIManager.IsInGame(true);
         uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
     }
 
@@ -43,23 +43,16 @@ public class UIMenus : MonoBehaviour
     public void GoToInitialMenu()
     {
         SceneManager.LoadScene(initialScene);
+
+        uIManager.DesactivateAllUIGameObjects();
         uIManager.ActivateUIGameObjects(uIManager.initialMenu, true);
-        uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
-        uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
-        uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
-        uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
-        uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
     }
 
     public void GoToLevelsMenu()
     {
         uIManager.IsInGame(false);
-        uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
-        uIManager.ActivateUIGameObjects(uIManager.levelsMenu, true);
-        uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
-        uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
-        uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
-        uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
+        uIManager.DesactivateAllUIGameObjects();
+        uIManager.ActivateUIGameObjects(uIManager.levelsMenu, true);        
     }
 
     public void GotToTutorialLevel()
@@ -86,13 +79,8 @@ public class UIMenus : MonoBehaviour
             }
 
             uIManager.IsInGame(false);
-            Time.timeScale = 0;
-            uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
-            uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
-            uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
+            uIManager.DesactivateAllUIGameObjects();
             uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, true);
-            uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
-            uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
         }
         else
         {
@@ -102,14 +90,8 @@ public class UIMenus : MonoBehaviour
                 player.SetActive(true);
                 isAMenuOrPanel = false;
             }
+
             uIManager.IsInGame(true);
-            Time.timeScale = 1;
-            uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
-            uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
-            uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
-            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
-            uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
-            uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
         }
     }
 
@@ -126,13 +108,8 @@ public class UIMenus : MonoBehaviour
             }
 
             uIManager.IsInGame(false);
-            Time.timeScale = 0;
-            uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
-            uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
+            uIManager.DesactivateAllUIGameObjects();
             uIManager.ActivateUIGameObjects(uIManager.pauseMenu, true);
-            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
-            uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
-            uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
         }
         else
         {
@@ -143,13 +120,6 @@ public class UIMenus : MonoBehaviour
             }
 
             uIManager.IsInGame(true);
-            Time.timeScale = 1;
-            uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
-            uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
-            uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
-            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
-            uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
-            uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
         }
     }
 }
