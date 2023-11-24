@@ -14,18 +14,12 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject endPanel;
 
-<<<<<<< Updated upstream
     public bool dead = false;
-
     public void ActivateUIGameObjects(GameObject gOToActivate, bool b)
-=======
     public void MenusAndPanels(GameObject gOToActivate, bool b)
->>>>>>> Stashed changes
     {
         gOToActivate.SetActive(b);
     }
-
-=======
     // TODO: Poner la imagen en el canvas y activarla y desactivarla
     private void EnableImage()
     {
