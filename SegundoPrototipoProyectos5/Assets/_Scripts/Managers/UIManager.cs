@@ -15,11 +15,12 @@ public class UIManager : MonoBehaviour
     public GameObject endPanel;
 
     public bool dead = false;
+
     public void ActivateUIGameObjects(GameObject gOToActivate, bool b)
-    public void MenusAndPanels(GameObject gOToActivate, bool b)
     {
         gOToActivate.SetActive(b);
     }
+
     // TODO: Poner la imagen en el canvas y activarla y desactivarla
     private void EnableImage()
     {
@@ -62,7 +63,7 @@ public class UIManager : MonoBehaviour
         endPanel.SetActive(isActive);
     }
 
->>>>>>> Stashed changes
+
     private void OnEnable()
     {
         GameManager.OnGameOver += ShowGameOver;
@@ -84,27 +85,29 @@ public class UIManager : MonoBehaviour
         dead = true;
     }
 
+    public void EndGame ()
     {
         IsInGame(false);
-        exitLevelMenu.SetActive(true);
+    exitLevelMenu.SetActive(true);
     }
 
-    public void FinalScore()
+public void FinalScore()
+{
+    finalScore.SetActive(true);
+    exitLevelMenu.SetActive(false);
+}
+
+ public void IsInGame (bool isInGame)
+{
+    if(isInGame)
     {
-        finalScore.SetActive(true);
-        exitLevelMenu.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
-
+    else
     {
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
+}
 }

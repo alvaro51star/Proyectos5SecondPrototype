@@ -11,7 +11,7 @@ public class UIMenus : MonoBehaviour
     private int initialScene = 0;
     private int tutorialLevelScene = 1;
     private int congratulationsPanel = 4;
-    private int endPanel = 5;   // el número de la última escena
+    private int endPanel = 5;   // el nï¿½mero de la ï¿½ltima escena
 
     public bool isPaused = false;
     public bool islevelCompleted = false;
@@ -89,7 +89,7 @@ public class UIMenus : MonoBehaviour
         SceneManager.LoadScene(endPanel);
     }
 
-    public void LevelCompleted()    // aquí se pondría el EndGame del FinalCollider
+    public void LevelCompleted()    // aqui se pondria el EndGame del FinalCollider
     {
         islevelCompleted = !islevelCompleted;
         if (islevelCompleted)
