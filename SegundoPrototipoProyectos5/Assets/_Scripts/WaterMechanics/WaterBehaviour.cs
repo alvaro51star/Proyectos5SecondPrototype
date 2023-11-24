@@ -12,5 +12,10 @@ public class WaterBehaviour : MonoBehaviour
         {
             other.GetComponent<FireLifeManager>().Damage(damage);
         }
+
+        if (other.CompareTag("ElectricZone"))
+        {
+            other.GetComponent<WaterConductiveZone>().waterReached = true;
+        }
     }
 }

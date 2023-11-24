@@ -14,8 +14,8 @@ public class ElectricityManager : MonoBehaviour
     private void Start()
     {
         tempValue = active;
+        OnElectricityChange(active);
     }
-
 
     private void OnEnable()
     {
