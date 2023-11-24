@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class MenuInput : MonoBehaviour
 {
-    [SerializeField] UIMenus m_uiMenu;
+    [SerializeField] UIMenus uIMenu;
+    [SerializeField] UIManager uIManager;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            m_uiMenu.PauseMenu();
+            if (uIManager.dead == false)
+            {
+                if (uIMenu.isAMenuOrPanel == false)
+                uIMenu.PauseMenu();
+            }
         }
     }
 }

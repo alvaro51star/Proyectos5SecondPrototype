@@ -32,32 +32,6 @@ public class UIManager : MonoBehaviour
         Debug.Log("Fuera");
     }
 
-    /*
-    public void EnabledInitialMenu(bool isActive)
-    {
-        initialMenu.SetActive(isActive);
-    }
-
-    public void EnabledLevelsMenu(bool isActive)
-    {
-        levelsMenu.SetActive(isActive);
-    }
-
-    public void EnabledPauseMenu(bool isActive)
-    {
-        pauseMenu.SetActive(isActive);
-    }
-    public void EnabledCongratulationsPanel(bool isActive)
-    {
-        congratulationsPanel.SetActive(isActive);
-    }
-
-    public void EnabledGameOverMenu(bool isActive)
-    {
-        gameOverPanel2.SetActive(isActive);
-    }
-    */
-
     public void EnabledEndMenu(bool isActive)
     {
         endPanel.SetActive(isActive);

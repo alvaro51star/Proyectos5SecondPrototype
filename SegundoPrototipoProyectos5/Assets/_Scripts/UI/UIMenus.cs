@@ -11,10 +11,11 @@ public class UIMenus : MonoBehaviour
     private int initialScene = 0;
     private int tutorialLevelScene = 1;
     private int congratulationsPanel = 4;
-    private int endPanel = 5;   // el n�mero de la �ltima escena
+    private int endPanel = 5;   // el numero de la ultima escena
 
     public bool isPaused = false;
     public bool islevelCompleted = false;
+    public bool isAMenuOrPanel = false;
 
     void Start()
     {
@@ -22,12 +23,18 @@ public class UIMenus : MonoBehaviour
         if (player)
         {
             player.SetActive(true);
+            isAMenuOrPanel = false;
+        }
+        else
+        {
+            //isAMenuOrPanel = true;
         }
 
         if (SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < congratulationsPanel)
         {
             uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, true);
             LevelCompleted();
+            //isAMenuOrPanel = true;
         }
         else
         {
@@ -35,7 +42,6 @@ public class UIMenus : MonoBehaviour
         }
 
         uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
-        uIManager.dead = false;
     }
 
     public void QuitGame()
@@ -94,6 +100,7 @@ public class UIMenus : MonoBehaviour
         islevelCompleted = !islevelCompleted;
         if (islevelCompleted)
         {
+            isAMenuOrPanel = true;
             if (player)
             {
                 player.SetActive(false);
@@ -106,14 +113,15 @@ public class UIMenus : MonoBehaviour
             uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
             uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, true);
             uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
-            uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
             uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
         }
         else
         {
+            isAMenuOrPanel = false;
             if (player)
             {
                 player.SetActive(true);
+                isAMenuOrPanel = false;
             }
             uIManager.IsInGame(true);
             Time.timeScale = 1;
@@ -135,6 +143,7 @@ public class UIMenus : MonoBehaviour
             if (player)
             {
                 player.SetActive(false);
+                isAMenuOrPanel = true;
             }
 
             uIManager.IsInGame(false);
@@ -151,23 +160,17 @@ public class UIMenus : MonoBehaviour
             if (player)
             {
                 player.SetActive(true);
+                isAMenuOrPanel = false;
             }
 
-            if (uIManager.dead == true)
-            {
-                Debug.Log("Estas muerto, no hay resume");
-            }
-            else
-            {
-                uIManager.IsInGame(true);
-                Time.timeScale = 1;
-                uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
-                uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
-                uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
-                uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
-                uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
-                uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
-            }
+            uIManager.IsInGame(true);
+            Time.timeScale = 1;
+            uIManager.ActivateUIGameObjects(uIManager.initialMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.levelsMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
+            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.gameOverPanel, false);
+            uIManager.ActivateUIGameObjects(uIManager.endPanel, false);
         }
     }
 }
