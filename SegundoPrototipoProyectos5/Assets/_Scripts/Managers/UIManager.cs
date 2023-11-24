@@ -14,11 +14,21 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject endPanel;
 
+    [SerializeField] private GameObject[] UIGameObjects;
+
     public bool dead = false;
+
 
     public void ActivateUIGameObjects(GameObject gOToActivate, bool b)
     {
         gOToActivate.SetActive(b);
+    }
+    public void DesactivateAllUIGameObjects()
+    {
+        for (int i = 0; i < UIGameObjects.Length; i++)
+        {
+            UIGameObjects[i].SetActive(false);
+        }
     }
 
     // TODO: Poner la imagen en el canvas y activarla y desactivarla
@@ -62,26 +72,29 @@ public class UIManager : MonoBehaviour
     public void EndGame ()
     {
         IsInGame(false);
-    exitLevelMenu.SetActive(true);
+        exitLevelMenu.SetActive(true);
     }
 
-public void FinalScore()
-{
-    finalScore.SetActive(true);
-    exitLevelMenu.SetActive(false);
-}
+    public void FinalScore()
+    {
+        finalScore.SetActive(true);
+        exitLevelMenu.SetActive(false);
+    }
 
- public void IsInGame (bool isInGame)
-{
-    if(isInGame)
+    public void IsInGame (bool isInGame)
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
+        if(isInGame)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            Time.timeScale = 1;
+            DesactivateAllUIGameObjects();
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0;
+        }
     }
-    else
-    {
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-    }
-}
 }
