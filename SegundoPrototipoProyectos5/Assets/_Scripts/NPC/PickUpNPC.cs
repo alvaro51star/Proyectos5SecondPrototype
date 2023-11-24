@@ -1,8 +1,10 @@
+using System.Runtime.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Buffers.Text;
 
-public class PickUpNPC : MonoBehaviour
+public class PickUpNPC : InteractiveObject
 {
     private bool pickedUp = false;
     [SerializeField] private Transform pickUpPosition;
@@ -11,11 +13,21 @@ public class PickUpNPC : MonoBehaviour
     private ParachuteBehaviour parachuteBehaviour;
     [SerializeField] private PlayerManager playerManager;
 
+    LayerMask groundLayer = 6;
+    [SerializeField] private MeshCollider meshColliderNPC;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         parachuteBehaviour = GetComponent<ParachuteBehaviour>();
     }
+
+    protected override void OnTriggerEnter(Collider other) {
+        if(pickedUp == false){
+            base.OnTriggerEnter(other);
+        }
+    }
+
 
     private void OnTriggerStay(Collider other)
     {

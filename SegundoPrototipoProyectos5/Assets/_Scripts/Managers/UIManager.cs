@@ -14,21 +14,73 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject endPanel;
 
+<<<<<<< Updated upstream
     public bool dead = false;
 
     public void ActivateUIGameObjects(GameObject gOToActivate, bool b)
+=======
+    public void MenusAndPanels(GameObject gOToActivate, bool b)
+>>>>>>> Stashed changes
     {
         gOToActivate.SetActive(b);
     }
 
+=======
+    // TODO: Poner la imagen en el canvas y activarla y desactivarla
+    private void EnableImage()
+    {
+        Debug.Log("Dentro");
+    }
+
+    private void DisableImage()
+    {
+        Debug.Log("Fuera");
+    }
+
+    /*
+    public void EnabledInitialMenu(bool isActive)
+    {
+        initialMenu.SetActive(isActive);
+    }
+
+    public void EnabledLevelsMenu(bool isActive)
+    {
+        levelsMenu.SetActive(isActive);
+    }
+
+    public void EnabledPauseMenu(bool isActive)
+    {
+        pauseMenu.SetActive(isActive);
+    }
+    public void EnabledCongratulationsPanel(bool isActive)
+    {
+        congratulationsPanel.SetActive(isActive);
+    }
+
+    public void EnabledGameOverMenu(bool isActive)
+    {
+        gameOverPanel2.SetActive(isActive);
+    }
+    */
+
+    public void EnabledEndMenu(bool isActive)
+    {
+        endPanel.SetActive(isActive);
+    }
+
+>>>>>>> Stashed changes
     private void OnEnable()
     {
         GameManager.OnGameOver += ShowGameOver;
+        InteractiveObject.OnPlayerInside += EnableImage;
+        InteractiveObject.OnPlayerOutSide += DisableImage;
     }
 
     private void OnDisable()
     {
         GameManager.OnGameOver -= ShowGameOver;
+        InteractiveObject.OnPlayerInside -= EnableImage;
+        InteractiveObject.OnPlayerOutSide -= DisableImage;
     }
 
     private void ShowGameOver()
@@ -38,7 +90,6 @@ public class UIManager : MonoBehaviour
         dead = true;
     }
 
-    public void EndGame ()
     {
         IsInGame(false);
         exitLevelMenu.SetActive(true);
@@ -50,9 +101,7 @@ public class UIManager : MonoBehaviour
         exitLevelMenu.SetActive(false);
     }
 
-    public void IsInGame (bool isInGame)
     {
-        if(isInGame)
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
