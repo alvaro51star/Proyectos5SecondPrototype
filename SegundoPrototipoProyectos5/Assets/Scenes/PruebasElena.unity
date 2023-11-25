@@ -1045,15 +1045,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -28.78
+      value: -2.1
       objectReference: {fileID: 0}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.63
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.47
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1083,10 +1083,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4778301157051544009, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: m_IncludeLayers.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7169669320638059221, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_Name
       value: PlayerYCamara
       objectReference: {fileID: 0}
+    - target: {fileID: 8929261014544802242, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 1692050012}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1665,6 +1673,11 @@ MeshCollider:
 --- !u!1 &1692050011 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7638451427510771538, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+  m_PrefabInstance: {fileID: 784425605}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &1692050012 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2012203778040200328, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
   m_PrefabInstance: {fileID: 784425605}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1824644284 stripped

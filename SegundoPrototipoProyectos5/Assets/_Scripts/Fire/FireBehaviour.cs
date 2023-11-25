@@ -19,6 +19,7 @@ public class FireBehaviour : MonoBehaviour
     
     private void DamageControl()
     {
+        Debug.Log("Damage control se hace");
         //segun la intensidad del fuego hara mas o menos daño MEJORAR ESTO SEGUN FEEDBACK
         float intensity = fire.currentIntensity;
 
@@ -34,9 +35,11 @@ public class FireBehaviour : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
+        Debug.Log("algo entra en el sist de particulas");
         DamageControl();
         if (other.gameObject.CompareTag("Player"))
         {
+            Debug.Log("player dentro del fuego");
             other.GetComponent<LifeManager>().Damage(m_damage);
         }
     }
