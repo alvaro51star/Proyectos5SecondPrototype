@@ -5,9 +5,14 @@ using UnityEngine;
 public class FinalCollider : MonoBehaviour
 {
     [SerializeField] private UIManager uImanager;
+
+    ///<summary> Cuando el player entra en el trigger se activa el menu de confirmacion para irse del nivel </summary>
     private void OnTriggerEnter(Collider other)
     {
-        //Llamar al UIController para que active menú de confirmación para irse
-        uImanager.ActivateUIGameObjects(uImanager.endPanel, true);
+        if(other.CompareTag("Player"))
+        {
+            uImanager.ActivateUIGameObjects(uImanager.confirmEndLevel, true);
+            uImanager.IsInGame(false);
+        }
     }
 }

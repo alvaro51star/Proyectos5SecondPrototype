@@ -4,13 +4,12 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private GameObject exitLevelMenu;
-    [SerializeField] private GameObject finalScore;
-
+    public GameObject confirmEndLevel;
+    public GameObject finalScore;
     public GameObject initialMenu;
     public GameObject levelsMenu;
     public GameObject pauseMenu;
-    public GameObject congratulationsPanel;
+    //public GameObject congratulationsPanel;
     public GameObject gameOverPanel;
     public GameObject endPanel;
 
@@ -67,18 +66,6 @@ public class UIManager : MonoBehaviour
         IsInGame(false);
         gameOverPanel.SetActive(true);
         dead = true;
-    }
-
-    public void EndGame ()
-    {
-        IsInGame(false);
-        exitLevelMenu.SetActive(true);
-    }
-
-    public void FinalScore()
-    {
-        finalScore.SetActive(true);
-        exitLevelMenu.SetActive(false);
     }
 
     public void IsInGame (bool isInGame)

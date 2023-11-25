@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class UIMenus : MonoBehaviour
 {
-    public UIManager uIManager;
-    [SerializeField] GameObject player;
+    [SerializeField] private UIManager uIManager;
+    [SerializeField] private MoveToNextLevel moveToNextLevel;
+    [SerializeField] private GameObject player;
 
     private int initialScene = 0;
     private int tutorialLevelScene = 1;
-    private int congratulationsPanel = 4;
+    //private int congratulationsPanel = 4;
     private int endPanel = 5;   // el numero de la ultima escena
 
     public bool isPaused = false;
@@ -25,10 +26,10 @@ public class UIMenus : MonoBehaviour
             isAMenuOrPanel = false;
         }
 
-        if (SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < congratulationsPanel)
+        /*if (SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < congratulationsPanel)
         {
             LevelCompleted();
-        }
+        }*/
 
         uIManager.IsInGame(true);
         uIManager.ActivateUIGameObjects(uIManager.pauseMenu, false);
@@ -67,7 +68,7 @@ public class UIMenus : MonoBehaviour
         SceneManager.LoadScene(endPanel);
     }
 
-    public void LevelCompleted()    // aqui se pondria el EndGame del FinalCollider
+    /*public void LevelCompleted()    // aqui se pondria el EndGame del FinalCollider
     {
         islevelCompleted = !islevelCompleted;
         if (islevelCompleted)
@@ -93,7 +94,7 @@ public class UIMenus : MonoBehaviour
 
             uIManager.IsInGame(true);
         }
-    }
+    }*/
 
     public void PauseMenu()
     {
@@ -119,7 +120,24 @@ public class UIMenus : MonoBehaviour
                 isAMenuOrPanel = false;
             }
 
-            uIManager.IsInGame(true);
+            Resume();
         }
+    }
+
+    public void GoToFinalScore() //para boton yes de confirmEndLevel
+    {
+        uIManager.ActivateUIGameObjects(uIManager.finalScore, true);
+        uIManager.ActivateUIGameObjects(uIManager.confirmEndLevel, false);
+    }
+
+    public void Resume() //para boton no de confirmEndLevel
+    {
+        uIManager.DesactivateAllUIGameObjects();
+        uIManager.IsInGame(true);
+    }
+
+    public void GoToNextLevel()
+    {
+        moveToNextLevel.GoToNextLevel();
     }
 }

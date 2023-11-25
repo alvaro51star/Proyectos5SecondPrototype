@@ -11,7 +11,8 @@ public class EndLevel : MonoBehaviour
     }
 
     private void FinalScore()
-    {
-        uiManager.FinalScore();
+    {        
+        uiManager.ActivateUIGameObjects(uiManager.finalScore, true);
+        uiManager.ActivateUIGameObjects(uiManager.endPanel, false);
     }
 }
