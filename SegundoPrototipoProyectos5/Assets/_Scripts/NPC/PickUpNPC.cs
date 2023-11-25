@@ -40,6 +40,7 @@ public class PickUpNPC : InteractiveObject
         {
             parachuteBehaviour.enabled = false;
             rb.useGravity = false;
+            meshColliderNPC.enabled = false;
             transform.SetParent(pickUpPosition);
             ResetTransform();
             pickedUp = true;
@@ -51,6 +52,7 @@ public class PickUpNPC : InteractiveObject
             pickUpPosition.DetachChildren();
             rb.useGravity = true;
             rb.AddForce(Camera.main.transform.forward * force, ForceMode.Impulse);
+            meshColliderNPC.enabled = true;
             transform.localRotation = Quaternion.Euler(Vector3.zero);
             pickedUp = false;
 
