@@ -5,7 +5,7 @@ using static GameManager;
 
 public class LifeManager : MonoBehaviour
 {
-    public delegate void ChangeLifeDelegate (float newVal, float newVal2);
+    public delegate void ChangeLifeDelegate(float newVal, float newVal2);
     public static event ChangeLifeDelegate OnLifeChange;
 
     [SerializeField] private float maxLife = 100f;
@@ -31,10 +31,13 @@ public class LifeManager : MonoBehaviour
     {
         m_currentLife -= damage;
         //SoundManager.instance.ReproduceSound(AudioClipsNames.Auch, audioSource);
+        
+        if (OnLifeChange != null)
+        {
+            OnLifeChange(m_currentLife, maxLife);
+        }
 
-        OnLifeChange(m_currentLife, maxLife);
-
-        m_timeLastDamaged = regenTime;        
+        m_timeLastDamaged = regenTime;
 
         if (m_currentLife <= 0 && !isDone)
         {
@@ -48,11 +51,14 @@ public class LifeManager : MonoBehaviour
     {
         m_timeLastDamaged -= Time.deltaTime;
 
-        if(m_currentLife < maxLife && m_timeLastDamaged <= 0)
+        if (m_currentLife < maxLife && m_timeLastDamaged <= 0)
             m_currentLife += regenRate * Time.deltaTime;
 
         m_currentLife = Mathf.Clamp(m_currentLife, 0, maxLife);
 
-        OnLifeChange(m_currentLife, maxLife);
+        if (OnLifeChange != null)
+        {
+            OnLifeChange(m_currentLife, maxLife);
+        }
     }
 }
