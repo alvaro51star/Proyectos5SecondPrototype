@@ -42,7 +42,7 @@ public class Score : MonoBehaviour
     }
     private void CalculateScore()
     {
-        if (calculateSavedNPCs.savedVictims >= calculateSavedNPCs.totalNumberOfVictims)
+        if (calculateSavedNPCs.everyoneHasBeenSaved)
             m_numberOfStarsWon += 1;
         if (calculatePutOutFires.putOutFires >= calculatePutOutFires.totalNumberOfFires)
             m_numberOfStarsWon += 1;

@@ -217,6 +217,22 @@ PrefabInstance:
       propertyPath: calculatePutOutFires
       value: 
       objectReference: {fileID: 1168108285}
+    - target: {fileID: 4098023431870989130, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098023431870989130, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1026906346}
+    - target: {fileID: 4098023431870989130, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 4098023431870989130, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UIMenus, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4258256300529771379, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: m_Name
       value: UI
@@ -528,8 +544,7 @@ MonoBehaviour:
   - {fileID: 521274827}
   - {fileID: 1824644284}
   - {fileID: 1939529350}
-  totalNumberOfVictims: 0
-  savedVictims: 0
+  everyoneHasBeenSaved: 0
 --- !u!1 &456166841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,6 +1275,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 477998853}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1026906346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3629889425460279024, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+  m_PrefabInstance: {fileID: 177053084}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97435313ddeb9054b93ef8bb9e6909f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1026906348 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2934215141517266926, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
@@ -2029,6 +2055,10 @@ PrefabInstance:
       propertyPath: uImanager
       value: 
       objectReference: {fileID: 1026906348}
+    - target: {fileID: 6333513114889670992, guid: 2e59a4525b093a24d8b7fa042480ffca, type: 3}
+      propertyPath: calculateSavedNPCs
+      value: 
+      objectReference: {fileID: 443707499}
     - target: {fileID: 7220107677914230567, guid: 2e59a4525b093a24d8b7fa042480ffca, type: 3}
       propertyPath: m_Name
       value: TriggerEndLevel (Ambulance)

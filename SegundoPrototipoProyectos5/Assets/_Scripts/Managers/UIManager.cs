@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour
     //public GameObject congratulationsPanel;
     public GameObject gameOverPanel;
     public GameObject endPanel;
+    public GameObject dontAllowToLeaveLevelPanel;
     [SerializeField] private GameObject EImage;
     [SerializeField] private GameObject timerBar;
 
