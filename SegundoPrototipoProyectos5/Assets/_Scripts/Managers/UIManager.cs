@@ -13,10 +13,14 @@ public class UIManager : MonoBehaviour
     //public GameObject congratulationsPanel;
     public GameObject gameOverPanel;
     public GameObject endPanel;
+    public GameObject firstStar;
+    public GameObject secondStar;
+    public GameObject thirdStar;
+
 
     [SerializeField] private GameObject EImage;
 
-    [SerializeField] private GameObject[] UIGameObjects;
+    [SerializeField] private GameObject[] MenusAndPanels;
 
     public bool dead = false;
 
@@ -27,9 +31,9 @@ public class UIManager : MonoBehaviour
     }
     public void DesactivateAllUIGameObjects()
     {
-        for (int i = 0; i < UIGameObjects.Length; i++)
+        for (int i = 0; i < MenusAndPanels.Length; i++)
         {
-            UIGameObjects[i].SetActive(false);
+            MenusAndPanels[i].SetActive(false);
         }
     }
 

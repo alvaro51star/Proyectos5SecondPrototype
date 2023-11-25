@@ -8,6 +8,7 @@ public class UIMenus : MonoBehaviour
     [SerializeField] private UIManager uIManager;
     [SerializeField] private MoveToNextLevel moveToNextLevel;
     [SerializeField] private GameObject player;
+    [SerializeField] private Score score;
 
     private int initialScene = 0;
     private int tutorialLevelScene = 1;
@@ -128,6 +129,7 @@ public class UIMenus : MonoBehaviour
     {
         uIManager.ActivateUIGameObjects(uIManager.finalScore, true);
         uIManager.ActivateUIGameObjects(uIManager.confirmEndLevel, false);
+        score.ShowStars();
     }
 
     public void Resume() //para boton no de confirmEndLevel

@@ -56,6 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4718666110924365271}
   - component: {fileID: 3629889425460279024}
+  - component: {fileID: 4043450924757945306}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -96,9 +97,25 @@ MonoBehaviour:
   uIManager: {fileID: 6803694938076449422}
   moveToNextLevel: {fileID: 0}
   player: {fileID: 0}
+  score: {fileID: 0}
   isPaused: 0
   islevelCompleted: 0
   isAMenuOrPanel: 0
+--- !u!114 &4043450924757945306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258256300529771379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c23c7aae3605dd7418ffe0f841249bf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uImanager: {fileID: 6803694938076449422}
+  calculateSavedNPCs: {fileID: 0}
+  timeMultiplier: 0.5
 --- !u!1 &7281844140535923405
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,9 +642,19 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 6803694938076449422}
   m_SourcePrefab: {fileID: 100100000, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
+--- !u!1 &784624228659937554 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 792157634177432126, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
+  m_PrefabInstance: {fileID: 8379103106480940}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1406085901872499193 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1413759826646348501, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
+  m_PrefabInstance: {fileID: 8379103106480940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1820127117295806671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1828363900212106211, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
   m_PrefabInstance: {fileID: 8379103106480940}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2108629847285553683 stripped
@@ -654,7 +681,11 @@ MonoBehaviour:
   pauseMenu: {fileID: 2211566610405669066}
   gameOverPanel: {fileID: 3380916509319476767}
   endPanel: {fileID: 6392587286110633158}
-  UIGameObjects:
+  firstStar: {fileID: 1820127117295806671}
+  secondStar: {fileID: 4276136789640569819}
+  thirdStar: {fileID: 784624228659937554}
+  EImage: {fileID: 0}
+  MenusAndPanels:
   - {fileID: 7444221261715267237}
   - {fileID: 6155970021595386427}
   - {fileID: 2211566610405669066}
@@ -671,6 +702,11 @@ GameObject:
 --- !u!1 &3380916509319476767 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3384078094738328883, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
+  m_PrefabInstance: {fileID: 8379103106480940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4276136789640569819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4272270622621686007, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
   m_PrefabInstance: {fileID: 8379103106480940}
   m_PrefabAsset: {fileID: 0}
 --- !u!224 &4980964757896733771 stripped
