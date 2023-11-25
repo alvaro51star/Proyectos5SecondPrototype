@@ -11,7 +11,11 @@ public class WaterGun : MonoBehaviour
     [SerializeField] ParticleSystem waterParticleSystem;
     private Rigidbody rb;
 
+    public delegate void OnWaterChangeDelegate(float newVal, float maxValue);
+    public static event OnWaterChangeDelegate OnWaterChange;
+
     private float currentWater;
+    private float tempWaterValue;
     [Header("Player variables")]
     [SerializeField] private GroundCheck groundCheck;
     [SerializeField] private Transform playerCamera;
@@ -24,6 +28,7 @@ public class WaterGun : MonoBehaviour
     {
         waterParticleSystem.Play();
         currentWater = maxWater;
+        tempWaterValue = currentWater;
         playerCamera = Camera.main.transform;
         rb = GetComponent<Rigidbody>();
     }
@@ -36,7 +41,7 @@ public class WaterGun : MonoBehaviour
         {
             currentWater -= Time.deltaTime;
             EnableWater();
-
+            CheckWaterValueChange();
 
             if (!groundCheck.isGrounded)
             {
@@ -88,6 +93,23 @@ public class WaterGun : MonoBehaviour
             return true;
         }
         return false;
+    }
+
+    private void CheckWaterValueChange()
+    {
+        if (tempWaterValue != currentWater && OnWaterChange != null)
+        {
+            tempWaterValue = currentWater;
+            OnWaterChange(currentWater, maxWater);
+        }
+    }
+
+    public void InvokeOnWaterChange()
+    {
+        if (OnWaterChange != null)
+        {
+            OnWaterChange(currentWater, maxWater);
+        }
     }
 }
 

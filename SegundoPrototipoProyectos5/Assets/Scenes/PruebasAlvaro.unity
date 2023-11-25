@@ -1785,10 +1785,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5175999067266274948, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1945246992}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2773811d89c208645bb742089f43611e, type: 3}
 --- !u!1 &1576316523
 GameObject:
@@ -2237,23 +2234,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1264558447}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1945246989 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5175999067266274948, guid: 2773811d89c208645bb742089f43611e, type: 3}
-  m_PrefabInstance: {fileID: 1562433059}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1945246992
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1945246989}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2000739447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,6 +2828,10 @@ PrefabInstance:
     - target: {fileID: 4185619167809004255, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[0].outWeight
       value: 0.20578343
+      objectReference: {fileID: 0}
+    - target: {fileID: 4498719831991683256, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: maxWater
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4514447861889760144, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_Materials.Array.data[0]

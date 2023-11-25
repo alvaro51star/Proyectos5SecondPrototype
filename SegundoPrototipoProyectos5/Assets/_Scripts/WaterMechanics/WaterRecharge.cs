@@ -8,6 +8,10 @@ public class WaterRecharge : InteractiveObject
     private bool empty = false;
     [SerializeField] private GameObject water;
 
+    public delegate void OnWaterRechargeDelegate();
+    public static event OnWaterRechargeDelegate OnWaterRecharge;
+
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -19,9 +23,9 @@ public class WaterRecharge : InteractiveObject
                     other.gameObject.GetComponent<WaterGun>().RechargeWater();
                     empty = true;
                     water.SetActive(false);
+                    other.GetComponent<WaterGun>().InvokeOnWaterChange();
                 }
             }
-
         }
     }
 }
