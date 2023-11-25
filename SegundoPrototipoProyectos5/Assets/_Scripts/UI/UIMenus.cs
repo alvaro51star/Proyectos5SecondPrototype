@@ -70,7 +70,11 @@ public class UIMenus : MonoBehaviour
 
     public void GoToLevelsMenu()
     {
-        m_UIManager.IsInGame(false);
+        if (SceneManager.GetActiveScene().buildIndex != m_initialScene)
+        {
+            SceneManager.LoadScene(m_initialScene);
+        }
+
         m_UIManager.DesactivateAllUIGameObjects();
         m_UIManager.ActivateUIGameObjects(m_UIManager.levelsMenu, true);        
     }
