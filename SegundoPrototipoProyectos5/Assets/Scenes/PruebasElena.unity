@@ -1581,6 +1581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FIRE (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8445084869772928660, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1753,6 +1757,10 @@ PrefabInstance:
     - target: {fileID: 8445084869772928660, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_Name
       value: FIRE (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8445084869772928660, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1974,6 +1982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FIRE (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8445084869772928660, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2066,6 +2078,10 @@ PrefabInstance:
       propertyPath: calculatePutOutFires
       value: 
       objectReference: {fileID: 1168108285}
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: maxEmissionRate
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 8177794739573682663, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.27
