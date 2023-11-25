@@ -38,6 +38,9 @@ public class UIMenus : MonoBehaviour
 
         m_UIManager.IsInGame(true);
         m_UIManager.ActivateUIGameObjects(m_UIManager.pauseMenu, false);
+
+        if (SceneManager.GetActiveScene().buildIndex == m_initialScene)
+            m_UIManager.ActivateUIGameObjects(m_UIManager.initialMenu, true);
     }
 
     public void QuitGame()
