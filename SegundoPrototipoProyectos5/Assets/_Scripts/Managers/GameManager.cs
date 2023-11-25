@@ -72,6 +72,9 @@ public class GameManager : MonoBehaviour
 
     public void InvokeGameOver()
     {
-        OnGameOver.Invoke();
+        if (OnGameOver != null)
+        {
+            OnGameOver.Invoke();
+        }
     }
 }
