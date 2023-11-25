@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Fire
   - ElectricZone
+  - Ground
   layers:
   - Default
   - TransparentFX
