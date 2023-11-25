@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    [Header("Canvas menus and panels")]
     public GameObject confirmEndLevel;
     public GameObject finalScore;
     public GameObject initialMenu;
@@ -13,17 +14,18 @@ public class UIManager : MonoBehaviour
     //public GameObject congratulationsPanel;
     public GameObject gameOverPanel;
     public GameObject endPanel;
+    [SerializeField] private GameObject EImage;
+    [SerializeField] private GameObject timerBar;
+
+    [Header("Put same things here:")]
+    [SerializeField] private GameObject[] MenusAndPanels;
+
+    [Header("Score stars")]
     public GameObject firstStar;
     public GameObject secondStar;
     public GameObject thirdStar;
 
-
-    [SerializeField] private GameObject EImage;
-
-    [SerializeField] private GameObject[] MenusAndPanels;
-
-    public bool dead = false;
-
+    [HideInInspector] public bool dead = false;
 
     public void ActivateUIGameObjects(GameObject gOToActivate, bool b)
     {
@@ -85,6 +87,7 @@ public class UIManager : MonoBehaviour
             Cursor.visible = false;
             Time.timeScale = 1;
             DesactivateAllUIGameObjects();
+            timerBar.SetActive(true);
         }
         else
         {

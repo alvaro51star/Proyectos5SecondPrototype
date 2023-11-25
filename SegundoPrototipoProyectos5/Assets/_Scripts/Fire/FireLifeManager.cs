@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireLifeManager : MonoBehaviour
-{
-    [SerializeField] public float maxLife = 100;
+{    
     [SerializeField] private Fire fire;
+    [SerializeField] private CalculatePutOutFires calculatePutOutFires;
     [SerializeField] private AudioSource audioSource;
 
+    [HideInInspector] public float maxLife = 100;
     [HideInInspector] public float currentLife;
     private float m_maxEmissionRate;
 
@@ -28,6 +29,7 @@ public class FireLifeManager : MonoBehaviour
         if (currentLife <= 0)
         {
             fire.Death();
+            calculatePutOutFires.FirePutOut();
             //SoundManager.instance.ReproduceSound(AudioClipsNames.FireDeath, audioSource);
         }
     }

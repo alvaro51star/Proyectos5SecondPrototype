@@ -16,7 +16,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1332799591169868592
 Transform:
   m_ObjectHideFlags: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIMenu: {fileID: 3629889425460279024}
-  uIManager: {fileID: 6803694938076449422}
+  uIManager: {fileID: 2934215141517266926}
 --- !u!1 &4258256300529771379
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,6 +57,8 @@ GameObject:
   - component: {fileID: 4718666110924365271}
   - component: {fileID: 3629889425460279024}
   - component: {fileID: 4043450924757945306}
+  - component: {fileID: 7475682333404853675}
+  - component: {fileID: 2934215141517266926}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -94,10 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97435313ddeb9054b93ef8bb9e6909f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uIManager: {fileID: 6803694938076449422}
-  moveToNextLevel: {fileID: 0}
   player: {fileID: 0}
-  score: {fileID: 0}
   isPaused: 0
   islevelCompleted: 0
   isAMenuOrPanel: 0
@@ -113,9 +112,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c23c7aae3605dd7418ffe0f841249bf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uImanager: {fileID: 6803694938076449422}
   calculateSavedNPCs: {fileID: 0}
-  timeMultiplier: 0.5
+  calculatePutOutFires: {fileID: 0}
+  timeMultiplier: 0
+--- !u!114 &7475682333404853675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258256300529771379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e30e26cb9db6fbd4c897e954859c874c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastLevel: 3
+--- !u!114 &2934215141517266926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258256300529771379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd479299022547242af922b2c955f884, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  confirmEndLevel: {fileID: 7735481374436073972}
+  finalScore: {fileID: 1406085901872499193}
+  initialMenu: {fileID: 7444221261715267237}
+  levelsMenu: {fileID: 6155970021595386427}
+  pauseMenu: {fileID: 2211566610405669066}
+  gameOverPanel: {fileID: 3380916509319476767}
+  endPanel: {fileID: 6392587286110633158}
+  EImage: {fileID: 7226744150932970148}
+  timerBar: {fileID: 5667613532363787881}
+  MenusAndPanels:
+  - {fileID: 7444221261715267237}
+  - {fileID: 6155970021595386427}
+  - {fileID: 2211566610405669066}
+  - {fileID: 3380916509319476767}
+  - {fileID: 7735481374436073972}
+  - {fileID: 6392587286110633158}
+  - {fileID: 1406085901872499193}
+  - {fileID: 7226744150932970148}
+  - {fileID: 5667613532363787881}
+  firstStar: {fileID: 1820127117295806671}
+  secondStar: {fileID: 4276136789640569819}
+  thirdStar: {fileID: 784624228659937554}
+  dead: 0
 --- !u!1 &4731259290553953170
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,10 +930,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4972595974525296487, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
       insertIndex: 1
       addedObject: {fileID: 6552418661368020453}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2116303780643299647, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6803694938076449422}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
 --- !u!1 &784624228659937554 stripped
 GameObject:
@@ -903,43 +947,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1828363900212106211, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
   m_PrefabInstance: {fileID: 8379103106480940}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2108629847285553683 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2116303780643299647, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}
-  m_PrefabInstance: {fileID: 8379103106480940}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6803694938076449422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108629847285553683}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd479299022547242af922b2c955f884, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  confirmEndLevel: {fileID: 7735481374436073972}
-  finalScore: {fileID: 1406085901872499193}
-  initialMenu: {fileID: 7444221261715267237}
-  levelsMenu: {fileID: 6155970021595386427}
-  pauseMenu: {fileID: 2211566610405669066}
-  gameOverPanel: {fileID: 3380916509319476767}
-  endPanel: {fileID: 6392587286110633158}
-  firstStar: {fileID: 1820127117295806671}
-  secondStar: {fileID: 4276136789640569819}
-  thirdStar: {fileID: 784624228659937554}
-  EImage: {fileID: 7226744150932970148}
-  MenusAndPanels:
-  - {fileID: 7444221261715267237}
-  - {fileID: 6155970021595386427}
-  - {fileID: 2211566610405669066}
-  - {fileID: 3380916509319476767}
-  - {fileID: 7735481374436073972}
-  - {fileID: 6392587286110633158}
-  - {fileID: 1406085901872499193}
-  dead: 0
 --- !u!1 &2211566610405669066 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2210375311972533222, guid: 40bac3a7cf13ed540afdaba2db811808, type: 3}

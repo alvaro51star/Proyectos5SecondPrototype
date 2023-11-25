@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Score : MonoBehaviour
-{
-    [SerializeField] private UIManager uImanager;
+{    
     [SerializeField] private CalculateSavedNPCs calculateSavedNPCs;
+    [SerializeField] private CalculatePutOutFires calculatePutOutFires;
 
     [SerializeField, Range (0,1)] private float timeMultiplier = 0.5f;
-    private int m_victimsSaved;
-    private int m_totalNumberOfFires;
-    private int m_firesPutOut;
+
+    private UIManager m_uIManager;
     private int m_numberOfStarsWon = 0;
 
     private void Start()
     {
+        m_uIManager = GetComponent<UIManager>();
+
         ActivateStars(false, false, false);
     }
 
@@ -41,9 +42,9 @@ public class Score : MonoBehaviour
     }
     private void CalculateScore()
     {
-        if (m_victimsSaved >= calculateSavedNPCs.totalNumberOfVictims)
+        if (calculateSavedNPCs.savedVictims >= calculateSavedNPCs.totalNumberOfVictims)
             m_numberOfStarsWon += 1;
-        if (m_firesPutOut >= m_totalNumberOfFires)
+        if (calculatePutOutFires.putOutFires >= calculatePutOutFires.totalNumberOfFires)
             m_numberOfStarsWon += 1;
         if (GameManager.instance.currentTime >= GameManager.instance.maxTimeLevel * timeMultiplier)
             m_numberOfStarsWon += 1;
@@ -53,8 +54,8 @@ public class Score : MonoBehaviour
 
     private void ActivateStars(bool b1, bool b2, bool b3)
     {
-        uImanager.ActivateUIGameObjects(uImanager.firstStar, b1);
-        uImanager.ActivateUIGameObjects(uImanager.secondStar, b2);
-        uImanager.ActivateUIGameObjects(uImanager.thirdStar, b3);
+        m_uIManager.ActivateUIGameObjects(m_uIManager.firstStar, b1);
+        m_uIManager.ActivateUIGameObjects(m_uIManager.secondStar, b2);
+        m_uIManager.ActivateUIGameObjects(m_uIManager.thirdStar, b3);
     }
 }
