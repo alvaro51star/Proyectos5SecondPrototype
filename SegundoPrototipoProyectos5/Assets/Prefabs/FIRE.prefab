@@ -1,75 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2168654796776432024
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3013153578239551936}
-  - component: {fileID: 6199324343387522397}
-  - component: {fileID: 6238450212499282484}
-  m_Layer: 7
-  m_Name: BoxCollider
-  m_TagString: Fire
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3013153578239551936
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2168654796776432024}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8177794739573682663}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &6199324343387522397
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2168654796776432024}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6238450212499282484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2168654796776432024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78b39b52c29d2094daee50361123353c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxLife: 100
-  fire: {fileID: 1793371952872935867}
-  audioSource: {fileID: 510250210287216393}
-  currentLife: 0
 --- !u!1 &5175999067266274948
 GameObject:
   m_ObjectHideFlags: 0
@@ -5071,7 +5001,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8177794739573682663}
   - component: {fileID: 1793371952872935867}
+  - component: {fileID: 725382082066388614}
   - component: {fileID: 510250210287216393}
+  - component: {fileID: 8711213089600687656}
   m_Layer: 7
   m_Name: FIRE
   m_TagString: Fire
@@ -5093,7 +5025,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8781789526509267800}
-  - {fileID: 3013153578239551936}
   - {fileID: 5869545198652131954}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5112,15 +5043,32 @@ MonoBehaviour:
   regenTime: 2.5
   regenRate: 5
   fireParticleSystem: {fileID: 3476746791584358532}
-  fireLifeManager: {fileID: 6238450212499282484}
+  fireLifeManager: {fileID: 725382082066388614}
   fireLight: {fileID: 148201850107522815}
   maxEmissionRate: 80
   minParticleSizeMultiplier: 0.01
   maxParticleSizeMultiplier: 1
   maxScale: 3
   minScale: 1
-  boxCollider: {fileID: 6199324343387522397}
+  boxCollider: {fileID: 8711213089600687656}
   currentIntensity: 0
+--- !u!114 &725382082066388614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445084869772928660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78b39b52c29d2094daee50361123353c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fire: {fileID: 1793371952872935867}
+  calculatePutOutFires: {fileID: 0}
+  audioSource: {fileID: 510250210287216393}
+  maxLife: 100
+  currentLife: 0
 --- !u!82 &510250210287216393
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5217,3 +5165,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &8711213089600687656
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445084869772928660}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

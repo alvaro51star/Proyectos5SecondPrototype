@@ -35,9 +35,12 @@ public class PlayerMovement : MonoBehaviour
     private GroundCheck m_groundCheck;
     private bool m_grounded;
 
+    private PlayerManager m_playerManager;
+
 
     void Start()
     {
+        m_playerManager = GetComponent<PlayerManager>();
         m_rb = GetComponent<Rigidbody>();
         m_rb.freezeRotation = true;
         m_groundCheck = groundCheckObject.GetComponent<GroundCheck>();

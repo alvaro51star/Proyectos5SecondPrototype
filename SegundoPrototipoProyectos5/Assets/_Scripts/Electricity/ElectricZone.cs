@@ -11,6 +11,8 @@ public class ElectricZone : MonoBehaviour
     [SerializeField] private float timeBetweenDamageTicks = 0.5f;
     [SerializeField] private float damage = 20;
 
+    [SerializeField] private List<ParticleSystem> particleSystems;
+
     #region EnableDisable
     private void OnEnable()
     {
@@ -53,10 +55,18 @@ public class ElectricZone : MonoBehaviour
         if (electrityStatus)
         {
             Debug.Log("Feedback Electrico Activado");
+            foreach (var particleSystem in particleSystems)
+            {
+                particleSystem.Play();
+            }
         }
         else
         {
             Debug.Log("Feedback Electrico Desactivado");
+            foreach (var particleSystem in particleSystems)
+            {
+                particleSystem.Stop();
+            }
         }
     }
 

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8806491601585428166}
   m_Layer: 0
   m_Name: InjuredNPC
-  m_TagString: Untagged
+  m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,6 +72,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pickUpPosition: {fileID: 0}
   force: 10
+  playerManager: {fileID: 0}
+  meshColliderNPC: {fileID: 0}
 --- !u!114 &6586586901571864103
 MonoBehaviour:
   m_ObjectHideFlags: 0

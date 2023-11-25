@@ -116,8 +116,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6008859527398957093}
-  - component: {fileID: 708749262992112534}
-  - component: {fileID: 6509790974016927745}
   m_Layer: 0
   m_Name: WaterBarrel
   m_TagString: Untagged
@@ -140,15 +138,62 @@ Transform:
   m_Children:
   - {fileID: 6529552224468869960}
   - {fileID: 2422754298678461151}
+  - {fileID: 5659377793983065142}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &708749262992112534
+--- !u!1 &5901440410974825308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5659377793983065142}
+  - component: {fileID: 1448094285659792128}
+  - component: {fileID: 370170967784159622}
+  m_Layer: 0
+  m_Name: WaterBarrelFuncionality
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5659377793983065142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901440410974825308}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6008859527398957093}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1448094285659792128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5901440410974825308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20192aff1ace9ad4ab5fc8e42ee61948, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  water: {fileID: 3447294765657419604}
+--- !u!65 &370170967784159622
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3682588053711922339}
+  m_GameObject: {fileID: 5901440410974825308}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -161,21 +206,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.793718, y: 3.1554053, z: 2.793718}
-  m_Center: {x: 0, y: 1.5756427, z: 0}
---- !u!114 &6509790974016927745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3682588053711922339}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20192aff1ace9ad4ab5fc8e42ee61948, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  water: {fileID: 3447294765657419604}
+  m_Size: {x: 3, y: 3, z: 3}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &6526640197266311866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,8 +268,38 @@ PrefabInstance:
     - {fileID: 64121451006515978, guid: 686b172872fde0f4ca73ea7874c6d53e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1062499603887538, guid: 686b172872fde0f4ca73ea7874c6d53e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7272952741401865154}
   m_SourcePrefab: {fileID: 100100000, guid: 686b172872fde0f4ca73ea7874c6d53e, type: 3}
+--- !u!1 &6525873057770159880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1062499603887538, guid: 686b172872fde0f4ca73ea7874c6d53e, type: 3}
+  m_PrefabInstance: {fileID: 6526640197266311866}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &7272952741401865154
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6525873057770159880}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: c534a0b83197c86439c6e036547f282d, type: 3}
 --- !u!4 &6529552224468869960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4197425217284594, guid: 686b172872fde0f4ca73ea7874c6d53e, type: 3}

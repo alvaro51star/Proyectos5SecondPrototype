@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaterRecharge : MonoBehaviour
+public class WaterRecharge : InteractiveObject
 {
     private bool empty = false;
     [SerializeField] private GameObject water;

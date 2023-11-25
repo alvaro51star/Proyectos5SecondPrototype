@@ -1,23 +1,32 @@
+using System.Runtime.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private GameObject exitLevelMenu;
-    [SerializeField] private GameObject finalScore;
-
+    [Header("Canvas menus and panels")]
+    public GameObject confirmEndLevel;
+    public GameObject finalScore;
     public GameObject initialMenu;
     public GameObject levelsMenu;
     public GameObject pauseMenu;
-    public GameObject congratulationsPanel;
+    //public GameObject congratulationsPanel;
     public GameObject gameOverPanel;
     public GameObject endPanel;
+    public GameObject dontAllowToLeaveLevelPanel;
+    [SerializeField] private GameObject EImage;
+    [SerializeField] private GameObject timerBar;
 
-    [SerializeField] private GameObject[] UIGameObjects;
+    [Header("Put same things here:")]
+    [SerializeField] private GameObject[] MenusAndPanels;
 
-    public bool dead = false;
+    [Header("Score stars")]
+    public GameObject firstStar;
+    public GameObject secondStar;
+    public GameObject thirdStar;
 
+    [HideInInspector] public bool dead = false;
 
     public void ActivateUIGameObjects(GameObject gOToActivate, bool b)
     {
@@ -25,9 +34,9 @@ public class UIManager : MonoBehaviour
     }
     public void DesactivateAllUIGameObjects()
     {
-        for (int i = 0; i < UIGameObjects.Length; i++)
+        for (int i = 0; i < MenusAndPanels.Length; i++)
         {
-            UIGameObjects[i].SetActive(false);
+            MenusAndPanels[i].SetActive(false);
         }
     }
 
@@ -35,11 +44,13 @@ public class UIManager : MonoBehaviour
     private void EnableImage()
     {
         Debug.Log("Dentro");
+        EImage.SetActive(true);
     }
 
     private void DisableImage()
     {
         Debug.Log("Fuera");
+        EImage.SetActive(false);
     }
 
     public void EnabledEndMenu(bool isActive)
@@ -69,18 +80,6 @@ public class UIManager : MonoBehaviour
         dead = true;
     }
 
-    public void EndGame ()
-    {
-        IsInGame(false);
-        exitLevelMenu.SetActive(true);
-    }
-
-    public void FinalScore()
-    {
-        finalScore.SetActive(true);
-        exitLevelMenu.SetActive(false);
-    }
-
     public void IsInGame (bool isInGame)
     {
         if(isInGame)
@@ -89,6 +88,7 @@ public class UIManager : MonoBehaviour
             Cursor.visible = false;
             Time.timeScale = 1;
             DesactivateAllUIGameObjects();
+            timerBar.SetActive(true);
         }
         else
         {
