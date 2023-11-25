@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static GameManager;
 
 public class LifeManager : MonoBehaviour
 {
+    public delegate void ChangeLifeDelegate (float newVal, float newVal2);
+    public static event ChangeLifeDelegate OnLifeChange;
+
     [SerializeField] private float maxLife = 100f;
     [SerializeField] private float regenTime = 2.5f;
     [SerializeField] private float regenRate = 5;
@@ -28,8 +32,9 @@ public class LifeManager : MonoBehaviour
         m_currentLife -= damage;
         //SoundManager.instance.ReproduceSound(AudioClipsNames.Auch, audioSource);
 
-        m_timeLastDamaged = regenTime;
-        
+        OnLifeChange(m_currentLife, maxLife);
+
+        m_timeLastDamaged = regenTime;        
 
         if (m_currentLife <= 0 && !isDone)
         {
@@ -47,5 +52,7 @@ public class LifeManager : MonoBehaviour
             m_currentLife += regenRate * Time.deltaTime;
 
         m_currentLife = Mathf.Clamp(m_currentLife, 0, maxLife);
+
+        OnLifeChange(m_currentLife, maxLife);
     }
 }

@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
     public GameObject dontAllowToLeaveLevelPanel;
     [SerializeField] private GameObject EImage;
     [SerializeField] private GameObject timerBar;
+    [SerializeField] private GameObject lifeBar;
 
     [Header("Put same things here:")]
     [SerializeField] private GameObject[] MenusAndPanels;
@@ -42,14 +43,12 @@ public class UIManager : MonoBehaviour
 
     // TODO: Poner la imagen en el canvas y activarla y desactivarla
     private void EnableImage()
-    {
-        Debug.Log("Dentro");
+    {        
         EImage.SetActive(true);
     }
 
     private void DisableImage()
     {
-        Debug.Log("Fuera");
         EImage.SetActive(false);
     }
 
@@ -57,7 +56,6 @@ public class UIManager : MonoBehaviour
     {
         endPanel.SetActive(isActive);
     }
-
 
     private void OnEnable()
     {
@@ -76,6 +74,7 @@ public class UIManager : MonoBehaviour
     private void ShowGameOver()
     {
         IsInGame(false);
+        DesactivateAllUIGameObjects();
         gameOverPanel.SetActive(true);
         dead = true;
     }
@@ -89,6 +88,7 @@ public class UIManager : MonoBehaviour
             Time.timeScale = 1;
             DesactivateAllUIGameObjects();
             timerBar.SetActive(true);
+            lifeBar.SetActive(true);
         }
         else
         {
