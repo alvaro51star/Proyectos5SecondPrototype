@@ -5,25 +5,27 @@ using UnityEngine;
 public class CalculateSavedNPCs : MonoBehaviour
 {
     [SerializeField]  private GameObject[] victims;
-    [HideInInspector] public int totalNumberOfVictims;
-    [HideInInspector] public int savedVictims = 0;
+    private int m_totalNumberOfVictims;
+    private int m_savedVictims = 0;
+    [HideInInspector] public bool everyoneHasBeenSaved;
     private void Start()
     {
-        totalNumberOfVictims = victims.Length;
+        m_totalNumberOfVictims = victims.Length;
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("NPC"))
         {
             Debug.Log("NPC toca el suelo");
-            savedVictims += 1;
-            savedVictims = Mathf.Clamp(savedVictims, 0, totalNumberOfVictims);
+            m_savedVictims += 1;
+            m_savedVictims = Mathf.Clamp(m_savedVictims, 0, m_totalNumberOfVictims);
             other.tag = "Untagged";
-            Debug.Log("saved victims:  " + savedVictims +"/" + totalNumberOfVictims);
+            Debug.Log("saved victims:  " + m_savedVictims +"/" + m_totalNumberOfVictims);
 
-            if(savedVictims >= totalNumberOfVictims)
+            if(m_savedVictims >= m_totalNumberOfVictims)
             {
                 Debug.Log("Enhorabuena, has salvado a todos");
+                everyoneHasBeenSaved = true;
                 //SoundManager.instance.ReproduceSound();
             }
         }

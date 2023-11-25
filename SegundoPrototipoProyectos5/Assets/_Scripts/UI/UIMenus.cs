@@ -136,7 +136,7 @@ public class UIMenus : MonoBehaviour
         m_Score.ShowStars();
     }
 
-    public void Resume() //para boton no de confirmEndLevel
+    public void Resume() //para boton no de confirmEndLevel y para dontAllowToLeaveLevel
     {
         m_UIManager.DesactivateAllUIGameObjects();
         m_UIManager.IsInGame(true);
