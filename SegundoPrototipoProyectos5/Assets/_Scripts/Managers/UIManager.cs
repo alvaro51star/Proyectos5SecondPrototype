@@ -1,3 +1,4 @@
+using System.Runtime.Serialization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,8 @@ public class UIManager : MonoBehaviour
     //public GameObject congratulationsPanel;
     public GameObject gameOverPanel;
     public GameObject endPanel;
+
+    [SerializeField] private GameObject EImage;
 
     [SerializeField] private GameObject[] UIGameObjects;
 
@@ -34,11 +37,13 @@ public class UIManager : MonoBehaviour
     private void EnableImage()
     {
         Debug.Log("Dentro");
+        EImage.SetActive(true);
     }
 
     private void DisableImage()
     {
         Debug.Log("Fuera");
+        EImage.SetActive(false);
     }
 
     public void EnabledEndMenu(bool isActive)
