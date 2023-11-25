@@ -3,19 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Fire : MonoBehaviour
-{
-    [SerializeField] private float regenTime = 2.5f;
-    [SerializeField] private float regenRate = 5;
+{    
     [SerializeField] private ParticleSystem fireParticleSystem;
     [SerializeField] private FireLifeManager fireLifeManager;
     [SerializeField] private Light fireLight;
     [Header("CUANTO MAS GRANDE MAS PARTICULAS HAY QUE PONER")]
+
     public float maxEmissionRate;
     [SerializeField, Range(0,1)] private float minParticleSizeMultiplier;
     [SerializeField, Range(0, 1)] private float maxParticleSizeMultiplier;
     [SerializeField] private float maxScale;
     [SerializeField] private float minScale;
     [SerializeField] private BoxCollider boxCollider;
+
+    [Header("Regeneración del fuego:")]
+    [SerializeField] private float regenTime = 2.5f;
+    [SerializeField] private float regenRate = 5;
 
     [HideInInspector] public float currentIntensity;
     
@@ -27,12 +30,16 @@ public class Fire : MonoBehaviour
     {
         var fireEmissionRateOverTime = fireParticleSystem.emission.rateOverTime;
         fireEmissionRateOverTime.constantMax = maxEmissionRate;
+    }
 
+    private void Start()
+    {
         currentIntensity = maxEmissionRate;
         m_timeLastWatered = regenTime;
         m_initialLightIntensity = fireLight.intensity;
-
         m_InitialParticleSystemShapeScale = fireParticleSystem.shape.scale * maxScale;
+
+        ChangeIntensity();
         ChangeSize();
     }
 
