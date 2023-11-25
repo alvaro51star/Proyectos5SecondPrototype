@@ -54,6 +54,12 @@ public class UIMenus : MonoBehaviour
         Debug.Log("Quit Game");
     }
 
+    public void Retry()
+    {
+        int numScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(numScene);
+    }
+
     public void GoToInitialMenu()
     {
         SceneManager.LoadScene(m_initialScene);
