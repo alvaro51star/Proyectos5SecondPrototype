@@ -34,13 +34,18 @@ public class UIMenus : MonoBehaviour
         /*if (SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < congratulationsPanel)
         {
             LevelCompleted();
-        }*/
-
-        m_UIManager.IsInGame(true);
-        m_UIManager.ActivateUIGameObjects(m_UIManager.pauseMenu, false);
+        }*/        
 
         if (SceneManager.GetActiveScene().buildIndex == m_initialScene)
+        {
+            m_UIManager.IsInGame(false);
             m_UIManager.ActivateUIGameObjects(m_UIManager.initialMenu, true);
+        }
+        else
+        {
+            m_UIManager.IsInGame(true);
+            m_UIManager.ActivateUIGameObjects(m_UIManager.pauseMenu, false);
+        }
     }
 
     public void QuitGame()
