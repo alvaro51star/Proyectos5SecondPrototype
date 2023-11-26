@@ -99,21 +99,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (!m_audioSource.isPlaying)
         {
-            int clip = Random.Range(0, 2);
-
-            if (clip == 0)
-            {
-                SoundManager.instance.ReproduceSound(AudioClipsNames.Jump_01, m_audioSource);
-            }
-
-            else if (clip == 1)
-            {
-                SoundManager.instance.ReproduceSound(AudioClipsNames.Jump_02, m_audioSource);
-            }
-            else
-            {
-                SoundManager.instance.ReproduceSound(AudioClipsNames.Jump_03, m_audioSource);
-            }
+            SoundManager.instance.ReproduceSound(AudioClipsNames.Jump, m_audioSource);
         }
     }
     private void HandleDrag()
