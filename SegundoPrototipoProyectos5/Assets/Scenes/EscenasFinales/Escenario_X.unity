@@ -26506,6 +26506,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4498719831991683256, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: maxWater
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7169669320638059221, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_Name
       value: PlayerYCamara
