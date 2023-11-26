@@ -2285,6 +2285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caff485f7876b9b4ebeaa74d9c274768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timesCatBeenPet: 0
   player: {fileID: 1247170451}
   gameStarts: 1
   maxTimeLevel: 90

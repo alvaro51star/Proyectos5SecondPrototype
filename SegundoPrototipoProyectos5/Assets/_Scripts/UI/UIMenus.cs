@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,7 +35,7 @@ public class UIMenus : MonoBehaviour
         /*if (SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < congratulationsPanel)
         {
             LevelCompleted();
-        }*/        
+        }*/
 
         if (SceneManager.GetActiveScene().buildIndex == m_initialScene)
         {
@@ -83,12 +84,12 @@ public class UIMenus : MonoBehaviour
     public void GoToLevelsMenu()
     {
         if (SceneManager.GetActiveScene().buildIndex != m_initialScene)
-        {           
+        {
             SceneManager.LoadScene(m_initialScene);
         }
 
         m_UIManager.DesactivateAllUIGameObjects();
-        m_UIManager.ActivateUIGameObjects(m_UIManager.levelsMenu, true);        
+        m_UIManager.ActivateUIGameObjects(m_UIManager.levelsMenu, true);
     }
 
     public void GotToTutorialLevel()
@@ -101,6 +102,11 @@ public class UIMenus : MonoBehaviour
     {
         m_UIManager.IsInGame(false);
         SceneManager.LoadScene(m_endPanel);
+    }
+
+    public void GoToScene(String sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
     }
 
     /*public void LevelCompleted()    // aqui se pondria el EndGame del FinalCollider
