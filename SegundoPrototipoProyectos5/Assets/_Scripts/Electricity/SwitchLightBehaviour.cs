@@ -5,11 +5,11 @@ using UnityEngine;
 
 public class SwitchLightBehaviour : MonoBehaviour
 {
-    MeshRenderer meshRenderer;
+    [SerializeField] private MeshRenderer meshRenderer;
 
     [SerializeField] private Material enabledMaterial, disabledMaterial;
 
-    private void Start()
+    private void Awake()
     {
         meshRenderer = GetComponent<MeshRenderer>();
     }
