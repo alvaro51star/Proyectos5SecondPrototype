@@ -2811,7 +2811,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2604919051970317382, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: m_Name
-      value: InjuredNPC
+      value: InjuredNPC (1)
       objectReference: {fileID: 0}
     - target: {fileID: 7602409596650478473, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12815,6 +12815,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7602409596650478473, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
   m_PrefabInstance: {fileID: 1742482205}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1742482207 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2604919051970317382, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
+  m_PrefabInstance: {fileID: 1742482205}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1754572269
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16125,7 +16130,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 200607950}
     - target: {fileID: 3908169302086989688, guid: f4db37e2181675840a03a49990efd2b8, type: 3}
+      propertyPath: victims.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3908169302086989688, guid: f4db37e2181675840a03a49990efd2b8, type: 3}
       propertyPath: victims.Array.data[0]
+      value: 
+      objectReference: {fileID: 1742482207}
+    - target: {fileID: 3908169302086989688, guid: f4db37e2181675840a03a49990efd2b8, type: 3}
+      propertyPath: victims.Array.data[1]
       value: 
       objectReference: {fileID: 2078589715}
     - target: {fileID: 4365266493443827223, guid: f4db37e2181675840a03a49990efd2b8, type: 3}
