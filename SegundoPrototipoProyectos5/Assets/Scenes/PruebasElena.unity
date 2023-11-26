@@ -2141,7 +2141,15 @@ PrefabInstance:
       objectReference: {fileID: 1168108285}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 10
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476746791584358532, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 887
+      objectReference: {fileID: 0}
+    - target: {fileID: 3476746791584358532, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8177794739573682663, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2186,6 +2194,10 @@ PrefabInstance:
     - target: {fileID: 8445084869772928660, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_Name
       value: FIRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 8781789526509267800, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -5040,8 +5040,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16256652c8cd8904a9ee7326c66d5ba6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  regenTime: 2.5
-  regenRate: 5
   fireParticleSystem: {fileID: 3476746791584358532}
   fireLifeManager: {fileID: 725382082066388614}
   fireLight: {fileID: 148201850107522815}
@@ -5051,6 +5049,8 @@ MonoBehaviour:
   maxScale: 3
   minScale: 1
   boxCollider: {fileID: 8711213089600687656}
+  regenTime: 2.5
+  regenRate: 5
   currentIntensity: 0
 --- !u!114 &725382082066388614
 MonoBehaviour:

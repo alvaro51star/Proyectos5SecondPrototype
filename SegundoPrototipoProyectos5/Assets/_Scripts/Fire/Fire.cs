@@ -124,6 +124,7 @@ public class Fire : MonoBehaviour
             particleSystemShape.scale = m_InitialParticleSystemShapeScale;
             ChangeColliderSize(maxScale);
         }
+        particleSystemShape.position = new Vector3(0,particleSystemShape.scale.y * 0.5f,0);
     }
 
     private void ChangeColliderSize(float scaleMultiplier)
