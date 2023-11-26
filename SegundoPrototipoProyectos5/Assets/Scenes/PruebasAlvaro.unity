@@ -2733,6 +2733,10 @@ PrefabInstance:
       propertyPath: m_FOVAxisMode
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4177385333648602308, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 4185619167809004255, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: ShapeModule.angle
       value: 12.09
