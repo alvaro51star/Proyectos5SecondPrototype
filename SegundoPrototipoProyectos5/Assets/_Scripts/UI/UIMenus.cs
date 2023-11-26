@@ -38,11 +38,11 @@ public class UIMenus : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == m_initialScene)
         {
-            m_UIManager.IsInGame(false);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
 
-            if(GameManager.instance.gameStarts)
+            if (GameManager.instance.gameStarts)
             {
-                //m_UIManager.DesactivateAllUIGameObjects();
                 m_UIManager.ActivateUIGameObjects(m_UIManager.initialMenu, true);
                 GameManager.instance.gameStarts = false;
             }
