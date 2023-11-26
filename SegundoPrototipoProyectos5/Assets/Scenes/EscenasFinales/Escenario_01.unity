@@ -1838,7 +1838,7 @@ GameObject:
   - component: {fileID: 184695231}
   m_Layer: 6
   m_Name: Suelo (3)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3016,7 +3016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602409596650478473, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 55.432518
+      value: 55.492
       objectReference: {fileID: 0}
     - target: {fileID: 7602409596650478473, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3050,6 +3050,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
+      propertyPath: pickUpPosition
+      value: 
+      objectReference: {fileID: 8966124959652213492}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6167,7 +6171,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602409596650478473, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 55.48352
+      value: 55.57
       objectReference: {fileID: 0}
     - target: {fileID: 7602409596650478473, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6201,6 +6205,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
+      propertyPath: pickUpPosition
+      value: 
+      objectReference: {fileID: 8966124959652213492}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6432,7 +6440,7 @@ GameObject:
   - component: {fileID: 665507270}
   m_Layer: 6
   m_Name: Suelo (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7749,7 +7757,7 @@ GameObject:
   - component: {fileID: 827140038}
   m_Layer: 6
   m_Name: Suelo (4)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7963,7 +7971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602409596650478473, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50.86252
+      value: 50.986
       objectReference: {fileID: 0}
     - target: {fileID: 7602409596650478473, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7997,6 +8005,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
+      propertyPath: pickUpPosition
+      value: 
+      objectReference: {fileID: 8966124959652213492}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9035,8 +9047,8 @@ Transform:
   m_GameObject: {fileID: 957184816}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.42905298, z: -0, w: 0.90327936}
-  m_LocalPosition: {x: -1.31, y: 60.57, z: -59.11}
-  m_LocalScale: {x: 2.077841, y: 3.4283497, z: 2.0345378}
+  m_LocalPosition: {x: -1.31, y: 59.77, z: -59.11}
+  m_LocalScale: {x: 2.077841, y: 2.108121, z: 2.0345378}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 379834971}
@@ -14478,7 +14490,7 @@ GameObject:
   - component: {fileID: 1415364274}
   m_Layer: 6
   m_Name: Suelo (2)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15818,13 +15830,43 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 129814, guid: 5a617fc8f93f68a43a614883fb2489fd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1558617522}
   m_SourcePrefab: {fileID: 100100000, guid: 5a617fc8f93f68a43a614883fb2489fd, type: 3}
 --- !u!4 &1558617520 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 485612, guid: 5a617fc8f93f68a43a614883fb2489fd, type: 3}
   m_PrefabInstance: {fileID: 1558617519}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1558617521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 129814, guid: 5a617fc8f93f68a43a614883fb2489fd, type: 3}
+  m_PrefabInstance: {fileID: 1558617519}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1558617522
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558617521}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 73fa7e4f765906648b8b5c6583bba7e2, type: 3}
 --- !u!1001 &1561748752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21306,7 +21348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7602409596650478473, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 51.08752
+      value: 51.22
       objectReference: {fileID: 0}
     - target: {fileID: 7602409596650478473, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: m_LocalPosition.z
@@ -21340,6 +21382,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
+      propertyPath: pickUpPosition
+      value: 
+      objectReference: {fileID: 8966124959652213492}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21988,7 +22034,7 @@ GameObject:
   - component: {fileID: 2130816745}
   m_Layer: 6
   m_Name: Suelo (5)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22284,6 +22330,11 @@ GameObject:
 --- !u!1 &8966124959652213491 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7638451427510771538, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+  m_PrefabInstance: {fileID: 8966124959652213489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8966124959652213492 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4666088999292032027, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
   m_PrefabInstance: {fileID: 8966124959652213489}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
