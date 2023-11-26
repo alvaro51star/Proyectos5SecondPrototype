@@ -16,7 +16,7 @@ public class UIMenus : MonoBehaviour
     private int m_endPanel = 5;   // el numero de la ultima escena
 
     [HideInInspector] public bool isPaused = false;
-    [HideInInspector] public bool islevelCompleted = false;
+    //[HideInInspector] public bool islevelCompleted = false;
     [HideInInspector] public bool isAMenuOrPanel = false;
 
     void Start()
@@ -39,7 +39,19 @@ public class UIMenus : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == m_initialScene)
         {
             m_UIManager.IsInGame(false);
-            m_UIManager.ActivateUIGameObjects(m_UIManager.initialMenu, true);
+
+            if(GameManager.instance.gameStarts)
+            {
+                //m_UIManager.DesactivateAllUIGameObjects();
+                m_UIManager.ActivateUIGameObjects(m_UIManager.initialMenu, true);
+                GameManager.instance.gameStarts = false;
+            }
+
+            else
+            {
+                m_UIManager.ActivateUIGameObjects(m_UIManager.initialMenu, false);
+                m_UIManager.ActivateUIGameObjects(m_UIManager.levelsMenu, true);
+            }
         }
         else
         {
@@ -71,7 +83,7 @@ public class UIMenus : MonoBehaviour
     public void GoToLevelsMenu()
     {
         if (SceneManager.GetActiveScene().buildIndex != m_initialScene)
-        {
+        {           
             SceneManager.LoadScene(m_initialScene);
         }
 
