@@ -12,7 +12,6 @@ public class PickUpNPC : InteractiveObject
     [SerializeField] private float force = 10;
     private ParachuteBehaviour parachuteBehaviour;
     [SerializeField] private PlayerManager playerManager;
-    [SerializeField] private AudioSource playerAudioSource;
 
     LayerMask groundLayer = 6;
     [SerializeField] private MeshCollider meshColliderNPC;
@@ -39,13 +38,13 @@ public class PickUpNPC : InteractiveObject
 
         if (Input.GetKey(KeyCode.E) && other.gameObject.CompareTag("Player") && !pickedUp && !playerManager.HasBody())
         {
+            SoundManager.instance.ReproduceSound(AudioClipsNames.Grabbing);
             parachuteBehaviour.enabled = false;
             rb.useGravity = false;
             meshColliderNPC.enabled = false;
             transform.SetParent(pickUpPosition);
             ResetTransform();
             pickedUp = true;
-            SoundManager.instance.ReproduceSound(AudioClipsNames.Grabbing, playerAudioSource);
         }
 
         if (pickedUp && Input.GetKey(KeyCode.G))
