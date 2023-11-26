@@ -34,7 +34,7 @@ public class UIManager : MonoBehaviour
 
     public void ActivateUIGameObjects(GameObject gOToActivate, bool b)
     {
-        gOToActivate.SetActive(b);
+        gOToActivate.SetActive(b);        
     }
     public void DesactivateAllUIGameObjects()
     {

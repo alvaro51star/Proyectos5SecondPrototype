@@ -23,7 +23,6 @@ public class CalculatePutOutFires : MonoBehaviour
 
         if (putOutFires >= totalNumberOfFires)
         {
-            Debug.Log("Enhorabuena, has apagado todos los fuegos");
             //SoundManager.instance.ReproduceSound();
         }
     }

@@ -43,7 +43,7 @@ public class DialogueController : MonoBehaviour
         
         uiManager.IsInGame(false);
         uiManager.DesactivateAllUIGameObjects();
-        //AudioManager.instance.ReproduceSound(AudioClipsNames.Pop, audioSource);
+        SoundManager.instance.ReproduceSound(AudioClipsNames.Pop, audioSource);
         uiManager.ActivateUIGameObjects(uiManager.dialoguePanel, true);
 
         didDialogueStart = true;
@@ -77,7 +77,7 @@ public class DialogueController : MonoBehaviour
 
     public void NextDialogueLine()
     {
-        //AudioManager.instance.ReproduceSound(AudioClipsNames.Click, audioSource);
+        SoundManager.instance.ReproduceSound(AudioClipsNames.Click, audioSource);
 
         if (dialogueText.text == dialogueLines[lineIndex]) //si enseña la linea completa
         {

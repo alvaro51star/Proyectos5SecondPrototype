@@ -18,14 +18,15 @@ public class FinalCollider : MonoBehaviour
             Time.timeScale = 0;
             uImanager.camera.GetComponent<CameraRotation>().enabled = false;
 
-
             if (calculateSavedNPCs.everyoneHasBeenSaved)
             {
                 uImanager.ActivateUIGameObjects(uImanager.confirmEndLevel, true);
+                SoundManager.instance.ReproduceSound(AudioClipsNames.Pop2, uImanager.GetComponent<AudioSource>());
             }
             else
             {
                 uImanager.ActivateUIGameObjects(uImanager.dontAllowToLeaveLevelPanel, true);
+                SoundManager.instance.ReproduceSound(AudioClipsNames.Pop3, uImanager.GetComponent<AudioSource>());
             }
         }
     }

@@ -6,11 +6,27 @@ using UnityEngine.Audio;
 
 public enum AudioClipsNames
 {
-    Jump,
-    Auch,
-    FireWaterDamage,
-    FireDeath,
-    RechargeWater
+    CatMeow,
+    Fire_1,
+    Fire_2,
+    FireDying_1,
+    FireDying_2,
+    GameOver,
+    Grunt_1,
+    Grunt_2,
+    Grunt_4,
+    Jump_01,
+    Jump_02,
+    Jump_03,
+    Landing_01,
+    Landing_02,
+    Reload,
+    WaterGround,
+    Click,
+    Click_01,
+    Pop,
+    Pop2,
+    Pop3,
 }
 
 

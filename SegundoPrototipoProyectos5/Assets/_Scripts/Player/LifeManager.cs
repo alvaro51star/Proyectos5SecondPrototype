@@ -11,7 +11,7 @@ public class LifeManager : MonoBehaviour
     [SerializeField] private float maxLife = 100f;
     [SerializeField] private float regenTime = 2.5f;
     [SerializeField] private float regenRate = 5;
-    [SerializeField] private AudioSource audioSource;
+    private AudioSource m_audioSource;
     private float m_timeLastDamaged;
     private float m_currentLife;
 
@@ -21,6 +21,7 @@ public class LifeManager : MonoBehaviour
     {
         m_timeLastDamaged = regenTime;
         m_currentLife = maxLife;
+        m_audioSource = GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -29,8 +30,8 @@ public class LifeManager : MonoBehaviour
     public void Damage(float damage)
     {
         m_currentLife -= damage;
-        //SoundManager.instance.ReproduceSound(AudioClipsNames.Auch, audioSource);
-        
+        DamageSound(damage);
+
         if (OnLifeChange != null)
         {
             OnLifeChange(m_currentLife, maxLife);
@@ -44,7 +45,6 @@ public class LifeManager : MonoBehaviour
             isDone = true;
         }
     }
-
     private void Regeneration()
     {
         m_timeLastDamaged -= Time.deltaTime;
@@ -59,4 +59,27 @@ public class LifeManager : MonoBehaviour
             OnLifeChange(m_currentLife, maxLife);
         }
     }
+
+    private void DamageSound(float damage)
+    {
+        if (!m_audioSource.isPlaying)
+        {
+            if (damage < 5)
+            {
+                SoundManager.instance.ReproduceSound(AudioClipsNames.Grunt_1, m_audioSource);
+            }
+            else
+            {
+                int clip = Random.Range(0, 1);
+                if (clip == 0)
+                {
+                    SoundManager.instance.ReproduceSound(AudioClipsNames.Grunt_2, m_audioSource);
+                }
+                else if (clip == 1)
+                {
+                    SoundManager.instance.ReproduceSound(AudioClipsNames.Grunt_4, m_audioSource);
+                }
+            }
+        }           
+    }   
 }

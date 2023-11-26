@@ -18,16 +18,13 @@ public class CalculateSavedNPCs : MonoBehaviour
     {
         if(other.CompareTag("NPC"))
         {
-            Debug.Log("NPC toca el suelo");
             m_savedVictims += 1;
             m_savedVictims = Mathf.Clamp(m_savedVictims, 0, m_totalNumberOfVictims);
             other.tag = "Untagged";
-            Debug.Log("saved victims:  " + m_savedVictims +"/" + m_totalNumberOfVictims);
             icons.ChangeNumber(m_savedVictims, icons.numberVictimsLeft);
 
             if(m_savedVictims >= m_totalNumberOfVictims)
             {
-                Debug.Log("Enhorabuena, has salvado a todos");
                 everyoneHasBeenSaved = true;
                 //SoundManager.instance.ReproduceSound();
             }

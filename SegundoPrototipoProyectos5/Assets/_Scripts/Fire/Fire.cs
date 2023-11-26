@@ -14,7 +14,7 @@ public class Fire : MonoBehaviour
     [SerializeField, Range(0, 1)] private float maxParticleSizeMultiplier;
     [SerializeField] private float maxScale;
     [SerializeField] private float minScale;
-    [SerializeField] private BoxCollider boxCollider;
+    public BoxCollider boxCollider;
 
     [Header("Regeneración del fuego:")]
     [SerializeField] private float regenTime = 2.5f;
