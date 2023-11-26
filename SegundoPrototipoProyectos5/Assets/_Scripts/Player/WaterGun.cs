@@ -21,7 +21,6 @@ public class WaterGun : MonoBehaviour
     [SerializeField] private Transform playerCamera;
     [SerializeField] private AudioSource playerAudioSource;
 
-
     private bool canMoveWithWater = false;
 
     private void Start()
@@ -35,8 +34,6 @@ public class WaterGun : MonoBehaviour
 
     private void Update()
     {
-        //Debug.Log(currentWater);
-
         if (Input.GetButton("Fire1") && currentWater > 0)
         {
             currentWater -= Time.deltaTime;
@@ -71,7 +68,7 @@ public class WaterGun : MonoBehaviour
     public void RechargeWater()
     {
         currentWater = maxWater;
-        //SoundManager.instance.ReproduceSound(AudioClipsNames.RechargeWater, playerAudioSource);
+        SoundManager.instance.ReproduceSound(AudioClipsNames.Reload, playerAudioSource);
     }
 
     private void EnableWater()

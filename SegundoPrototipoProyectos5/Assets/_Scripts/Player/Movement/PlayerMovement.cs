@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(AudioSource))]
@@ -94,8 +95,26 @@ public class PlayerMovement : MonoBehaviour
     private void Jump()
     {
         m_rb.velocity = new Vector3(m_rb.velocity.x, 0, m_rb.velocity.z); //si no reseteas la v.y y vuelves a saltar salta muy alto
-        m_rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);        
-        //SoundManager.instance.ReproduceSound(AudioClipsNames.Jump, m_audioSource);
+        m_rb.AddForce(transform.up * jumpForce, ForceMode.Impulse);
+
+        if (!m_audioSource.isPlaying)
+        {
+            int clip = Random.Range(0, 2);
+
+            if (clip == 0)
+            {
+                SoundManager.instance.ReproduceSound(AudioClipsNames.Jump_01, m_audioSource);
+            }
+
+            else if (clip == 1)
+            {
+                SoundManager.instance.ReproduceSound(AudioClipsNames.Jump_02, m_audioSource);
+            }
+            else
+            {
+                SoundManager.instance.ReproduceSound(AudioClipsNames.Jump_03, m_audioSource);
+            }
+        }
     }
     private void HandleDrag()
     {

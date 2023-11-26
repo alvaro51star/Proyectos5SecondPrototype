@@ -6,22 +6,24 @@ public class FireLifeManager : MonoBehaviour
 {    
     [SerializeField] private Fire fire;
     [SerializeField] private CalculatePutOutFires calculatePutOutFires;
-    [SerializeField] private AudioSource audioSource;
 
     [HideInInspector] public float maxLife = 100;
     [HideInInspector] public float currentLife;
     private float m_maxEmissionRate;
 
+    private AudioSource m_audioSource;
+
     private void Start()
     {
         currentLife = maxLife;
         m_maxEmissionRate = fire.maxEmissionRate;
+        m_audioSource = GetComponent<AudioSource>();
     }
 
     public void Damage(float damage)
     {
         currentLife -= damage;
-        //SoundManager.instance.ReproduceSound(AudioClipsNames.FireWaterDamage, audioSource);
+        SoundManager.instance.ReproduceSound(AudioClipsNames.FireDying_1, m_audioSource);
 
         float lessParticles = (m_maxEmissionRate * currentLife) / maxLife;
         fire.DecreaseParticles(lessParticles);
@@ -30,7 +32,7 @@ public class FireLifeManager : MonoBehaviour
         {
             fire.Death();
             calculatePutOutFires.FirePutOut();
-            //SoundManager.instance.ReproduceSound(AudioClipsNames.FireDeath, audioSource);
+            SoundManager.instance.ReproduceSound(AudioClipsNames.FireDying_2, m_audioSource);
         }
     }
 }

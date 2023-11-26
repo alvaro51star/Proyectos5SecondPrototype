@@ -5059,7 +5059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fire: {fileID: 1793371952872935867}
   audioSource: {fileID: 510250210287216393}
-  sizeMultiplier: 20
+  sizeMultiplier: 35
 --- !u!1 &8445084869772928660
 GameObject:
   m_ObjectHideFlags: 0
@@ -5160,9 +5160,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
