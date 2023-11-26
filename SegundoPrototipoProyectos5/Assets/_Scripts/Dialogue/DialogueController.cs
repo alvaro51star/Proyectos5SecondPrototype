@@ -5,15 +5,15 @@ using TMPro;
 
 public class DialogueController : MonoBehaviour
 {
-    /*[SerializeField] private TMP_Text dialogueText;
+    [SerializeField] private TMP_Text dialogueText;
     [SerializeField] private float typingTime; //con 0.05s son 20 char/s
 
     public static DialogueController instance;
     public GameObject dialogueGameObject;
     public bool didDialogueStart;
 
-    private PlayerMovement playerMovement;
     private AudioSource audioSource;
+    private UIManager uiManager;
     private int lineIndex;
     private string[] dialogueLines; 
     private bool isInteractive;
@@ -31,10 +31,9 @@ public class DialogueController : MonoBehaviour
         }
     }
     private void Start()
-    {       
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        playerMovement = player.GetComponent<PlayerMovement>();
-        audioSource = player.GetComponent<AudioSource>();
+    { 
+        uiManager = GetComponent<UIManager>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void StartDialogue(string[] textLines, bool _isInteractive, GameObject trigger)
@@ -42,13 +41,10 @@ public class DialogueController : MonoBehaviour
         isInteractive = _isInteractive;
         activeTrigger = trigger;
         
-        UIManager.CursorVisible();
-        UIManager.DesactivateObject(UIController.instance.list);
-        UIManager.DesactivateObject(UIController.instance.iconList);
+        uiManager.IsInGame(false);
+        uiManager.DesactivateAllUIGameObjects();
         //AudioManager.instance.ReproduceSound(AudioClipsNames.Pop, audioSource);
-        UIManager.ActivateObject(dialogueGameObject);
-
-        playerMovement.canMove = false;
+        uiManager.ActivateUIGameObjects(uiManager.dialoguePanel, true);
 
         didDialogueStart = true;
         dialogueLines = textLines;
@@ -59,11 +55,9 @@ public class DialogueController : MonoBehaviour
     public void EndDialogue()
     {
         didDialogueStart = false;
-        playerMovement.canMove = true;
 
-        UIController.instance.CursorInvisible();        
-        UIController.instance.ActivateObject(UIController.instance.iconList);                        
-        UIController.instance.DesactivateObject(dialogueGameObject);
+        uiManager.IsInGame(true);
+        uiManager.DesactivateAllUIGameObjects();
 
         if (!isInteractive)
         {
@@ -111,5 +105,5 @@ public class DialogueController : MonoBehaviour
     {
         StopAllCoroutines();
         dialogueText.text = dialogueLines[lineIndex];
-    }*/
+    }
 }

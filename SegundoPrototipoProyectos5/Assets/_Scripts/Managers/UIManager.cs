@@ -15,10 +15,8 @@ public class UIManager : MonoBehaviour
     public GameObject gameOverPanel;
     public GameObject endPanel;
     public GameObject dontAllowToLeaveLevelPanel;
+    public GameObject dialoguePanel;
     [SerializeField] private GameObject EImage;
-    //[SerializeField] private GameObject timerBar;
-    //[SerializeField] private GameObject lifeBar;
-    //[SerializeField] private GameObject waterBar;
     [SerializeField] private GameObject permanentIcons;   
 
     [Header("Put same things here:")]
