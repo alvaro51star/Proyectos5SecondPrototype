@@ -688,6 +688,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+--- !u!114 &33784224 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5719214131896826547, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+  m_PrefabInstance: {fileID: 33784223}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2cc0ce6de16c34bbe1cc7d2c0ba1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &33883419
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23021,6 +23032,7 @@ MonoBehaviour:
   - {fileID: 2007646811}
   - {fileID: 572810175}
   - {fileID: 1219314244}
+  icons: {fileID: 33784224}
   everyoneHasBeenSaved: 0
 --- !u!65 &1089160231
 BoxCollider:
@@ -25443,6 +25455,7 @@ MonoBehaviour:
   - {fileID: 1757969286}
   - {fileID: 223351752}
   - {fileID: 686451046}
+  icons: {fileID: 33784224}
   totalNumberOfFires: 0
   putOutFires: 0
 --- !u!1001 &1191002239
@@ -32252,6 +32265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 915338442}
+  gameStarts: 0
   maxTimeLevel: 100
   currentTime: 0
 --- !u!4 &1549006887
