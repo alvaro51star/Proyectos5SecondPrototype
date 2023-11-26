@@ -2265,6 +2265,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1247170451}
+  gameStarts: 1
   maxTimeLevel: 90
   currentTime: 0
 --- !u!4 &2000739449
@@ -2840,7 +2841,7 @@ PrefabInstance:
     - target: {fileID: 4514447861889760144, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 8817069077250685178, guid: 201f8d112d864be4680d97dd50d396ef, type: 3}
+      objectReference: {fileID: 2100000, guid: 506cd23fb0d40ef4f81ec0d89cdd9287, type: 2}
     - target: {fileID: 5896160391297265784, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_IsActive
       value: 1
