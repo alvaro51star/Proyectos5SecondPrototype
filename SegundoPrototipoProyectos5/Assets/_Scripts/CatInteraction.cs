@@ -5,13 +5,14 @@ using UnityEngine;
 public class CatInteraction : InteractiveObject
 {
 
-    public delegate void OnCatInteractionDelegate();
-    public static event OnCatInteractionDelegate OnCatPet;
+    //public delegate void OnCatInteractionDelegate();
+    //public static event OnCatInteractionDelegate OnCatPet;
 
     AudioSource audioSource;
     [SerializeField] private AudioClip catSound;
+    [SerializeField] private GameObject heartImage;
 
-    [SerializeField] private float timeToSwitchAgain = 1f;
+    [SerializeField] private float timeToPetAgain = 1f;
     private bool recentActivated = false;
 
     private void Start()
@@ -24,13 +25,15 @@ public class CatInteraction : InteractiveObject
         if (other.CompareTag("Player") && Input.GetKey(KeyCode.E) && !recentActivated)
         {
             recentActivated = true;
-            StartCoroutine(SetBoolFalse(timeToSwitchAgain));
-            if (OnCatPet != null)
-                OnCatPet();
+            StartCoroutine(SetBoolFalse(timeToPetAgain));
+            //if (OnCatPet != null)
+              //  OnCatPet();
+            ReproduceCatSound();
+            ShowImage();
         }
     }
 
-    private void OnEnable()
+    /*private void OnEnable()
     {
         OnCatPet += ReproduceCatSound;
     }
@@ -38,11 +41,23 @@ public class CatInteraction : InteractiveObject
     private void OnDisable()
     {
         OnCatPet -= ReproduceCatSound;
-    }
+    }*/
 
     private void ReproduceCatSound()
     {
-        SoundManager.instance.ReproduceSound(catSound, audioSource);
+        //!SoundManager.instance.ReproduceSound(catSound, audioSource);
+    }
+
+    private void ShowImage()
+    {
+        heartImage.SetActive(true);
+        StartCoroutine(DisableImage(timeToPetAgain));
+    }
+
+    private IEnumerator DisableImage(float time)
+    {
+        yield return new WaitForSeconds(time);
+        heartImage.SetActive(false);
     }
 
     private IEnumerator SetBoolFalse(float time)
