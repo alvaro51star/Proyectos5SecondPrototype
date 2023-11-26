@@ -5060,6 +5060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fire: {fileID: 1793371952872935867}
   sizeMultiplier: 35
+  audioSource: {fileID: 0}
 --- !u!82 &8958981885363464168
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5208,6 +5209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fireParticleSystem: {fileID: 3476746791584358532}
   fireLifeManager: {fileID: 725382082066388614}
+  soundCollider: {fileID: 7437423507621586363}
   fireLight: {fileID: 148201850107522815}
   maxEmissionRate: 80
   minParticleSizeMultiplier: 0.01

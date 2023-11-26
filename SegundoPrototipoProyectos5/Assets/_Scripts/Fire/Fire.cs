@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class Fire : MonoBehaviour
 {    
     [SerializeField] private ParticleSystem fireParticleSystem;
     [SerializeField] private FireLifeManager fireLifeManager;
+    [SerializeField] private GameObject soundCollider;
     [SerializeField] private Light fireLight;
     [Header("CUANTO MAS GRANDE MAS PARTICULAS HAY QUE PONER")]
 
@@ -53,8 +55,9 @@ public class Fire : MonoBehaviour
         if(currentIntensity <=0)
         {
             fireParticleSystem.Stop();
-            gameObject.SetActive(false);
-            Destroy(gameObject);
+            soundCollider.SetActive(false);
+            boxCollider.enabled = false;
+            StartCoroutine(DestroyGameObject());
         }
     }
     public void DecreaseParticles(float removerOfIntensity)
@@ -144,4 +147,10 @@ public class Fire : MonoBehaviour
         else
             fireLight.intensity = m_initialLightIntensity;
     }
+    private IEnumerator DestroyGameObject()
+    {        
+        yield return new WaitForSecondsRealtime(5);
+        gameObject.SetActive(false);
+        Destroy(gameObject);
+    }   
 }

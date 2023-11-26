@@ -50,7 +50,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 01bf1941767cc834e8dddee632a901cb, type: 3}
   - {fileID: 8300000, guid: c0bf82e95a4d99b46bd912bdc46341ec, type: 3}
   - {fileID: 8300000, guid: 70e3ec68997177a498b0444ef04b5030, type: 3}
-  - {fileID: 8300000, guid: f45900af12cf200438050731c54f83ac, type: 3}
+  - {fileID: 8300000, guid: d7ba16a0ef6b44a47b876109e3e1d8d7, type: 3}
   - {fileID: 8300000, guid: 2bd95f65433aecd4f822ca1b45f89194, type: 3}
   - {fileID: 8300000, guid: 7e986f8d1fa406443a4ca7231375bee3, type: 3}
   - {fileID: 8300000, guid: 17d7354d0188ab84a9fb1e35bd1d3a90, type: 3}
@@ -66,6 +66,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4c0e44fbefbfaa947b915c2f6adddc63, type: 3}
   - {fileID: 8300000, guid: 3bec8a39924868449baac4118a7b82f7, type: 3}
   - {fileID: 8300000, guid: 9eba5c0fac87efc49ac16f32309ffd12, type: 3}
+  - {fileID: 8300000, guid: bf408884b08824e47887f4c2f7c108c8, type: 3}
   managerAudioSource: {fileID: 6408804361272320549}
 --- !u!82 &6408804361272320549
 AudioSource:

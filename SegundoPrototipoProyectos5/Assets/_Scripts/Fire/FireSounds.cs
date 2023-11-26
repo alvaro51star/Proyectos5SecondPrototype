@@ -6,31 +6,32 @@ public class FireSounds : MonoBehaviour
 {
     [SerializeField] private Fire fire;
     [SerializeField] private int sizeMultiplier = 50;
-    private AudioSource m_audioSource;
+
+    [HideInInspector] public AudioSource audioSource;
 
     private void Start()
     {
         BoxCollider boxCollider = GetComponent<BoxCollider>();
         boxCollider.size = fire.boxCollider.size * sizeMultiplier;
-        m_audioSource = GetComponent<AudioSource>();
-        m_audioSource.maxDistance = sizeMultiplier;
+        audioSource = GetComponent<AudioSource>();
+        audioSource.maxDistance = sizeMultiplier;
     }
     private void OnTriggerEnter(Collider other)
     {
         if(other.CompareTag("Player"))
         {
-            if(!m_audioSource.isPlaying)
+            if(!audioSource.isPlaying)
             {
                 int clip = Random.Range(0, 1);
 
                 if (clip == 0)
                 {
 
-                    SoundManager.instance.Reproduce3DSound(AudioClipsNames.Fire_1, m_audioSource);
+                    SoundManager.instance.Reproduce3DSound(AudioClipsNames.Fire_1, audioSource);
                 }
                 else
                 {
-                    SoundManager.instance.Reproduce3DSound(AudioClipsNames.Fire_1, m_audioSource);
+                    SoundManager.instance.Reproduce3DSound(AudioClipsNames.Fire_1, audioSource);
                 }
             }            
         }        
@@ -40,9 +41,9 @@ public class FireSounds : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (m_audioSource.isPlaying)
+            if (audioSource.isPlaying)
             {
-                m_audioSource.Stop();
+                audioSource.Stop();
             }
         }
     }

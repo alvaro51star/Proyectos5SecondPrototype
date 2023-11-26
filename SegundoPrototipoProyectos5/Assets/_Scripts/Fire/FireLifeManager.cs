@@ -23,16 +23,20 @@ public class FireLifeManager : MonoBehaviour
     public void Damage(float damage)
     {
         currentLife -= damage;
-        SoundManager.instance.ReproduceSound(AudioClipsNames.FireDying_1, m_audioSource);
+        if (!m_audioSource.isPlaying)
+        {
+            SoundManager.instance.ReproduceSound(AudioClipsNames.FireDying_1, m_audioSource);
+        }
 
         float lessParticles = (m_maxEmissionRate * currentLife) / maxLife;
         fire.DecreaseParticles(lessParticles);
 
         if (currentLife <= 0)
         {
-            fire.Death();
-            calculatePutOutFires.FirePutOut();
             SoundManager.instance.ReproduceSound(AudioClipsNames.FireDying_2, m_audioSource);
+
+            calculatePutOutFires.FirePutOut();
+            fire.Death();
         }
     }
 }
