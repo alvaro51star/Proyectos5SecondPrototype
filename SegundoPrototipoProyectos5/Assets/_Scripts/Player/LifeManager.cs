@@ -25,7 +25,6 @@ public class LifeManager : MonoBehaviour
     private void Update()
     {
         Regeneration();
-        Debug.Log(m_currentLife);
     }
     public void Damage(float damage)
     {
@@ -41,7 +40,6 @@ public class LifeManager : MonoBehaviour
 
         if (m_currentLife <= 0 && !isDone)
         {
-            //!Se activa el game over
             GameManager.instance.InvokeGameOver();
             isDone = true;
         }

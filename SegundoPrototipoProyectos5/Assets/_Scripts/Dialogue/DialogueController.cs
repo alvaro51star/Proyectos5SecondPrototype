@@ -71,7 +71,6 @@ public class DialogueController : MonoBehaviour
         foreach (char ch in dialogueLines[lineIndex])
         {
             dialogueText.text += ch;
-            //yield return new WaitForSeconds(typingTime);
             yield return new WaitForSecondsRealtime(typingTime);
         }
     }

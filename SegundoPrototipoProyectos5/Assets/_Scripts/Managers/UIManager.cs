@@ -88,9 +88,11 @@ public class UIManager : MonoBehaviour
         {
             player.SetActive(true);
             camera.GetComponent<CameraRotation>().enabled = true;
+
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             Time.timeScale = 1;
+
             DesactivateAllUIGameObjects();
             permanentIcons.SetActive(true);
         }
@@ -98,6 +100,7 @@ public class UIManager : MonoBehaviour
         {
             player.SetActive(false);
             camera.GetComponent<CameraRotation>().enabled = false;
+
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0;
