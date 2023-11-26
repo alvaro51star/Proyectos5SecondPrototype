@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 
 public class TriggerForDialogue : MonoBehaviour
-{
+{/*
     DialogueController dialogueController;
     [SerializeField] private bool isInteractive;
 
@@ -33,5 +33,5 @@ public class TriggerForDialogue : MonoBehaviour
         {
             dialogueController.StartDialogue(textLines, isInteractive, gameObject);
         }
-    }    
+    }    */
 }

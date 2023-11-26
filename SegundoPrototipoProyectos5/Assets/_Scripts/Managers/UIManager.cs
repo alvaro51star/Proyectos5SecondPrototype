@@ -16,9 +16,10 @@ public class UIManager : MonoBehaviour
     public GameObject endPanel;
     public GameObject dontAllowToLeaveLevelPanel;
     [SerializeField] private GameObject EImage;
-    [SerializeField] private GameObject timerBar;
-    [SerializeField] private GameObject lifeBar;
-    [SerializeField] private GameObject waterBar;
+    //[SerializeField] private GameObject timerBar;
+    //[SerializeField] private GameObject lifeBar;
+    //[SerializeField] private GameObject waterBar;
+    [SerializeField] private GameObject permanentIcons;   
 
     [Header("Put same things here:")]
     [SerializeField] private GameObject[] MenusAndPanels;
@@ -88,9 +89,10 @@ public class UIManager : MonoBehaviour
             Cursor.visible = false;
             Time.timeScale = 1;
             DesactivateAllUIGameObjects();
-            timerBar.SetActive(true);
-            lifeBar.SetActive(true);
-            waterBar.SetActive(true);
+            permanentIcons.SetActive(true);
+            //timerBar.SetActive(true);
+            //lifeBar.SetActive(true);
+            //waterBar.SetActive(true);
         }
         else
         {

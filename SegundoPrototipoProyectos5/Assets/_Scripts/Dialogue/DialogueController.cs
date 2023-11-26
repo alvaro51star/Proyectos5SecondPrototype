@@ -5,7 +5,7 @@ using TMPro;
 
 public class DialogueController : MonoBehaviour
 {
-    [SerializeField] private TMP_Text dialogueText;
+    /*[SerializeField] private TMP_Text dialogueText;
     [SerializeField] private float typingTime; //con 0.05s son 20 char/s
 
     public static DialogueController instance;
@@ -111,5 +111,5 @@ public class DialogueController : MonoBehaviour
     {
         StopAllCoroutines();
         dialogueText.text = dialogueLines[lineIndex];
-    }
+    }*/
 }

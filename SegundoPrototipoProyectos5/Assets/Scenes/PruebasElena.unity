@@ -210,10 +210,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1692050011}
     - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: calculateSavedNPCs
       value: 
       objectReference: {fileID: 443707499}
@@ -532,6 +528,7 @@ MonoBehaviour:
   - {fileID: 521274827}
   - {fileID: 1824644284}
   - {fileID: 1939529350}
+  icons: {fileID: 1727387871}
   everyoneHasBeenSaved: 0
 --- !u!1 &456166841
 GameObject:
@@ -1320,6 +1317,7 @@ MonoBehaviour:
   - {fileID: 2110374246}
   - {fileID: 1937011398}
   - {fileID: 1651610968}
+  icons: {fileID: 1727387871}
   totalNumberOfFires: 0
   putOutFires: 0
 --- !u!4 &1168108286
@@ -1722,6 +1720,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 2012203778040200328, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
   m_PrefabInstance: {fileID: 784425605}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1727387871 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5719214131896826547, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+  m_PrefabInstance: {fileID: 177053084}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a2cc0ce6de16c34bbe1cc7d2c0ba1c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1824644284 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2604919051970317382, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
