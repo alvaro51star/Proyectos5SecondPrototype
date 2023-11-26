@@ -26,22 +26,10 @@ public class CatInteraction : InteractiveObject
         {
             recentActivated = true;
             StartCoroutine(SetBoolFalse(timeToPetAgain));
-            //if (OnCatPet != null)
-              //  OnCatPet();
             ReproduceCatSound();
             ShowImage();
         }
     }
-
-    /*private void OnEnable()
-    {
-        OnCatPet += ReproduceCatSound;
-    }
-
-    private void OnDisable()
-    {
-        OnCatPet -= ReproduceCatSound;
-    }*/
 
     private void ReproduceCatSound()
     {

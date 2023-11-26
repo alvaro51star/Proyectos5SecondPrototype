@@ -69,4 +69,10 @@ public class SoundManager : MonoBehaviour
         managerAudioSource.PlayOneShot(audioClip);
     }
 
+    public void Reproduce3DSound(AudioClip audioClip, AudioSource audioSource)
+    {
+        audioSource.clip = audioClip;
+        audioSource.Play();
+    }
+
 }
