@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public delegate void OnVariableChangeDelegate(float newVal);
     public static event OnVariableChangeDelegate OnTimeChange;
 
+    public int timesCatBeenPet = 0;
 
     public GameObject player;
     public bool gameStarts = true;
@@ -34,7 +35,6 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -76,6 +76,29 @@ public class GameManager : MonoBehaviour
         if (OnGameOver != null)
         {
             OnGameOver.Invoke();
+        }
+    }
+
+    private void OnEnable()
+    {
+        CatInteraction.OnCatPet += UpdateCounterCat;
+    }
+
+    private void OnDisable()
+    {
+        CatInteraction.OnCatPet -= UpdateCounterCat;
+    }
+
+    private void UpdateCounterCat()
+    {
+        if (!PlayerPrefs.HasKey("TimesCatPet"))
+        {
+            PlayerPrefs.SetInt("TimesCatPet", 1);
+        }
+        else
+        {
+            int tempValue = PlayerPrefs.GetInt("TimesCatPet");
+            PlayerPrefs.SetInt("TimesCatPet", tempValue + 1);
         }
     }
 }
