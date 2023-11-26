@@ -94,11 +94,13 @@ public class GameManager : MonoBehaviour
         if (!PlayerPrefs.HasKey("TimesCatPet"))
         {
             PlayerPrefs.SetInt("TimesCatPet", 1);
+            PlayerPrefs.Save();
         }
         else
         {
             int tempValue = PlayerPrefs.GetInt("TimesCatPet");
             PlayerPrefs.SetInt("TimesCatPet", tempValue + 1);
+            PlayerPrefs.Save();
         }
     }
 }
