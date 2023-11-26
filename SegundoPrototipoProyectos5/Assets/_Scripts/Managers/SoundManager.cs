@@ -18,7 +18,6 @@ public enum AudioClipsNames
     Jump_01,
     Jump_02,
     Jump_03,
-    Landing_01,
     Landing_02,
     Reload,
     WaterGround,
@@ -69,9 +68,9 @@ public class SoundManager : MonoBehaviour
         managerAudioSource.PlayOneShot(audioClip);
     }
 
-    public void Reproduce3DSound(AudioClip audioClip, AudioSource audioSource)
+    public void Reproduce3DSound(AudioClipsNames clipName, AudioSource audioSource)
     {
-        audioSource.clip = audioClip;
+        audioSource.clip = soundList[(int)clipName];
         audioSource.Play();
     }
 

@@ -549,6 +549,10 @@ PrefabInstance:
       propertyPath: waterParticleSystem
       value: 
       objectReference: {fileID: 4185619167809004255}
+    - target: {fileID: 6322420422273886995, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2012203778040200328}
     - target: {fileID: 7117654575415963426, guid: 9e15a6bc81101894c9eb3f1f5ac599d1, type: 3}
       propertyPath: m_Layer
       value: 9

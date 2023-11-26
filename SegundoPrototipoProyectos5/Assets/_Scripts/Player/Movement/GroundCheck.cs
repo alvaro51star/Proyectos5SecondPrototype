@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GroundCheck : MonoBehaviour
 {
+    [SerializeField] private AudioSource audioSource;
+    [HideInInspector] public bool isGrounded = false;
     private bool isTouchingGround, raycastIsGround = false;
-    public bool isGrounded = false;
     private int layerGround;
     private LayerMask groundMask;
 
@@ -17,7 +18,7 @@ public class GroundCheck : MonoBehaviour
 
     private void Update()
     {
-        raycastIsGround = Physics.Raycast(transform.position, Vector3.down, 0.5f, groundMask); //no funciona lo de groundMask???
+        raycastIsGround = Physics.Raycast(transform.position, Vector3.down, 0.5f, groundMask);
         Debug.DrawRay(transform.position, Vector3.down, Color.red);
 
         if(raycastIsGround && isTouchingGround)
@@ -34,6 +35,11 @@ public class GroundCheck : MonoBehaviour
         if(other.gameObject.layer == layerGround)
         {
             isTouchingGround = true;
+
+            if (!audioSource.isPlaying)
+            {
+                SoundManager.instance.ReproduceSound(AudioClipsNames.Landing_02, audioSource);
+            }            
         }
     }
 }

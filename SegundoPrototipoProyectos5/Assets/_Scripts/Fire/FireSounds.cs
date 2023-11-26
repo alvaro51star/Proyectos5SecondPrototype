@@ -25,11 +25,12 @@ public class FireSounds : MonoBehaviour
 
                 if (clip == 0)
                 {
-                    SoundManager.instance.ReproduceSound(AudioClipsNames.Fire_1, m_audioSource);
+
+                    SoundManager.instance.Reproduce3DSound(AudioClipsNames.Fire_1, m_audioSource);
                 }
                 else
                 {
-                    SoundManager.instance.ReproduceSound(AudioClipsNames.Fire_2, m_audioSource);
+                    SoundManager.instance.Reproduce3DSound(AudioClipsNames.Fire_1, m_audioSource);
                 }
             }            
         }        
