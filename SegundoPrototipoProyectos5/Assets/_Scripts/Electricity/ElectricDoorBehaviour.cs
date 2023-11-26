@@ -8,7 +8,7 @@ public class ElectricDoorBehaviour : MonoBehaviour
     [SerializeField] private GameObject door;
     private bool active = false;
     [SerializeField] private WaterConductiveZone waterConductiveZone;
-
+    private AudioSource audioSource;
 
     private void OnEnable()
     {
@@ -18,6 +18,11 @@ public class ElectricDoorBehaviour : MonoBehaviour
     private void OnDisable()
     {
         ElectricityManager.OnElectricityChange -= SetActive;
+    }
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -35,10 +40,15 @@ public class ElectricDoorBehaviour : MonoBehaviour
         if (active && hasWaterReachTheArea)
         {
             door.SetActive(false);
+            
         }
         else
         {
             door.SetActive(true);
+            if (!audioSource.isPlaying)
+            {
+                SoundManager.instance.ReproduceSound(AudioClipsNames.OpenDoor, audioSource);
+            }
         }
     }
 }

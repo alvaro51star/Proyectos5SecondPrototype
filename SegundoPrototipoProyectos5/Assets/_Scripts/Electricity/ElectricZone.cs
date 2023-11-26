@@ -13,6 +13,8 @@ public class ElectricZone : MonoBehaviour
 
     [SerializeField] private List<ParticleSystem> particleSystems;
 
+    [SerializeField] private AudioSource audioSource;
+
     #region EnableDisable
     private void OnEnable()
     {
@@ -25,7 +27,10 @@ public class ElectricZone : MonoBehaviour
     }
     #endregion
 
-
+    private void Start()
+    {
+        //audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -54,18 +59,24 @@ public class ElectricZone : MonoBehaviour
     {
         if (electrityStatus)
         {
-            Debug.Log("Feedback Electrico Activado");
             foreach (var particleSystem in particleSystems)
-            {
+            {                
                 particleSystem.Play();
+            }
+            if(!audioSource.isPlaying)
+            {
+                audioSource.Play();
             }
         }
         else
         {
-            Debug.Log("Feedback Electrico Desactivado");
             foreach (var particleSystem in particleSystems)
+            {                
+                particleSystem.Stop();                
+            }
+            if (audioSource.isPlaying)
             {
-                particleSystem.Stop();
+                audioSource.Stop();
             }
         }
     }

@@ -41,6 +41,7 @@ public class WaterConductiveZone : MonoBehaviour
             if (waterReached)
             {
                 enabledParticleSystem.Play();
+                SoundManager.instance.ReproduceSound(AudioClipsNames.ElectricWire);
             }
             else
             {

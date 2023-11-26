@@ -68,6 +68,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: bf408884b08824e47887f4c2f7c108c8, type: 3}
   - {fileID: 8300000, guid: 2bc2e03f0d16d2549a1e04e5f549a6a0, type: 3}
   - {fileID: 8300000, guid: 621c8f0fc787891459501b8241870407, type: 3}
+  - {fileID: 8300000, guid: 5729dad4b0ddf764fba9c0bd3d243c89, type: 3}
+  - {fileID: 8300000, guid: 919bb953a85871f47a964d820e4ac39d, type: 3}
+  - {fileID: 8300000, guid: 2a45db21934fd74498976543b877c54e, type: 3}
   managerAudioSource: {fileID: 6408804361272320549}
 --- !u!82 &6408804361272320549
 AudioSource:
@@ -92,7 +95,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0

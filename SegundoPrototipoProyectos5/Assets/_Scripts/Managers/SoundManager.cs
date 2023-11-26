@@ -26,7 +26,9 @@ public enum AudioClipsNames
     Pop3,
     Grabbing,
     AllVictimsSaved,
-    AllFiresPutOut
+    AllFiresPutOut,
+    Switch,
+    ElectricWire
 }
 
 
