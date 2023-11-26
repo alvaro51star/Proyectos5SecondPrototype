@@ -3730,7 +3730,7 @@ ParticleSystem:
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
-    multiplyColliderForceByCollisionAngle: 1
+    multiplyColliderForceByCollisionAngle: 0
     m_Planes:
     - {fileID: 0}
     - {fileID: 0}
@@ -3902,7 +3902,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 887
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -5046,7 +5046,7 @@ MonoBehaviour:
   maxEmissionRate: 80
   minParticleSizeMultiplier: 0.01
   maxParticleSizeMultiplier: 1
-  maxScale: 3
+  maxScale: 4
   minScale: 1
   boxCollider: {fileID: 8711213089600687656}
   regenTime: 2.5
