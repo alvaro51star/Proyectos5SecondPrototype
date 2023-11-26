@@ -73,6 +73,7 @@ MonoBehaviour:
   pickUpPosition: {fileID: 0}
   force: 10
   playerManager: {fileID: 0}
+  playerAudioSource: {fileID: 0}
   meshColliderNPC: {fileID: 3669624858930382901}
 --- !u!114 &6586586901571864103
 MonoBehaviour:

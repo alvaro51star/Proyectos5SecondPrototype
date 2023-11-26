@@ -12,6 +12,7 @@ public class PickUpNPC : InteractiveObject
     [SerializeField] private float force = 10;
     private ParachuteBehaviour parachuteBehaviour;
     [SerializeField] private PlayerManager playerManager;
+    [SerializeField] private AudioSource playerAudioSource;
 
     LayerMask groundLayer = 6;
     [SerializeField] private MeshCollider meshColliderNPC;
@@ -44,6 +45,7 @@ public class PickUpNPC : InteractiveObject
             transform.SetParent(pickUpPosition);
             ResetTransform();
             pickedUp = true;
+            SoundManager.instance.ReproduceSound(AudioClipsNames.Grabbing, playerAudioSource);
         }
 
         if (pickedUp && Input.GetKey(KeyCode.G))
