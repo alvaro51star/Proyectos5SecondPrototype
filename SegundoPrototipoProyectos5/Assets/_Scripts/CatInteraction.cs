@@ -8,17 +8,12 @@ public class CatInteraction : InteractiveObject
     public delegate void OnCatInteractionDelegate();
     public static event OnCatInteractionDelegate OnCatPet;
 
-    AudioSource audioSource;
-    [SerializeField] private AudioClip catSound;
+    [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject heartImage;
 
     [SerializeField] private float timeToPetAgain = 1f;
     private bool recentActivated = false;
 
-    private void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
 
     private void OnTriggerStay(Collider other)
     {
@@ -26,18 +21,13 @@ public class CatInteraction : InteractiveObject
         {
             recentActivated = true;
             StartCoroutine(SetBoolFalse(timeToPetAgain));
-            ReproduceCatSound();
+            SoundManager.instance.ReproduceSound(AudioClipsNames.CatMeow, audioSource);
             ShowImage();
             if(OnCatPet != null){
                 OnCatPet();
             }
         }
-    }
-
-    private void ReproduceCatSound()
-    {
-        //!SoundManager.instance.ReproduceSound(catSound, audioSource);
-    }
+    }   
 
     private void ShowImage()
     {

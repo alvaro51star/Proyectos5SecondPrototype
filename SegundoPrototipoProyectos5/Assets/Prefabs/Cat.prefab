@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6833672701727179319}
-  - component: {fileID: 2206540719703096615}
+  - component: {fileID: 3885794713501372134}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -27,15 +27,15 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 44.03, y: 0, z: -32.84}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1030273562351873384}
   - {fileID: 4568759383912851398}
   - {fileID: 8670476446499242372}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &2206540719703096615
+--- !u!82 &3885794713501372134
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,7 +46,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -176,7 +176,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bcf8285c64f73b44bfc9c9d9b792ccc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  catSound: {fileID: 0}
+  audioSource: {fileID: 3885794713501372134}
   heartImage: {fileID: 8535563471819809928}
   timeToPetAgain: 2
 --- !u!135 &1592872711907833304
