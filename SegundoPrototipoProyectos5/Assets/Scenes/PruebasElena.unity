@@ -1529,6 +1529,10 @@ PrefabInstance:
       propertyPath: calculatePutOutFires
       value: 
       objectReference: {fileID: 1168108285}
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: maxEmissionRate
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 6238450212499282484, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1706,6 +1710,10 @@ PrefabInstance:
       propertyPath: calculatePutOutFires
       value: 
       objectReference: {fileID: 1168108285}
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: maxEmissionRate
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6238450212499282484, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1930,6 +1938,10 @@ PrefabInstance:
       propertyPath: calculatePutOutFires
       value: 
       objectReference: {fileID: 1168108285}
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: maxEmissionRate
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 6238450212499282484, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2080,7 +2092,7 @@ PrefabInstance:
       objectReference: {fileID: 1168108285}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 80
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8177794739573682663, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_LocalPosition.x
