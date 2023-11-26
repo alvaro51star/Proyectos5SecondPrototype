@@ -25,7 +25,7 @@ public class CalculatePutOutFires : MonoBehaviour
 
         if (putOutFires >= totalNumberOfFires)
         {
-            //SoundManager.instance.ReproduceSound();
+            SoundManager.instance.ReproduceSound(AudioClipsNames.AllFiresPutOut);
         }
     }
 
