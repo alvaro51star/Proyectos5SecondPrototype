@@ -10,6 +10,7 @@ public class WaterConductiveZone : MonoBehaviour
     [SerializeField] private List<ParticleSystem> disabledParticleSystems;
     [SerializeField] private ParticleSystem enabledParticleSystem;
     [SerializeField] private ElectricityManager electricityManager;
+    private AudioSource audioSource;
 
     private void OnEnable()
     {
@@ -19,6 +20,11 @@ public class WaterConductiveZone : MonoBehaviour
     private void OnDisable()
     {
         ElectricityManager.OnElectricityChange -= SetParticles;
+    }
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update() {
@@ -41,7 +47,7 @@ public class WaterConductiveZone : MonoBehaviour
             if (waterReached)
             {
                 enabledParticleSystem.Play();
-                SoundManager.instance.ReproduceSound(AudioClipsNames.ElectricWire);
+                SoundManager.instance.ReproduceSound(AudioClipsNames.ElectricWire, audioSource);
             }
             else
             {

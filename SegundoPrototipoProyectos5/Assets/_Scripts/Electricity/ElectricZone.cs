@@ -13,8 +13,6 @@ public class ElectricZone : MonoBehaviour
 
     [SerializeField] private List<ParticleSystem> particleSystems;
 
-    [SerializeField] private AudioSource audioSource;
-
     #region EnableDisable
     private void OnEnable()
     {
@@ -26,11 +24,7 @@ public class ElectricZone : MonoBehaviour
         ElectricityManager.OnElectricityChange -= ChangeState;
     }
     #endregion
-
-    private void Start()
-    {
-        //audioSource = GetComponent<AudioSource>();
-    }
+   
 
     private void OnTriggerStay(Collider other)
     {
@@ -62,24 +56,14 @@ public class ElectricZone : MonoBehaviour
             foreach (var particleSystem in particleSystems)
             {                
                 particleSystem.Play();
-            }
-            if(!audioSource.isPlaying)
-            {
-                audioSource.Play();
-            }
+            }            
         }
         else
         {
             foreach (var particleSystem in particleSystems)
             {                
                 particleSystem.Stop();                
-            }
-            if (audioSource.isPlaying)
-            {
-                audioSource.Stop();
-            }
+            }            
         }
     }
-
-
 }
