@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
 
     public GameObject player;
+    public bool gameStarts = true;
 
     [SerializeField] public float maxTimeLevel;
     [HideInInspector] public float currentTime;
