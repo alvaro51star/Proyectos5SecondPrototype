@@ -120,8 +120,14 @@ public class UIManager : MonoBehaviour
                 cameraPlayer.GetComponent<CameraRotation>().enabled = false;
             }
 
-            calculatePutOutFires.DesactivateFireSounds();
-
+            if(calculatePutOutFires != null)
+            {
+                if (calculatePutOutFires.putOutFires != calculatePutOutFires.totalNumberOfFires)
+                {
+                    calculatePutOutFires.DesactivateFireSounds();
+                }
+            }
+         
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0;

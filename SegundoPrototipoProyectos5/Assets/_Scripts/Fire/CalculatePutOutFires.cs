@@ -33,12 +33,15 @@ public class CalculatePutOutFires : MonoBehaviour
     {
         for(int i = 0; i < fires.Length; i++)
         {
-            fireSounds = fires[i].GetComponentInChildren<FireSounds>();
-
-            if(fireSounds.audioSource.isPlaying)
+            if (fires[i] != null)
             {
-                fireSounds.audioSource.Stop();
-            }
+                fireSounds = fires[i].GetComponentInChildren<FireSounds>(true);
+
+                if (fireSounds.audioSource.isPlaying)
+                {
+                    fireSounds.audioSource.Stop();
+                }
+            }            
         }
     }
 }
