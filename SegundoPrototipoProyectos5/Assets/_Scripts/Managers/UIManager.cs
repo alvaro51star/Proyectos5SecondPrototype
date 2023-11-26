@@ -6,6 +6,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public GameObject player;
+    public GameObject camera;
 
     [Header("Canvas menus and panels")]
     public GameObject confirmEndLevel;
@@ -86,6 +87,7 @@ public class UIManager : MonoBehaviour
         if(isInGame)
         {
             player.SetActive(true);
+            camera.GetComponent<CameraRotation>().enabled = true;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             Time.timeScale = 1;
@@ -95,6 +97,7 @@ public class UIManager : MonoBehaviour
         else
         {
             player.SetActive(false);
+            camera.GetComponent<CameraRotation>().enabled = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0;

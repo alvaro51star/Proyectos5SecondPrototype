@@ -2,21 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(BoxCollider))]
 
 public class TriggerForDialogue : MonoBehaviour
-{/*
-    DialogueController dialogueController;
+{
+    [SerializeField] private DialogueController dialogueController;
     [SerializeField] private bool isInteractive;
 
     [TextArea(2, 4)] public string[] textLines;// 2 = minNumLineas, 6 = maxNumLineas
 
-    private void Start()
-    {      
-        dialogueController = GameObject.FindGameObjectWithTag("Canvas").GetComponent<DialogueController>();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter(Collider collision)
     {
         if(collision.gameObject.CompareTag("Player"))
         {
@@ -27,11 +22,11 @@ public class TriggerForDialogue : MonoBehaviour
         }        
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay(Collider collision)
     {
-        if (Input.GetButton("Interact") && !dialogueController.didDialogueStart && isInteractive)
+        if (Input.GetKeyDown(KeyCode.E) && !dialogueController.didDialogueStart && isInteractive)
         {
             dialogueController.StartDialogue(textLines, isInteractive, gameObject);
         }
-    }    */
+    }    
 }
