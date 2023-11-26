@@ -8,6 +8,9 @@ public class CalculatePutOutFires : MonoBehaviour
     [SerializeField] private Icons icons;
     [HideInInspector] public int totalNumberOfFires;
     [HideInInspector] public int putOutFires = 0;
+
+    private FireSounds[] fireSounds;
+
     private void Start()
     {
         totalNumberOfFires = fires.Length;
@@ -23,6 +26,17 @@ public class CalculatePutOutFires : MonoBehaviour
         if (putOutFires >= totalNumberOfFires)
         {
             //SoundManager.instance.ReproduceSound();
+        }
+    }
+
+    public void DesactivateFireSounds()
+    {
+        for(int i = 0; i < fires.Length; i++)
+        {
+            if(!fireSounds[i].audioSource.isPlaying)
+            {
+                //fireSounds[i].audioSource.Stop();
+            }
         }
     }
 }

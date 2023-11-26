@@ -6,8 +6,9 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     public GameObject player;
-    public GameObject camera;
+    public GameObject cameraPlayer;
     [HideInInspector] public AudioSource audioSourceUI;
+    [SerializeField] private CalculatePutOutFires calculatePutOutFires;
 
     [Header("Canvas menus and panels")]
     public GameObject confirmEndLevel;
@@ -96,9 +97,9 @@ public class UIManager : MonoBehaviour
             {
                 player.SetActive(true);
             }
-            if (camera != null)
+            if (cameraPlayer != null)
             {
-                camera.GetComponent<CameraRotation>().enabled = true;
+                cameraPlayer.GetComponent<CameraRotation>().enabled = true;
             }
 
             Cursor.lockState = CursorLockMode.Locked;
@@ -114,10 +115,12 @@ public class UIManager : MonoBehaviour
             {
                 player.SetActive(false);
             }
-            if (camera != null)
+            if (cameraPlayer != null)
             {
-                camera.GetComponent<CameraRotation>().enabled = false;
+                cameraPlayer.GetComponent<CameraRotation>().enabled = false;
             }
+
+            calculatePutOutFires.DesactivateFireSounds();
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;

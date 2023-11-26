@@ -16,7 +16,7 @@ public class FinalCollider : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0;
-            uImanager.camera.GetComponent<CameraRotation>().enabled = false;
+            uImanager.cameraPlayer.GetComponent<CameraRotation>().enabled = false;
 
             if (calculateSavedNPCs.everyoneHasBeenSaved)
             {

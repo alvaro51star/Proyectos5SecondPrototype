@@ -213,6 +213,14 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1692050011}
+    - target: {fileID: 2934215141517266926, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: cameraPlayer
+      value: 
+      objectReference: {fileID: 197060393}
+    - target: {fileID: 2934215141517266926, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: calculatePutOutFires
+      value: 
+      objectReference: {fileID: 1168108285}
     - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: calculateSavedNPCs
       value: 
@@ -2393,5 +2401,5 @@ SceneRoots:
   - {fileID: 1168108286}
   - {fileID: 456166842}
   - {fileID: 1906048269}
-  - {fileID: 4231203401892818511}
   - {fileID: 854594122}
+  - {fileID: 4231203401892818511}
