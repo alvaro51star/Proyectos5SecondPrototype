@@ -10,7 +10,7 @@ EditorBuildSettings:
     guid: 1483947df46fae148b12ca6831090157
   - enabled: 1
     path: Assets/Scenes/EscenasFinales/Escenario_01.unity
-    guid: 6cdc4cf53da863a41b33410c02ae34e6
+    guid: 7eb1293371a8f074ab0407d00898050c
   - enabled: 1
     path: Assets/Scenes/EscenasFinales/Escenario_02.unity
     guid: f979b7e78e920104ea7e22c9d048a639
