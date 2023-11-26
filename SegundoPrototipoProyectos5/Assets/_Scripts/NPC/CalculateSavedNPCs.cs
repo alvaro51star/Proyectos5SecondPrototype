@@ -26,7 +26,7 @@ public class CalculateSavedNPCs : MonoBehaviour
             if(m_savedVictims >= m_totalNumberOfVictims)
             {
                 everyoneHasBeenSaved = true;
-                //SoundManager.instance.ReproduceSound();
+                SoundManager.instance.ReproduceSound(AudioClipsNames.AllVictimsSaved);
             }
         }
     }
