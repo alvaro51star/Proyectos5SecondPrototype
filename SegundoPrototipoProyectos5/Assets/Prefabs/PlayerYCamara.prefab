@@ -258,6 +258,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: -8.961
       objectReference: {fileID: 0}
+    - target: {fileID: 8719604226160048033, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8857738758844113338, guid: 5ac140310cb976d419cf7913028dc2c6, type: 3}
       propertyPath: ShapeModule.angle
       value: 12.09
