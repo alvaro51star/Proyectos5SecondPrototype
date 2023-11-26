@@ -19,6 +19,4 @@ public class LevelManager : MonoBehaviour
         PlayerPrefs.SetInt("LevelProgress", level);
         PlayerPrefs.Save();
     }
-
-    
 }
