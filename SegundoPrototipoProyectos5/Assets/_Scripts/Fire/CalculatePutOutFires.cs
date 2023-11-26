@@ -9,7 +9,7 @@ public class CalculatePutOutFires : MonoBehaviour
     [HideInInspector] public int totalNumberOfFires;
     [HideInInspector] public int putOutFires = 0;
 
-    private FireSounds[] fireSounds;
+    private FireSounds fireSounds;
 
     private void Start()
     {
@@ -33,9 +33,11 @@ public class CalculatePutOutFires : MonoBehaviour
     {
         for(int i = 0; i < fires.Length; i++)
         {
-            if(!fireSounds[i].audioSource.isPlaying)
+            fireSounds = fires[i].GetComponentInChildren<FireSounds>();
+
+            if(fireSounds.audioSource.isPlaying)
             {
-                //fireSounds[i].audioSource.Stop();
+                fireSounds.audioSource.Stop();
             }
         }
     }
