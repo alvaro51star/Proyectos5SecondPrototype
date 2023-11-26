@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
     public GameObject dontAllowToLeaveLevelPanel;
     public GameObject dialoguePanel;
     [SerializeField] private GameObject EImage;
-    [SerializeField] private GameObject permanentIcons;   
+    [SerializeField] private GameObject permanentIcons;
 
     [Header("Put same things here:")]
     [SerializeField] private GameObject[] MenusAndPanels;
@@ -39,7 +39,7 @@ public class UIManager : MonoBehaviour
     }
     public void ActivateUIGameObjects(GameObject gOToActivate, bool b)
     {
-        gOToActivate.SetActive(b);        
+        gOToActivate.SetActive(b);
     }
     public void DesactivateAllUIGameObjects()
     {
@@ -51,7 +51,7 @@ public class UIManager : MonoBehaviour
 
     // TODO: Poner la imagen en el canvas y activarla y desactivarla
     private void EnableImage()
-    {        
+    {
         EImage.SetActive(true);
     }
 
@@ -88,12 +88,18 @@ public class UIManager : MonoBehaviour
         dead = true;
     }
 
-    public void IsInGame (bool isInGame)
+    public void IsInGame(bool isInGame)
     {
-        if(isInGame)
+        if (isInGame)
         {
-            player.SetActive(true);
-            camera.GetComponent<CameraRotation>().enabled = true;
+            if (player != null)
+            {
+                player.SetActive(true);
+            }
+            if (camera != null)
+            {
+                camera.GetComponent<CameraRotation>().enabled = true;
+            }
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
@@ -104,8 +110,14 @@ public class UIManager : MonoBehaviour
         }
         else
         {
-            player.SetActive(false);
-            camera.GetComponent<CameraRotation>().enabled = false;
+            if (player != null)
+            {
+                player.SetActive(false);
+            }
+            if (camera != null)
+            {
+                camera.GetComponent<CameraRotation>().enabled = false;
+            }
 
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
