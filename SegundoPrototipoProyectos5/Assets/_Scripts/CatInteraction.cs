@@ -5,8 +5,8 @@ using UnityEngine;
 public class CatInteraction : InteractiveObject
 {
 
-    //public delegate void OnCatInteractionDelegate();
-    //public static event OnCatInteractionDelegate OnCatPet;
+    public delegate void OnCatInteractionDelegate();
+    public static event OnCatInteractionDelegate OnCatPet;
 
     AudioSource audioSource;
     [SerializeField] private AudioClip catSound;
@@ -28,6 +28,9 @@ public class CatInteraction : InteractiveObject
             StartCoroutine(SetBoolFalse(timeToPetAgain));
             ReproduceCatSound();
             ShowImage();
+            if(OnCatPet != null){
+                OnCatPet();
+            }
         }
     }
 
