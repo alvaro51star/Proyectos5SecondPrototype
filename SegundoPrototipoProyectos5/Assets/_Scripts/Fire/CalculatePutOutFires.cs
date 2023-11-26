@@ -18,7 +18,6 @@ public class CalculatePutOutFires : MonoBehaviour
     {
         putOutFires += 1;
         putOutFires = Mathf.Clamp(putOutFires, 0, totalNumberOfFires);
-        Debug.Log("fires put out:  " + putOutFires + "/" + totalNumberOfFires);
         icons.ChangeNumber(putOutFires, icons.numberFiresLeft);
 
         if (putOutFires >= totalNumberOfFires)
