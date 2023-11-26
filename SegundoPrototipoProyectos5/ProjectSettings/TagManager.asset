@@ -8,6 +8,7 @@ TagManager:
   - ElectricZone
   - Ground
   - NPC
+  - Floor
   layers:
   - Default
   - TransparentFX
