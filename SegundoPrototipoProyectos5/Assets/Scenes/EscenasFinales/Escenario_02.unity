@@ -5229,7 +5229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timesCatBeenPet: 0
   player: {fileID: 352731480}
-  gameStarts: 1
+  gameStarts: 0
   maxTimeLevel: 500
   currentTime: 0
 --- !u!4 &1036783682

@@ -597,8 +597,8 @@ MonoBehaviour:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 686599877}
   - {fileID: 1855288174}
   - {fileID: 1275977954}
   - {fileID: 1886859496}
   - {fileID: 1333173067}
-  - {fileID: 686599877}
