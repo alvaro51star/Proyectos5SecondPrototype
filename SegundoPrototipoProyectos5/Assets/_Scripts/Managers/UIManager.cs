@@ -7,6 +7,7 @@ public class UIManager : MonoBehaviour
 {
     public GameObject player;
     public GameObject camera;
+    [HideInInspector] public AudioSource audioSourceUI;
 
     [Header("Canvas menus and panels")]
     public GameObject confirmEndLevel;
@@ -32,6 +33,10 @@ public class UIManager : MonoBehaviour
 
     [HideInInspector] public bool dead = false;
 
+    private void Start()
+    {
+        audioSourceUI = GetComponent<AudioSource>();
+    }
     public void ActivateUIGameObjects(GameObject gOToActivate, bool b)
     {
         gOToActivate.SetActive(b);        
@@ -78,6 +83,7 @@ public class UIManager : MonoBehaviour
     {
         IsInGame(false);
         DesactivateAllUIGameObjects();
+        SoundManager.instance.ReproduceSound(AudioClipsNames.GameOver, audioSourceUI);
         gameOverPanel.SetActive(true);
         dead = true;
     }
