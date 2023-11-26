@@ -205,6 +205,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2934215141517266926, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1692050011}
     - target: {fileID: 3629889425460279024, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: player
       value: 
@@ -2139,18 +2143,6 @@ PrefabInstance:
       propertyPath: calculatePutOutFires
       value: 
       objectReference: {fileID: 1168108285}
-    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      propertyPath: maxEmissionRate
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476746791584358532, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      propertyPath: CollisionModule.collidesWith.m_Bits
-      value: 887
-      objectReference: {fileID: 0}
-    - target: {fileID: 3476746791584358532, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      propertyPath: CollisionModule.multiplyColliderForceByCollisionAngle
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8177794739573682663, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.27
@@ -2194,10 +2186,6 @@ PrefabInstance:
     - target: {fileID: 8445084869772928660, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_Name
       value: FIRE
-      objectReference: {fileID: 0}
-    - target: {fileID: 8781789526509267800, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

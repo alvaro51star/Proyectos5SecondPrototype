@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIMenus : MonoBehaviour
-{    
-    [SerializeField] private GameObject player;
-    
+{
+    private GameObject m_player;
     private Score m_Score;
     private UIManager m_UIManager;
     private MoveToNextLevel m_MoveToNextLevel;
@@ -24,10 +23,11 @@ public class UIMenus : MonoBehaviour
         m_UIManager = GetComponent<UIManager>();
         m_MoveToNextLevel = GetComponent<MoveToNextLevel>();
         m_Score = GetComponent<Score>();
+        m_player = m_UIManager.player;
 
-        if (player)
+        if (m_player)
         {
-            player.SetActive(true);
+            m_player.SetActive(true);
             isAMenuOrPanel = false;
         }
 
@@ -137,9 +137,9 @@ public class UIMenus : MonoBehaviour
 
         if (isPaused)
         {
-            if (player)
+            if (m_player)
             {
-                player.SetActive(false);
+                //m_player.SetActive(false);
                 isAMenuOrPanel = true;
             }
 
@@ -149,9 +149,9 @@ public class UIMenus : MonoBehaviour
         }
         else
         {
-            if (player)
+            if (m_player)
             {
-                player.SetActive(true);
+                //m_player.SetActive(true);
                 isAMenuOrPanel = false;
             }
 

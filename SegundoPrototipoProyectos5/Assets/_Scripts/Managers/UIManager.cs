@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
+    public GameObject player;
+
     [Header("Canvas menus and panels")]
     public GameObject confirmEndLevel;
     public GameObject finalScore;
@@ -83,17 +85,16 @@ public class UIManager : MonoBehaviour
     {
         if(isInGame)
         {
+            player.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             Time.timeScale = 1;
             DesactivateAllUIGameObjects();
             permanentIcons.SetActive(true);
-            //timerBar.SetActive(true);
-            //lifeBar.SetActive(true);
-            //waterBar.SetActive(true);
         }
         else
         {
+            player.SetActive(false);
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             Time.timeScale = 0;

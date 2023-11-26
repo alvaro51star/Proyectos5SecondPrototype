@@ -55,12 +55,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4718666110924365271}
-  - component: {fileID: 3629889425460279024}
+  - component: {fileID: 2934215141517266926}
   - component: {fileID: 4043450924757945306}
   - component: {fileID: 7475682333404853675}
-  - component: {fileID: 2934215141517266926}
   - component: {fileID: 5719214131896826547}
   - component: {fileID: 235683836681562780}
+  - component: {fileID: 3629889425460279024}
   - component: {fileID: 1386953833984379904}
   m_Layer: 0
   m_Name: UI
@@ -87,7 +87,7 @@ Transform:
   - {fileID: 4980964757896733771}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3629889425460279024
+--- !u!114 &2934215141517266926
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,12 +96,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 4258256300529771379}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97435313ddeb9054b93ef8bb9e6909f7, type: 3}
+  m_Script: {fileID: 11500000, guid: dd479299022547242af922b2c955f884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  isPaused: 0
-  isAMenuOrPanel: 0
+  confirmEndLevel: {fileID: 7735481374436073972}
+  finalScore: {fileID: 1406085901872499193}
+  initialMenu: {fileID: 7444221261715267237}
+  levelsMenu: {fileID: 6155970021595386427}
+  pauseMenu: {fileID: 2211566610405669066}
+  gameOverPanel: {fileID: 3380916509319476767}
+  endPanel: {fileID: 6392587286110633158}
+  dontAllowToLeaveLevelPanel: {fileID: 2766056220572600019}
+  dialoguePanel: {fileID: 4849164475106940712}
+  EImage: {fileID: 2099699723317141340}
+  permanentIcons: {fileID: 8232047261877482196}
+  MenusAndPanels:
+  - {fileID: 7444221261715267237}
+  - {fileID: 6155970021595386427}
+  - {fileID: 2211566610405669066}
+  - {fileID: 3380916509319476767}
+  - {fileID: 7735481374436073972}
+  - {fileID: 6392587286110633158}
+  - {fileID: 1406085901872499193}
+  - {fileID: 2099699723317141340}
+  - {fileID: 2766056220572600019}
+  - {fileID: 8232047261877482196}
+  - {fileID: 4849164475106940712}
+  firstStar: {fileID: 1820127117295806671}
+  secondStar: {fileID: 4276136789640569819}
+  thirdStar: {fileID: 784624228659937554}
+  dead: 0
 --- !u!114 &4043450924757945306
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,45 +155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lastLevel: 3
---- !u!114 &2934215141517266926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4258256300529771379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd479299022547242af922b2c955f884, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  confirmEndLevel: {fileID: 7735481374436073972}
-  finalScore: {fileID: 1406085901872499193}
-  initialMenu: {fileID: 7444221261715267237}
-  levelsMenu: {fileID: 6155970021595386427}
-  pauseMenu: {fileID: 2211566610405669066}
-  gameOverPanel: {fileID: 3380916509319476767}
-  endPanel: {fileID: 6392587286110633158}
-  dontAllowToLeaveLevelPanel: {fileID: 2766056220572600019}
-  dialoguePanel: {fileID: 4849164475106940712}
-  EImage: {fileID: 2099699723317141340}
-  permanentIcons: {fileID: 8232047261877482196}
-  MenusAndPanels:
-  - {fileID: 7444221261715267237}
-  - {fileID: 6155970021595386427}
-  - {fileID: 2211566610405669066}
-  - {fileID: 3380916509319476767}
-  - {fileID: 7735481374436073972}
-  - {fileID: 6392587286110633158}
-  - {fileID: 1406085901872499193}
-  - {fileID: 2099699723317141340}
-  - {fileID: 2766056220572600019}
-  - {fileID: 8232047261877482196}
-  - {fileID: 4849164475106940712}
-  firstStar: {fileID: 1820127117295806671}
-  secondStar: {fileID: 4276136789640569819}
-  thirdStar: {fileID: 784624228659937554}
-  dead: 0
 --- !u!114 &5719214131896826547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,6 +187,20 @@ MonoBehaviour:
   typingTime: 0
   dialogueGameObject: {fileID: 4849164475106940712}
   didDialogueStart: 0
+--- !u!114 &3629889425460279024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4258256300529771379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97435313ddeb9054b93ef8bb9e6909f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  isAMenuOrPanel: 0
 --- !u!82 &1386953833984379904
 AudioSource:
   m_ObjectHideFlags: 0

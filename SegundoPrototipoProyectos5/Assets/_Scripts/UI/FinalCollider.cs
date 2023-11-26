@@ -12,7 +12,12 @@ public class FinalCollider : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            if(calculateSavedNPCs.everyoneHasBeenSaved)
+            uImanager.DesactivateAllUIGameObjects();
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Time.timeScale = 0;
+
+            if (calculateSavedNPCs.everyoneHasBeenSaved)
             {
                 uImanager.ActivateUIGameObjects(uImanager.confirmEndLevel, true);
             }
@@ -20,7 +25,6 @@ public class FinalCollider : MonoBehaviour
             {
                 uImanager.ActivateUIGameObjects(uImanager.dontAllowToLeaveLevelPanel, true);
             }
-            uImanager.IsInGame(false);
         }
     }
 }
