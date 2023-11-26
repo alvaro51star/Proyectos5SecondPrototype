@@ -125,13 +125,77 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -4620282718447106903, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -2759622696371525738, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -2759622696371525738, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -2460233048728420653, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -383657012591524569, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 770498801028105770, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
       propertyPath: m_Name
       value: CamionBomberitos
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2899953514023083056, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3587788796799408565, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5123672995843361142, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479801705413144052, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5779128532376165417, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580289984459958310, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8483470800765219259, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8536400945726557719, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8559151462275330981, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060069769765479493, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -139,7 +203,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 8801265307085767146}
+      addedObject: {fileID: 1725983261868634647}
   m_SourcePrefab: {fileID: 100100000, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
 --- !u!4 &1458013888856140624 stripped
 Transform:
@@ -151,8 +215,8 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e8e6cae3e02f1054d8a98cdefca77ccc, type: 3}
   m_PrefabInstance: {fileID: 1419019352923327675}
   m_PrefabAsset: {fileID: 0}
---- !u!64 &8801265307085767146
-MeshCollider:
+--- !u!65 &1725983261868634647
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -169,7 +233,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
+  serializedVersion: 3
+  m_Size: {x: 2.372015, y: 3.4294555, z: 7.1508474}
+  m_Center: {x: 0.046771765, y: 1.2147278, z: 0.35665846}

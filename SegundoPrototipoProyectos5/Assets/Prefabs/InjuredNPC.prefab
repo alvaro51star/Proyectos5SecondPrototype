@@ -73,7 +73,7 @@ MonoBehaviour:
   pickUpPosition: {fileID: 0}
   force: 10
   playerManager: {fileID: 0}
-  meshColliderNPC: {fileID: 0}
+  meshColliderNPC: {fileID: 3669624858930382901}
 --- !u!114 &6586586901571864103
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,5 +283,10 @@ PrefabInstance:
 --- !u!4 &3610079538993262415 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4836201130559084, guid: ffc0ad7e0eac29c41b6f95457d9f7594, type: 3}
+  m_PrefabInstance: {fileID: 3605336326132099363}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &3669624858930382901 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 64627183470469398, guid: ffc0ad7e0eac29c41b6f95457d9f7594, type: 3}
   m_PrefabInstance: {fileID: 3605336326132099363}
   m_PrefabAsset: {fileID: 0}
