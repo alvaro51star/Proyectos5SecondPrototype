@@ -3196,6 +3196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Table_Metal_01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1963815331319966, guid: a852a93679cfbcf44a712b85fbb34edf, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4477093640573578, guid: a852a93679cfbcf44a712b85fbb34edf, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5000001
@@ -3842,6 +3846,10 @@ PrefabInstance:
     - target: {fileID: 1963815331319966, guid: a852a93679cfbcf44a712b85fbb34edf, type: 3}
       propertyPath: m_Name
       value: SM_Prop_Table_Metal_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1963815331319966, guid: a852a93679cfbcf44a712b85fbb34edf, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4477093640573578, guid: a852a93679cfbcf44a712b85fbb34edf, type: 3}
       propertyPath: m_LocalScale.x
@@ -22545,6 +22553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Table_Metal_01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1963815331319966, guid: a852a93679cfbcf44a712b85fbb34edf, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4477093640573578, guid: a852a93679cfbcf44a712b85fbb34edf, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5000001
@@ -28618,6 +28630,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Prop_Table_Metal_01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1963815331319966, guid: a852a93679cfbcf44a712b85fbb34edf, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4477093640573578, guid: a852a93679cfbcf44a712b85fbb34edf, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.5000001
@@ -32964,18 +32980,6 @@ PrefabInstance:
     - target: {fileID: 4812992525204427313, guid: 17522784b85460d4682a01d10dee9d63, type: 3}
       propertyPath: m_Name
       value: ElectricSwitch
-      objectReference: {fileID: 0}
-    - target: {fileID: 7382577464736531717, guid: 17522784b85460d4682a01d10dee9d63, type: 3}
-      propertyPath: m_Size.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7382577464736531717, guid: 17522784b85460d4682a01d10dee9d63, type: 3}
-      propertyPath: m_Size.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7382577464736531717, guid: 17522784b85460d4682a01d10dee9d63, type: 3}
-      propertyPath: m_Size.z
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -49838,6 +49842,10 @@ PrefabInstance:
     - target: {fileID: 1870138635693590, guid: e71e9ddb58035d94282eef1ab083b5ad, type: 3}
       propertyPath: m_Name
       value: SM_Prop_PaintCan_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 1870138635693590, guid: e71e9ddb58035d94282eef1ab083b5ad, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4149349207382476, guid: e71e9ddb58035d94282eef1ab083b5ad, type: 3}
       propertyPath: m_LocalScale.x
