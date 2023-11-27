@@ -20,7 +20,15 @@ public class CalculateSavedNPCs : MonoBehaviour
         {
             m_savedVictims += 1;
             m_savedVictims = Mathf.Clamp(m_savedVictims, 0, m_totalNumberOfVictims);
+
             other.tag = "Untagged";
+
+            GameObject Light = other.GetComponentInChildren<Light>().gameObject;
+            if(Light != null)
+            {
+                Light.SetActive(false);
+            }
+
             icons.ChangeNumber(m_savedVictims, icons.numberVictimsLeft);
 
             if(m_savedVictims >= m_totalNumberOfVictims)
