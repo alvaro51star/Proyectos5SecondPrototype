@@ -144,7 +144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   calculateSavedNPCs: {fileID: 0}
   calculatePutOutFires: {fileID: 0}
-  timeMultiplier: 0
+  timeMultiplier: 0.75
 --- !u!114 &7475682333404853675
 MonoBehaviour:
   m_ObjectHideFlags: 0

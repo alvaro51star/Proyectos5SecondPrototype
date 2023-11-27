@@ -623,6 +623,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: timeMultiplier
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: calculateSavedNPCs
       value: 
       objectReference: {fileID: 1345236883}
@@ -1528,7 +1532,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -6180,7 +6184,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -11292,7 +11296,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -11533,7 +11537,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -16749,7 +16753,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -18434,7 +18438,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -21708,7 +21712,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -22808,7 +22812,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -22823,17 +22827,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7638451427510771538, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
   m_PrefabInstance: {fileID: 1227465130}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &915338443 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5904537284865537756, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-  m_PrefabInstance: {fileID: 1227465130}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 915338442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31800eae2c8fee541a1110ca0b6cc641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &915574277
 GameObject:
   m_ObjectHideFlags: 0
@@ -24600,7 +24593,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -25161,7 +25154,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -25231,7 +25224,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -35520,7 +35513,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -38546,7 +38539,7 @@ MonoBehaviour:
   timesCatBeenPet: 0
   player: {fileID: 915338442}
   gameStarts: 0
-  maxTimeLevel: 400
+  maxTimeLevel: 600
   currentTime: 0
 --- !u!4 &1549006887
 Transform:
@@ -38665,7 +38658,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -41884,7 +41877,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -42187,7 +42180,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -43849,7 +43842,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -46109,7 +46102,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 915338443}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 

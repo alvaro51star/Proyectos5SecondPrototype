@@ -7966,6 +7966,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 298179915}
     - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: timeMultiplier
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: calculateSavedNPCs
       value: 
       objectReference: {fileID: 1470567571}
@@ -8088,7 +8092,7 @@ MonoBehaviour:
   timesCatBeenPet: 0
   player: {fileID: 352731480}
   gameStarts: 0
-  maxTimeLevel: 500
+  maxTimeLevel: 300
   currentTime: 0
 --- !u!4 &1036783682
 Transform:

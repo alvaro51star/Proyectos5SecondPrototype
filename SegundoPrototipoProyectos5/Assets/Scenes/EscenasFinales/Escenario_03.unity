@@ -1276,6 +1276,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: timeMultiplier
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: calculateSavedNPCs
       value: 
       objectReference: {fileID: 3389039657017908166}
@@ -2855,17 +2859,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7638451427510771538, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
   m_PrefabInstance: {fileID: 352731479}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &352731481 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5904537284865537756, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-  m_PrefabInstance: {fileID: 352731479}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352731480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31800eae2c8fee541a1110ca0b6cc641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &352731482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4666088999292032027, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
@@ -3009,7 +3002,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 352731481}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -3202,7 +3195,7 @@ MonoBehaviour:
   timesCatBeenPet: 0
   player: {fileID: 352731480}
   gameStarts: 0
-  maxTimeLevel: 500
+  maxTimeLevel: 600
   currentTime: 0
 --- !u!4 &375912375
 Transform:
