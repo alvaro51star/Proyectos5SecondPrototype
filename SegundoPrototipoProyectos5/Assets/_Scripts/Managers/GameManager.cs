@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     public int timesCatBeenPet = 0;
 
     public GameObject player;
-    public bool gameStarts = true;
+    public bool gameStarts;
 
     [SerializeField] public float maxTimeLevel;
     [HideInInspector] public float currentTime;

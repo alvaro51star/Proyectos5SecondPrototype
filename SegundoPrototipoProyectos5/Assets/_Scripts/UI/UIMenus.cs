@@ -12,11 +12,9 @@ public class UIMenus : MonoBehaviour
     private MoveToNextLevel m_MoveToNextLevel;
     private int m_initialScene = 0;
     private int m_tutorialLevelScene = 1;
-    //private int congratulationsPanel = 4;
     private int m_endPanel = 5;   // el numero de la ultima escena
 
     [HideInInspector] public bool isPaused = false;
-    //[HideInInspector] public bool islevelCompleted = false;
     [HideInInspector] public bool isAMenuOrPanel = false;
 
     void Start()
@@ -31,11 +29,6 @@ public class UIMenus : MonoBehaviour
             m_player.SetActive(true);
             isAMenuOrPanel = false;
         }
-
-        /*if (SceneManager.GetActiveScene().buildIndex > tutorialLevelScene && SceneManager.GetActiveScene().buildIndex < congratulationsPanel)
-        {
-            LevelCompleted();
-        }*/
 
         if (SceneManager.GetActiveScene().buildIndex == m_initialScene)
         {
@@ -109,33 +102,6 @@ public class UIMenus : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    /*public void LevelCompleted()    // aqui se pondria el EndGame del FinalCollider
-    {
-        islevelCompleted = !islevelCompleted;
-        if (islevelCompleted)
-        {
-            isAMenuOrPanel = true;
-            if (player)
-            {
-                player.SetActive(false);
-            }
-
-            uIManager.IsInGame(false);
-            uIManager.DesactivateAllUIGameObjects();
-            uIManager.ActivateUIGameObjects(uIManager.congratulationsPanel, true);
-        }
-        else
-        {
-            isAMenuOrPanel = false;
-            if (player)
-            {
-                player.SetActive(true);
-                isAMenuOrPanel = false;
-            }
-
-            uIManager.IsInGame(true);
-        }
-    }*/
 
     public void PauseMenu()
     {
@@ -145,7 +111,6 @@ public class UIMenus : MonoBehaviour
         {
             if (m_player)
             {
-                //m_player.SetActive(false);
                 isAMenuOrPanel = true;
             }
 
@@ -157,10 +122,8 @@ public class UIMenus : MonoBehaviour
         {
             if (m_player)
             {
-                //m_player.SetActive(true);
                 isAMenuOrPanel = false;
             }
-
             Resume();
         }
     }
