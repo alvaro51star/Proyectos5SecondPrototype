@@ -2581,7 +2581,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 60
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -3053,12 +3053,20 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: maxScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 20
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: maxParticleSizeMultiplier
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
-      value: 0.4
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 8177794739573682663, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6390,6 +6398,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1386953833984379904, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_Volume
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 2934215141517266926, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: player
       value: 
@@ -6880,7 +6892,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -7632,7 +7644,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -9794,7 +9806,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 30
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -10857,7 +10869,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 40
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -11010,7 +11022,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -11964,7 +11976,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -12043,7 +12055,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 40
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -13558,6 +13570,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: maxEmissionRate
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
       value: 0.4
       objectReference: {fileID: 0}
@@ -14598,8 +14614,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: maxScale
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 50
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -15726,7 +15746,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 30
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -15972,7 +15992,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 70
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -16129,7 +16149,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -17149,7 +17169,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 40
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -18535,6 +18555,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: maxEmissionRate
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
       value: 0.4
       objectReference: {fileID: 0}
@@ -19332,7 +19356,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -19751,6 +19775,10 @@ PrefabInstance:
       propertyPath: calculatePutOutFires
       value: 
       objectReference: {fileID: 1658315872}
+    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: maxEmissionRate
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
       value: 0.4
@@ -20620,7 +20648,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 30
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -21506,7 +21534,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 50
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
@@ -22078,7 +22106,7 @@ PrefabInstance:
       objectReference: {fileID: 1658315872}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: maxEmissionRate
-      value: 30
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: minParticleSizeMultiplier
