@@ -5073,7 +5073,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -5211,8 +5211,8 @@ MonoBehaviour:
   fireLifeManager: {fileID: 725382082066388614}
   soundCollider: {fileID: 7437423507621586363}
   fireLight: {fileID: 148201850107522815}
-  maxEmissionRate: 90
-  minParticleSizeMultiplier: 0.3
+  maxEmissionRate: 120
+  minParticleSizeMultiplier: 0.4
   maxParticleSizeMultiplier: 0.9
   maxScale: 4
   minScale: 1

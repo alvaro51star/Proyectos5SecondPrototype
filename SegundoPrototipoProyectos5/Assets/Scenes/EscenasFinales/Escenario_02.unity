@@ -1210,25 +1210,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 362422071588157394, guid: aa7494f2287c9af40b8e04fab3a9406e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 1089637219238457799, guid: aa7494f2287c9af40b8e04fab3a9406e, type: 3}
       propertyPath: m_Name
       value: Cat
-      objectReference: {fileID: 0}
-    - target: {fileID: 1089637219238457799, guid: aa7494f2287c9af40b8e04fab3a9406e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 3885794713501372134, guid: aa7494f2287c9af40b8e04fab3a9406e, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280031351797685423, guid: aa7494f2287c9af40b8e04fab3a9406e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6833672701727179319, guid: aa7494f2287c9af40b8e04fab3a9406e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1269,14 +1253,6 @@ PrefabInstance:
     - target: {fileID: 6833672701727179319, guid: aa7494f2287c9af40b8e04fab3a9406e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8535563471819809928, guid: aa7494f2287c9af40b8e04fab3a9406e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 9080090406211603113, guid: aa7494f2287c9af40b8e04fab3a9406e, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2650,6 +2626,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2012203778040200328, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
+      propertyPath: m_Volume
+      value: 0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.76
@@ -2704,17 +2684,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7638451427510771538, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
   m_PrefabInstance: {fileID: 352731479}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &352731481 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5904537284865537756, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
-  m_PrefabInstance: {fileID: 352731479}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 352731480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31800eae2c8fee541a1110ca0b6cc641, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &352731482 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4666088999292032027, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
@@ -3587,14 +3556,6 @@ PrefabInstance:
       propertyPath: calculatePutOutFires
       value: 
       objectReference: {fileID: 298179915}
-    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      propertyPath: maxEmissionRate
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      propertyPath: minParticleSizeMultiplier
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 8177794739573682663, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.91
@@ -13779,7 +13740,7 @@ PrefabInstance:
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: playerManager
       value: 
-      objectReference: {fileID: 352731481}
+      objectReference: {fileID: 0}
     - target: {fileID: 8698873734711481375, guid: 76edc5fdfdfc50d40b91947ca0cac934, type: 3}
       propertyPath: pickUpPosition
       value: 
@@ -16880,10 +16841,10 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 104406136}
   - {fileID: 1036783682}
   - {fileID: 1347683319}
   - {fileID: 643762933}
-  - {fileID: 104406136}
   - {fileID: 352731479}
   - {fileID: 236831447}
   - {fileID: 1470567570}
