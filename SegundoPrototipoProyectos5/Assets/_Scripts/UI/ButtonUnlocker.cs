@@ -12,7 +12,7 @@ public class ButtonUnlocker : MonoBehaviour
     {
         if (buttons != null && PlayerPrefs.HasKey("LevelProgress"))
         {
-            for (int i = 0; i <= PlayerPrefs.GetInt("LevelProgress"); i++)
+            for (int i = 0; i < PlayerPrefs.GetInt("LevelProgress"); i++)
             {
                 buttons[i].interactable = true;
             }
