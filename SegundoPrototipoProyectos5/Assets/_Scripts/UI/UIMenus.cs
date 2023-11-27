@@ -63,7 +63,7 @@ public class UIMenus : MonoBehaviour
 
     public void QuitGame()
     {
-        // Application.Quit();
+        Application.Quit();
         Debug.Log("Quit Game");
     }
 
