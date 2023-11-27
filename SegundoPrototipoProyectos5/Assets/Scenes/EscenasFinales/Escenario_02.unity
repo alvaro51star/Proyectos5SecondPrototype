@@ -1624,7 +1624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1714063253046634, guid: 4a06f84ab1beef14ba16a12447f2fcea, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1714063253046634, guid: 4a06f84ab1beef14ba16a12447f2fcea, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5918,7 +5918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 116224, guid: 7468f1ed6e4846042b8588e8610d2b7b, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 116224, guid: 7468f1ed6e4846042b8588e8610d2b7b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6904,7 +6904,7 @@ GameObject:
   - component: {fileID: 892437041}
   - component: {fileID: 892437040}
   - component: {fileID: 892437039}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: Nevera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7393,7 +7393,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1714063253046634, guid: 4a06f84ab1beef14ba16a12447f2fcea, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1714063253046634, guid: 4a06f84ab1beef14ba16a12447f2fcea, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8031,6 +8031,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4718666110924365271, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7444221261715267237, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -10983,7 +10987,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 141328, guid: 0054b749f112c5a42a027e37dc7ff22a, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 141328, guid: 0054b749f112c5a42a027e37dc7ff22a, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -16181,7 +16185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 116224, guid: 7468f1ed6e4846042b8588e8610d2b7b, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 116224, guid: 7468f1ed6e4846042b8588e8610d2b7b, type: 3}
       propertyPath: m_StaticEditorFlags

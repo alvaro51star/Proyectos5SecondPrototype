@@ -1002,6 +1002,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Prop_Bar_Shelf (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 194138, guid: 935d7f086ca803d4991e4a155db04d2f, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 420972, guid: 935d7f086ca803d4991e4a155db04d2f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.02
@@ -6150,6 +6154,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Prop_Desk_Straight
       objectReference: {fileID: 0}
+    - target: {fileID: 141328, guid: 0054b749f112c5a42a027e37dc7ff22a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 457540, guid: 0054b749f112c5a42a027e37dc7ff22a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.756851
@@ -6289,6 +6297,10 @@ PrefabInstance:
     - target: {fileID: 175986, guid: 49df441e268d265429f567f363723b14, type: 3}
       propertyPath: m_Name
       value: AI_Prop_Couch_Damaged_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 175986, guid: 49df441e268d265429f567f363723b14, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 442904, guid: 49df441e268d265429f567f363723b14, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11154,6 +11166,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AI_Prop_BathTub
       objectReference: {fileID: 0}
+    - target: {fileID: 147152, guid: 453851e3092749c46af9b4be640f6aad, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 480470, guid: 453851e3092749c46af9b4be640f6aad, type: 3}
       propertyPath: m_LocalPosition.x
       value: -21.50087
@@ -14014,6 +14030,10 @@ PrefabInstance:
       value: AI_Prop_BookShelf_Small (2)
       objectReference: {fileID: 0}
     - target: {fileID: 116224, guid: 7468f1ed6e4846042b8588e8610d2b7b, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 116224, guid: 7468f1ed6e4846042b8588e8610d2b7b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -15697,7 +15717,7 @@ GameObject:
   - component: {fileID: 1524372785}
   - component: {fileID: 1524372784}
   - component: {fileID: 1524372783}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cocina
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15801,6 +15821,10 @@ PrefabInstance:
     - target: {fileID: 132972, guid: a709cdb4216c5924ca2f55faa4a43ce8, type: 3}
       propertyPath: m_Name
       value: AI_Prop_Couch_Damaged_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 132972, guid: a709cdb4216c5924ca2f55faa4a43ce8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 411182, guid: a709cdb4216c5924ca2f55faa4a43ce8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17704,6 +17728,10 @@ PrefabInstance:
     - target: {fileID: 114786, guid: d9e646e2c9066a94cb48626d84dc1ba6, type: 3}
       propertyPath: m_Name
       value: AI_Prop_Chair_Damaged_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 114786, guid: d9e646e2c9066a94cb48626d84dc1ba6, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 441204, guid: d9e646e2c9066a94cb48626d84dc1ba6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19872,6 +19900,10 @@ PrefabInstance:
     - target: {fileID: 116224, guid: 7468f1ed6e4846042b8588e8610d2b7b, type: 3}
       propertyPath: m_Name
       value: AI_Prop_BookShelf_Small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 116224, guid: 7468f1ed6e4846042b8588e8610d2b7b, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 116224, guid: 7468f1ed6e4846042b8588e8610d2b7b, type: 3}
       propertyPath: m_StaticEditorFlags
