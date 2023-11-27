@@ -56,8 +56,8 @@ public class DialogueController : MonoBehaviour
     {
         didDialogueStart = false;
 
-        uiManager.IsInGame(true);
         uiManager.DesactivateAllUIGameObjects();
+        uiManager.IsInGame(true);
 
         if (!isInteractive)
         {

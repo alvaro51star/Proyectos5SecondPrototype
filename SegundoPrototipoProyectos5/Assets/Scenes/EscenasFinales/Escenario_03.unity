@@ -1161,6 +1161,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 235683836681562780, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 982813275247421061, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1180,6 +1184,10 @@ PrefabInstance:
     - target: {fileID: 3629889425460279024, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: uIManager
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4043450924757945306, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: calculateSavedNPCs
@@ -1274,7 +1282,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 200607949}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0d767fdf98d6ff46973dc189c96cf56, type: 3}
   m_Name: 
