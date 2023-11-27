@@ -681,6 +681,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 4651235650291701050, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -77.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4651235650291701050, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 61.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4718666110924365271, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -721,10 +729,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4982316307453036466, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -360
+      objectReference: {fileID: 0}
     - target: {fileID: 5891666603845074185, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1528828841}
+    - target: {fileID: 7207580471855439167, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7927973487921511310, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -149
+      objectReference: {fileID: 0}
+    - target: {fileID: 8111857065876292338, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8111857065876292338, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8111857065876292338, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 114
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
