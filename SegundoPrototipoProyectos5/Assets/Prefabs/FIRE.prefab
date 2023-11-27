@@ -3902,7 +3902,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 886
+      m_Bits: 630
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -5211,10 +5211,10 @@ MonoBehaviour:
   fireLifeManager: {fileID: 725382082066388614}
   soundCollider: {fileID: 7437423507621586363}
   fireLight: {fileID: 148201850107522815}
-  maxEmissionRate: 120
-  minParticleSizeMultiplier: 0.4
-  maxParticleSizeMultiplier: 0.9
-  maxScale: 4
+  maxEmissionRate: 80
+  minParticleSizeMultiplier: 0.3
+  maxParticleSizeMultiplier: 0.8
+  maxScale: 2
   minScale: 1
   boxCollider: {fileID: 8711213089600687656}
   regenTime: 2.5

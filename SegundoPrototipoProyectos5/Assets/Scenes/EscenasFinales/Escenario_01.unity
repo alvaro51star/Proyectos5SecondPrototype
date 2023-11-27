@@ -3052,21 +3052,9 @@ PrefabInstance:
       propertyPath: calculatePutOutFires
       value: 
       objectReference: {fileID: 1658315872}
-    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      propertyPath: maxScale
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      propertyPath: maxEmissionRate
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      propertyPath: maxParticleSizeMultiplier
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1793371952872935867, guid: 2773811d89c208645bb742089f43611e, type: 3}
-      propertyPath: minParticleSizeMultiplier
-      value: 0.3
+    - target: {fileID: 3476746791584358532, guid: 2773811d89c208645bb742089f43611e, type: 3}
+      propertyPath: CollisionModule.collidesWithDynamic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8177794739573682663, guid: 2773811d89c208645bb742089f43611e, type: 3}
       propertyPath: m_LocalPosition.x
