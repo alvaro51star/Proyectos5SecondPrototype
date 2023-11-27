@@ -56,6 +56,7 @@ public class Fire : MonoBehaviour
         {
             fireParticleSystem.Stop();
             soundCollider.SetActive(false);
+            fireLight.gameObject.SetActive(false);
             boxCollider.enabled = false;
             StartCoroutine(DestroyGameObject());
         }

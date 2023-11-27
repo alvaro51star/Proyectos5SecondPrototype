@@ -137,7 +137,7 @@ ParticleSystem:
   m_GameObject: {fileID: 6147656509441316930}
   serializedVersion: 8
   lengthInSec: 1
-  simulationSpeed: 1
+  simulationSpeed: 2
   stopAction: 0
   cullingMode: 3
   ringBufferMode: 0
@@ -264,7 +264,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.12
+      scalar: 0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -5211,9 +5211,9 @@ MonoBehaviour:
   fireLifeManager: {fileID: 725382082066388614}
   soundCollider: {fileID: 7437423507621586363}
   fireLight: {fileID: 148201850107522815}
-  maxEmissionRate: 80
-  minParticleSizeMultiplier: 0.01
-  maxParticleSizeMultiplier: 1
+  maxEmissionRate: 90
+  minParticleSizeMultiplier: 0.3
+  maxParticleSizeMultiplier: 0.9
   maxScale: 4
   minScale: 1
   boxCollider: {fileID: 8711213089600687656}
