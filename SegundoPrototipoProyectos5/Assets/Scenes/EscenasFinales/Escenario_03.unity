@@ -1274,7 +1274,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 200607949}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f0d767fdf98d6ff46973dc189c96cf56, type: 3}
   m_Name: 
@@ -5005,7 +5005,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: textLines.Array.data[0]
-      value: "\xBFRecuerdas que el agua conduce"
+      value: "\xBFRecurdas que el agua conduce la electricidad a trav\xE9s de los
+        iones disueltos en ella? Si no, es preocupante."
+      objectReference: {fileID: 0}
+    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
+      propertyPath: textLines.Array.data[1]
+      value: "El cable se ha roto, usa la l\xF3gica."
+      objectReference: {fileID: 0}
+    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
+      propertyPath: textLines.Array.data[2]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalPosition.x
