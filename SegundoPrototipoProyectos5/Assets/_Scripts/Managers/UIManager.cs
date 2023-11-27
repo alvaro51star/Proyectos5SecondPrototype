@@ -16,7 +16,6 @@ public class UIManager : MonoBehaviour
     public GameObject initialMenu;
     public GameObject levelsMenu;
     public GameObject pauseMenu;
-    //public GameObject congratulationsPanel;
     public GameObject gameOverPanel;
     public GameObject endPanel;
     public GameObject dontAllowToLeaveLevelPanel;
