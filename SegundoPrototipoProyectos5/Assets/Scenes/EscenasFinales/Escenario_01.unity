@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &4469151 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-  m_PrefabInstance: {fileID: 702766962}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &32512813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1662,7 +1657,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 502175324}
-  - {fileID: 373612082}
   - {fileID: 1635638622}
   - {fileID: 2039677366}
   - {fileID: 2115982049}
@@ -4307,38 +4301,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1803296328484338484, guid: 25066fe878705fb459cc66bf7c89b5d3, type: 3}
   m_PrefabInstance: {fileID: 367219065}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &373612081
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 373612082}
-  m_Layer: 0
-  m_Name: Colchoneta
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &373612082
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 373612081}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.6, y: 0, z: -1.2100005}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 4469151}
-  m_Father: {fileID: 151669285}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &379003830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7521,103 +7483,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4860624792605466, guid: f79ea884aeb890f479a018d1f350fe58, type: 3}
   m_PrefabInstance: {fileID: 699566118}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &702766962
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 373612082}
-    m_Modifications:
-    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: dialogueController
-      value: 
-      objectReference: {fileID: 883357005}
-    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: textLines.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: textLines.Array.data[0]
-      value: "Tranquilo, no es sangre, solo es una colchoneta para las v\xEDcitmas."
-      objectReference: {fileID: 0}
-    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: textLines.Array.data[1]
-      value: "A\xFAn no es sangre, solo es una colchoneta para las v\xEDcitmas."
-      objectReference: {fileID: 0}
-    - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.8200035
-      objectReference: {fileID: 0}
-    - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -1.0615134
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -36.72
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8.661513
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204261770075154819, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_Name
-      value: AlertText
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
 --- !u!1001 &718697046
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10301,7 +10166,7 @@ PrefabInstance:
       objectReference: {fileID: 883357005}
     - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: textLines.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: textLines.Array.data[0]
@@ -10315,6 +10180,11 @@ PrefabInstance:
       propertyPath: textLines.Array.data[2]
       value: "\xBFHas querido hacer flyboard acu\xE1tico, pero vives en Madrid? Propulsate
         con el agua, ten clara la direcci\xF3n y pulsa espacio."
+      objectReference: {fileID: 0}
+    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
+      propertyPath: textLines.Array.data[3]
+      value: "Tranquilo, lo que se ve no es sangre, solo es una colchoneta para las
+        v\xEDcitmas."
       objectReference: {fileID: 0}
     - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalPosition.x
