@@ -1707,7 +1707,6 @@ Transform:
   - {fileID: 373612082}
   - {fileID: 1635638622}
   - {fileID: 2039677366}
-  - {fileID: 1545952581}
   - {fileID: 2115982049}
   m_Father: {fileID: 320740849}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2004,35 +2003,39 @@ PrefabInstance:
       objectReference: {fileID: 883357005}
     - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: textLines.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: textLines.Array.data[0]
       value: "\xBFQuieres quitarte la persona de tu hombro?\nPulsa G."
       objectReference: {fileID: 0}
+    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
+      propertyPath: textLines.Array.data[1]
+      value: Ahora corre, no vaya a ser que realmente haya sangre.
+      objectReference: {fileID: 0}
     - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8399998
+      value: -7.12
       objectReference: {fileID: 0}
     - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.35
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.1999993
+      value: -1.72
       objectReference: {fileID: 0}
     - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5700,7 +5703,7 @@ Transform:
   m_GameObject: {fileID: 502175323}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.36, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10649,8 +10652,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: textLines.Array.data[2]
-      value: "\xBFHas querido hacer flyboard, pero vives en Madrid? Propulsate con
-        el agua, ten clara la direcci\xF3n y al espacio."
+      value: "\xBFHas querido hacer flyboard acu\xE1tico, pero vives en Madrid? Propulsate
+        con el agua, ten clara la direcci\xF3n y pulsa espacio."
       objectReference: {fileID: 0}
     - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11537,7 +11540,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: textLines.Array.data[1]
-      value: Ojo, no es agua infinita.
+      value: Ojo, no es agua infinita. Se recarga solo una vez.
       objectReference: {fileID: 0}
     - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalScale.x
@@ -11946,11 +11949,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4860624792605466, guid: f79ea884aeb890f479a018d1f350fe58, type: 3}
   m_PrefabInstance: {fileID: 1126852544}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &1127009596 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-  m_PrefabInstance: {fileID: 1907626896}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1128089400
 PrefabInstance:
@@ -16415,38 +16413,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 411182, guid: a709cdb4216c5924ca2f55faa4a43ce8, type: 3}
   m_PrefabInstance: {fileID: 1537077296}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1545952580
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1545952581}
-  m_Layer: 0
-  m_Name: Final
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1545952581
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545952580}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1127009596}
-  m_Father: {fileID: 151669285}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1546309337
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20628,91 +20594,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 635a1b475b8d48e4da42e4a5344ea2ab, type: 3}
---- !u!1001 &1907626896
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1545952581}
-    m_Modifications:
-    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: dialogueController
-      value: 
-      objectReference: {fileID: 883357005}
-    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: textLines.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: textLines.Array.data[0]
-      value: Corre, no vaya a ser que realmente haya sangre.
-      objectReference: {fileID: 0}
-    - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -7.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.9499999
-      objectReference: {fileID: 0}
-    - target: {fileID: 591282549741712745, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9204261770075154819, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
-      propertyPath: m_Name
-      value: AlertText
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
 --- !u!1 &1920568851 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 173472, guid: 0db5161906bdd524a822a731780ff249, type: 3}
@@ -23490,7 +23371,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.04
+      value: -38.221
       objectReference: {fileID: 0}
     - target: {fileID: 2805851327517876273, guid: 33b3bd7e27aa86048ae7f19293613a54, type: 3}
       propertyPath: m_LocalPosition.y
