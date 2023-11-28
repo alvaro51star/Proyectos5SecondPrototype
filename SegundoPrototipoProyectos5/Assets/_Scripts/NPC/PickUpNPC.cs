@@ -6,6 +6,7 @@ using System.Buffers.Text;
 
 public class PickUpNPC : InteractiveObject
 {
+    private bool canBePickedUp = true;
     private bool pickedUp = false;
     [SerializeField] private Transform pickUpPosition;
     private Rigidbody rb;
@@ -22,8 +23,10 @@ public class PickUpNPC : InteractiveObject
         parachuteBehaviour = GetComponent<ParachuteBehaviour>();
     }
 
-    protected override void OnTriggerEnter(Collider other) {
-        if(pickedUp == false){
+    protected override void OnTriggerEnter(Collider other)
+    {
+        if (pickedUp == false)
+        {
             base.OnTriggerEnter(other);
         }
     }
@@ -43,6 +46,7 @@ public class PickUpNPC : InteractiveObject
             rb.useGravity = false;
             meshColliderNPC.enabled = false;
             transform.SetParent(pickUpPosition);
+            EnableConstrains();
             ResetTransform();
             pickedUp = true;
         }
@@ -50,6 +54,7 @@ public class PickUpNPC : InteractiveObject
         if (pickedUp && Input.GetKey(KeyCode.G))
         {
             parachuteBehaviour.enabled = true;
+            DisableConstrains();
             pickUpPosition.DetachChildren();
             rb.useGravity = true;
             rb.AddForce(Camera.main.transform.forward * force, ForceMode.Impulse);
@@ -64,5 +69,13 @@ public class PickUpNPC : InteractiveObject
     {
         transform.localRotation = Quaternion.Euler(Vector3.zero);
         transform.localPosition = Vector3.zero;
+    }
+
+    private void EnableConstrains(){
+        rb.constraints = RigidbodyConstraints.FreezeAll;
+    }
+
+    private void DisableConstrains(){
+        rb.constraints = RigidbodyConstraints.None;
     }
 }
