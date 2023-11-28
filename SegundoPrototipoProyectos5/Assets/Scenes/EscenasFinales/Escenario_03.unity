@@ -1259,9 +1259,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1406085901872499193, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+    - target: {fileID: 1185894337030285932, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoToInitialMenu
       objectReference: {fileID: 0}
     - target: {fileID: 2934215141517266926, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: player
@@ -1302,7 +1302,7 @@ PrefabInstance:
     - target: {fileID: 4080536117041523648, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c1fd22c2ebfc89e449fc2a1da3e85cfe, type: 3}
+      objectReference: {fileID: 21300000, guid: 2a0eb6f259af06646906ad6f765fb8d1, type: 3}
     - target: {fileID: 4258256300529771379, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: m_Name
       value: UI

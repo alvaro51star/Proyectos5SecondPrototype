@@ -6,7 +6,6 @@ using System.Buffers.Text;
 
 public class PickUpNPC : InteractiveObject
 {
-    private bool canBePickedUp = true;
     private bool pickedUp = false;
     [SerializeField] private Transform pickUpPosition;
     private Rigidbody rb;
