@@ -8,9 +8,6 @@ public class WaterRecharge : InteractiveObject
     private bool empty = false;
     [SerializeField] private GameObject water;
 
-    public delegate void OnWaterRechargeDelegate();
-    public static event OnWaterRechargeDelegate OnWaterRecharge;
-
 
     private void OnTriggerStay(Collider other)
     {

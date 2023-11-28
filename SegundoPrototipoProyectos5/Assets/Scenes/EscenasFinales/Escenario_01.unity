@@ -6368,6 +6368,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1406085901872499193, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2934215141517266926, guid: 35644cc2fb405bf44948009b1b1c7c60, type: 3}
       propertyPath: player
       value: 
@@ -10212,7 +10216,7 @@ PrefabInstance:
     - target: {fileID: 413392993620759007, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: textLines.Array.data[3]
       value: "Tranquilo, lo que se ve no es sangre, solo es una colchoneta para las
-        v\xEDcitmas."
+        v\xEDctimas."
       objectReference: {fileID: 0}
     - target: {fileID: 6124116496450889305, guid: d5a51a80b3b951a4c8be3e37f8d98bb9, type: 3}
       propertyPath: m_LocalPosition.x
